@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "esbuild": "latest",
-    "typescript": "^5.0.2",
+    "typescript": "latest",
     "eslint-config-custom": "workspace:*"
   }
 }
