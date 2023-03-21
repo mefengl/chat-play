@@ -1,21 +1,12 @@
+import autoCopyWhenSend from './autoCopyWhenSend';
+
 async function initialize() {
   while (!window.chatgpt) { await new Promise((r) => setTimeout(r, 1000)); }
 }
 
-function onSend() {
-  navigator.clipboard.writeText(chatgpt.getChatInput());
-}
-
 async function main() {
   await initialize();
-  const textarea = chatgpt.getTextarea();
-  textarea.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      onSend();
-    }
-  });
-  const sendButton = chatgpt.getSendButton();
-  sendButton.addEventListener('click', onSend);
+  autoCopyWhenSend();
 }
 
 (function () {

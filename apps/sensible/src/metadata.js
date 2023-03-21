@@ -2,7 +2,7 @@ const metadata = `
 // ==UserScript==
 // @name         chatgpt sensible
 // @namespace    https://github.com/mefengl
-// @version      0.5.6
+// @version      0.5.8
 // @description  sensible to me
 // @author       mefengl
 // @match        https://chat.openai.com/*
