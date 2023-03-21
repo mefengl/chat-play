@@ -22,6 +22,16 @@ importers:
       eslint-config-custom: link:../../packages/eslint-config-custom
       typescript: 5.0.2
 
+  apps/infinite:
+    specifiers:
+      esbuild: latest
+      eslint-config-custom: workspace:*
+      typescript: ^5.0.2
+    devDependencies:
+      esbuild: 0.17.12
+      eslint-config-custom: link:../../packages/eslint-config-custom
+      typescript: 5.0.2
+
   packages/eslint-config-custom:
     specifiers:
       eslint-config-turbo: latest
