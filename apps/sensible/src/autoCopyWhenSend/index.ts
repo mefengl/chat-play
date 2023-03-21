@@ -1,16 +1,8 @@
-function onSend() {
-  navigator.clipboard.writeText(chatgpt.getChatInput());
-}
+import onSend from "../onSend";
+import chatgpt from '../chatgpt';
 
-function autoCopyWhenSend() {
-  const textarea = chatgpt.getTextarea();
-  textarea.addEventListener("keydown", function (event) {
-    if (event.key === "Enter") {
-      onSend();
-    }
+export default function autoCopyWhenSend() {
+  onSend(() => {
+    navigator.clipboard.writeText(chatgpt.getChatInput());
   });
-  const sendButton = chatgpt.getSendButton();
-  sendButton.addEventListener('click', onSend);
 }
-
-export default autoCopyWhenSend;
