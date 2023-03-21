@@ -1,10 +1,15 @@
 async function initialize() {
   while (!window.chatgpt) { await new Promise((r) => setTimeout(r, 1000)); }
+}
+
+async function main() {
+  await initialize();
+  // Your code here
   chatgpt.send('hello!');
 }
 
 (function () {
-  initialize();
+  main();
 }());
 
 /*
