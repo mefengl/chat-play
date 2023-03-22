@@ -13,15 +13,14 @@ async function startInfiniteLoop() {
   while (true) {
     const lastResponse = chatgpt.getLastResponse();
     const question = extractQuestion(lastResponse);
-    await chatgpt.send(question + "\nanswer above questions, and show me further question I can ask in the end prefixed with Q:");
+    await chatgpt.send(question + "\nanswer above question, and show me one more further question I can ask in the end prefixed with Q:");
     await waitForIdle();
     await sleep(5000);
   }
 }
 
 function extractQuestion(text) {
-  const match = text.match(/Q:(.*)/);
-  return match ? match[1].trim() : "Can you generate a question?";
+  return text.split("Q:").pop().trim();
 }
 
 function waitForIdle() {
