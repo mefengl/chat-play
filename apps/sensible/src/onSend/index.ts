@@ -1,4 +1,6 @@
-import chatgpt from '../chatgpt';
+import ChatGPT from "chatgpt"
+
+const chatgpt = new ChatGPT();
 
 function onSend(callback: () => void) {
   const textarea = chatgpt.getTextarea();
