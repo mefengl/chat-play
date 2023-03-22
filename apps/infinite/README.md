@@ -19,7 +19,7 @@ The script will ask the new question to ChatGPT, and the process repeats indefin
 Note: If the script does not start running automatically, refresh the chat interface page.
 
 ## Contributing
-Contributions to the script are welcome. You can fork the script's GitHub repository (https://github.com/mefengl/chatgpt-infinite) and submit a pull request with your changes.
+Contributions to the script are welcome. You can fork the script's GitHub repository (https://github.com/mefengl/chatgpt-playground) and submit a pull request with your changes.
 
 ## License
 The ChatGPT-Infinite UserScript is released under the MIT License. See the LICENSE file for more information.
