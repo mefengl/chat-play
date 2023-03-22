@@ -19,7 +19,8 @@
     "eslint": "latest",
     "eslint-config-custom": "workspace:*",
     "tsup": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "tsconfig": "workspace:*"
   },
   "publishConfig": {
     "access": "public"
