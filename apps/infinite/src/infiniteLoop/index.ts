@@ -1,16 +1,21 @@
 import ChatGPT from 'chatgpt'
+import askForLanguage from '../askForLanguage';
 
 const chatgpt = new ChatGPT();
 
 async function startInfiniteLoop() {
-  chatgpt.send("Can you generate a question?");
+  const language = await askForLanguage();
+  if (!language) return;
+  
+  chatgpt.send(`you can only answer question in ${language} language`);
   await waitForIdle();
+  
   while (true) {
-      const lastResponse = chatgpt.getLastResponse();
-      const question = extractQuestion(lastResponse);
-      await chatgpt.send(question + "\nanswer above questions, and show me further question I can ask in the end prefixed with Q:");
-      await waitForIdle();
-      await sleep(5000);
+    const lastResponse = chatgpt.getLastResponse();
+    const question = extractQuestion(lastResponse);
+    await chatgpt.send(question + "\nanswer above questions, and show me further question I can ask in the end prefixed with Q:");
+    await waitForIdle();
+    await sleep(5000);
   }
 }
 

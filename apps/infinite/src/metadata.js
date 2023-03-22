@@ -2,7 +2,7 @@ const metadata = `
 // ==UserScript==
 // @name chatgpt-infinite
 // @namespace https://github.com/mefengl
-// @version 0.1.7
+// @version 0.2.1
 // @description Infinite auto ask for chatgpt
 // @author mefengl
 // @match https://chat.openai.com/*
