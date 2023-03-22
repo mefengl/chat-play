@@ -1,213 +1,207 @@
-/*
- *  The code in this function was adapted from the chatgptjs/chatgpt.js library,
- *  authored by Adam Lui and 冯不游
- *  (https://chatgptjs.org) and licensed under the MIT License.
- */
-const chatgpt = {
+type Position = 'top' | 'bottom' | 'left' | 'right';
 
-  clearChats() {
+class ChatGPT {
+  private clearChatsCnt?: number;
+  private isDisplaying?: boolean;
+  private hideTimer?: number;
+  private status: string;
+  private prevStatus: string;
+  private events: Record<string, Function[]>;
+
+  constructor() {
+    this.clearChatsCnt = 0;
+    this.isDisplaying = false;
+    this.status = 'idle';
+    this.prevStatus = 'idle';
+    this.events = {};
+  }
+
+  clearChats(): void {
     const clearLabels = ['Clear conversations', 'Confirm clear conversations'];
-    if (!this.clearChats.cnt) this.clearChats.cnt = 0;
-    if (this.clearChats.cnt >= clearLabels.length) return; // exit if already confirmed
-    for (const navLink of document.querySelectorAll('nav > a')) {
-      if (navLink.textContent.includes(clearLabels[this.clearChats.cnt])) {
-        navLink.click(); this.clearChats.cnt++;
-        setTimeout(this.clearChats.bind(this), 500); return; // repeat to confirm
+    if (!this.clearChatsCnt) this.clearChatsCnt = 0;
+    if (this.clearChatsCnt >= clearLabels.length) return; // exit if already confirmed
+    for (const navLink of Array.from(document.querySelectorAll('nav > a'))) {
+      if (navLink.textContent?.includes(clearLabels[this.clearChatsCnt])) {
+        (navLink as HTMLElement).click(); this.clearChatsCnt++;
+        setTimeout(() => this.clearChats(), 500); return; // repeat to confirm
       }
     }
-  },
+  }
 
-  getChatInput() {
-    return document.querySelector('form textarea').value;
-  },
+  getChatInput(): string {
+    return (document.querySelector('form textarea') as HTMLTextAreaElement).value;
+  }
 
-  getNewChatButton() {
-    for (const navLink of document.querySelectorAll('nav > a')) {
-      if (navLink.textContent.includes('New chat')) {
-        return navLink;
+  getNewChatButton(): HTMLElement | undefined {
+    for (const navLink of Array.from(document.querySelectorAll('nav > a'))) {
+      if (navLink.textContent?.includes('New chat')) {
+        return navLink as HTMLElement;
       }
     }
-  },
+  }
 
-  getRegenerateButton() {
+  getRegenerateButton(): HTMLElement | undefined {
     const form = document.querySelector('form');
-    const buttons = form.querySelectorAll('button');
-    const result = Array.from(buttons).find((button) => button.textContent.trim().toLowerCase().includes('regenerate'));
+    const buttons = form!.querySelectorAll('button');
+    const result = Array.from(buttons).find((button) => button.textContent?.trim().toLowerCase().includes('regenerate'));
     return result;
-  },
+  }
 
-  getSendButton() {
+  getSendButton(): HTMLElement | null {
     return document.querySelector('form button[class*="bottom"]');
-  },
+  }
 
-  getStopGeneratingButton() {
+  getStopGeneratingButton(): HTMLElement | undefined {
     const form = document.querySelector('form');
-    const buttons = form.querySelectorAll('button');
-    return Array.from(buttons).find((button) => button.textContent.trim().toLowerCase().includes('stop generating'));
-  },
+    const buttons = form!.querySelectorAll('button');
+    return Array.from(buttons).find((button) => button.textContent?.trim().toLowerCase().includes('stop generating'));
+  }
 
-  getTextarea() {
+  getTextarea(): HTMLTextAreaElement | undefined {
     const form = document.querySelector('form');
-    const textareas = form.querySelectorAll('textarea');
-    const result = textareas[0];
+    const textareas = form!.querySelectorAll('textarea');
+    const result = textareas[0] as HTMLTextAreaElement;
     return result;
-  },
+  }
 
-  getLastResponseElement() {
+  getLastResponseElement(): HTMLElement | undefined {
     const responseElements = document.querySelectorAll('.group.w-full');
-    return responseElements[responseElements.length - 1];
-  },
+    return responseElements[responseElements.length - 1] as HTMLElement;
+  }
 
-  getLastResponse() {
+  getLastResponse(): string | null {
     const lastResponseElement = this.getLastResponseElement();
-    if (!lastResponseElement) return;
+    if (!lastResponseElement) return null;
     const lastResponse = lastResponseElement.textContent;
     return lastResponse;
-  },
+  }
 
-  send(msg) {
+  send(msg: string): void {
     const textarea = this.getTextarea();
-    textarea.value = msg;
+    textarea!.value = msg;
     const sendButton = this.getSendButton();
     sendButton && sendButton.click();
-  },
+  }
 
-  stop() {
+  stop(): void {
     const stopGeneratingButton = this.getStopGeneratingButton();
     stopGeneratingButton && stopGeneratingButton.click();
-  },
+  }
 
-  regenerate() {
+  regenerate(): void {
     const regenerateButton = this.getRegenerateButton();
     regenerateButton && regenerateButton.click();
-  },
+  }
 
-  new() {
+  new(): void {
     const newChatButton = this.getNewChatButton();
     newChatButton && newChatButton.click();
-  },
+  }
 
-  sendInNewChat(msg) {
+  sendInNewChat(msg: string): void {
     this.new();
     setTimeout(() => {
       this.send(msg);
     }, 500);
-  },
+  }
 
-  notify(msg, position = '') {
-    const vOffset = 13; const
-      hOffset = 27; // px offset from viewport border
-    const notificationDuration = 1.75; // sec duration to maintain notification visibility
-    const fadeDuration = 0.6; // sec duration of fade-out
 
-    // Find or make div
-    let notificationDiv = document.querySelector('#notification-alert');
-    if (!notificationDiv) { // if missing
-      notificationDiv = document.createElement('div'); // make div
+  notify(msg: string, position: Position = 'top'): void {
+    const vOffset = 13;
+    const hOffset = 27;
+    const notificationDuration = 1.75;
+    const fadeDuration = 0.6;
+
+    let notificationDiv = document.querySelector('#notification-alert') as HTMLElement;
+    if (!notificationDiv) {
+      notificationDiv = document.createElement('div');
       notificationDiv.id = 'notification-alert';
-      notificationDiv.style.cssText = ( // stylize it
-        '/* Box style */   background-color: black ; padding: 10px ; border-radius: 8px ; '
-        + '/* Visibility */  opacity: 0 ; position: fixed ; z-index: 9999 ; font-size: 1.8rem ; color: white');
-      document.body.appendChild(notificationDiv); // insert into DOM
+      notificationDiv.style.cssText = (
+        'background-color: black; padding: 10px; border-radius: 8px; '
+        + 'opacity: 0; position: fixed; z-index: 9999; font-size: 1.8rem; color: white');
+      document.body.appendChild(notificationDiv);
     }
 
-    // Position notification (defaults to top-right)
-    notificationDiv.style.top = !/low|bottom/i.test(position) ? `${vOffset}px` : '';
+    notificationDiv.style.top = !(/low|bottom/i.test(position)) ? `${vOffset}px` : '';
     notificationDiv.style.bottom = /low|bottom/i.test(position) ? `${vOffset}px` : '';
-    notificationDiv.style.right = !/left/i.test(position) ? `${hOffset}px` : '';
+    notificationDiv.style.right = !(/left/i.test(position)) ? `${hOffset}px` : '';
     notificationDiv.style.left = /left/i.test(position) ? `${hOffset}px` : '';
 
-    // Show notification
-    if (this.notify.isDisplaying) clearTimeout(this.notify.hideTimer); // clear previous hide
-    notificationDiv.innerHTML = msg; // insert msg
-    notificationDiv.style.transition = 'none'; // remove fade effect
-    notificationDiv.style.opacity = 1; // show msg
-    this.notify.isDisplaying = true;
+    if (this.isDisplaying) clearTimeout(this.hideTimer);
+    notificationDiv.innerHTML = msg;
+    notificationDiv.style.transition = 'none';
+    notificationDiv.style.opacity = '1';
+    this.isDisplaying = true;
 
-    // Hide notification
-    const hideDelay = ( // set delay before fading
-      fadeDuration > notificationDuration ? 0 // don't delay if fade exceeds notification duration
-        : notificationDuration - fadeDuration); // otherwise delay for difference
-    this.notify.hideTimer = setTimeout(function hideNotif() { // maintain notification visibility, then fade out
-      notificationDiv.style.transition = `opacity ${fadeDuration}s`; // add fade effect
-      notificationDiv.style.opacity = 0; // hide notification...
-      this.notify.isDisplaying = false;
-    }, hideDelay * 1000); // ...after pre-set duration
-  },
+    const hideDelay = (
+      fadeDuration > notificationDuration ? 0
+        : notificationDuration - fadeDuration);
+    this.hideTimer = setTimeout(() => {
+      notificationDiv.style.transition = `opacity ${fadeDuration}s`;
+      notificationDiv.style.opacity = '0';
+      this.isDisplaying = false;
+    }, hideDelay * 1000);
+  }
 
   startNewChat() {
-    for (const link of document.getElementsByTagName('a')) {
-      if (link.textContent.includes('New chat')) {
-        link.click(); break;
+    for (const link of Array.from(document.getElementsByTagName('a'))) {
+      if (link.textContent?.includes('New chat')) {
+        link.click();
+        break;
       }
     }
-  },
+  }
 
-  isIdle: true,
-  isGenerating: false,
-  status: 'idle',
-  prevStatus: 'idle',
-
-  updateStatus() {
+  updateStatus(): void {
     const stopGeneratingButton = this.getStopGeneratingButton();
 
     if (stopGeneratingButton) {
-      this.isIdle = false;
-      this.isGenerating = true;
       this.status = 'generating';
-    } else if (!stopGeneratingButton) {
-      this.isIdle = true;
-      this.isGenerating = false;
+    } else {
       this.status = 'idle';
     }
     if (this.status !== this.prevStatus) {
       this.toggleStatus();
     }
-  },
+  }
 
-  toggleStatus() {
+  toggleStatus(): void {
     this.prevStatus = this.status;
     if (this.status === 'idle') {
-      this.eventEmitter.emit('onIdle');
+      this.emit('onIdle');
     } else if (this.status === 'generating') {
-      this.eventEmitter.emit('onGenerating');
+      this.emit('onGenerating');
     }
-  },
+  }
 
-  eventEmitter: {
-    events: {},
+  on(eventName: string, callback: Function): void {
+    if (!this.events[eventName]) {
+      this.events[eventName] = [];
+    }
+    this.events[eventName].push(callback);
+  }
 
-    on(eventName, callback) {
-      if (!this.events[eventName]) {
-        this.events[eventName] = [];
-      }
-      this.events[eventName].push(callback);
-    },
+  once(eventName: string, callback: Function): void {
+    const oneTimeCallback = (...args: any[]) => {
+      callback.apply(null, args);
+      this.removeListener(eventName, oneTimeCallback);
+    };
+    this.on(eventName, oneTimeCallback);
+  }
 
-    once(eventName, callback) {
-      const self = this;
-      function oneTimeCallback() {
-        callback.apply(null, arguments);
-        self.removeListener(eventName, oneTimeCallback);
-      }
-      this.on(eventName, oneTimeCallback);
-    },
+  removeListener(eventName: string, callback: Function): void {
+    if (this.events[eventName]) {
+      this.events[eventName] = this.events[eventName].filter((cb) => cb !== callback);
+    }
+  }
 
-    removeListener(eventName, callback) {
-      if (this.events[eventName]) {
-        this.events[eventName] = this.events[eventName].filter((cb) => cb !== callback);
-      }
-    },
-
-    emit(eventName) {
-      if (this.events[eventName]) {
-        const args = Array.prototype.slice.call(arguments, 1);
-        this.events[eventName].forEach((callback) => {
-          callback.apply(null, args);
-        });
-      }
-    },
+  emit(eventName: string, ...args: any[]): void {
+    if (this.events[eventName]) {
+      this.events[eventName].forEach((callback) => {
+        callback.apply(null, args);
+      });
+    }
   }
 }
 
-export default chatgpt;
+export default ChatGPT;
