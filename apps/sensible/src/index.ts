@@ -1,10 +1,10 @@
-import { initInfoDivClone, getInfoDivClone } from './chatgpt/infoDiv';
+import { initInfoDivClone } from './chatgpt/infoDiv';
 import autoCopyWhenSend from './autoCopyWhenSend';
 import sendLaterOrForceSend from './sendLaterOrForceSend';
 
 async function initialize() {
-  await new Promise((r) => window.addEventListener('load', r));
-  await new Promise((r) => setTimeout(r, 1000));
+  await new Promise(resolve => window.addEventListener('load', resolve));
+  await new Promise(resolve => setTimeout(resolve, 1000));
   initInfoDivClone();
 }
 
