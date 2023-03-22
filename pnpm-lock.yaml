@@ -34,9 +34,12 @@ importers:
 
   apps/sensible:
     specifiers:
+      chatgpt: workspace:*
       esbuild: latest
       eslint-config-custom: workspace:*
       typescript: latest
+    dependencies:
+      chatgpt: link:../../packages/chatgpt
     devDependencies:
       esbuild: 0.17.12
       eslint-config-custom: link:../../packages/eslint-config-custom
@@ -46,11 +49,13 @@ importers:
     specifiers:
       eslint: latest
       eslint-config-custom: workspace:*
+      tsconfig: workspace:*
       tsup: latest
       typescript: latest
     devDependencies:
       eslint: 8.36.0
       eslint-config-custom: link:../eslint-config-custom
+      tsconfig: link:../tsconfig
       tsup: 6.7.0_typescript@5.0.2
       typescript: 5.0.2
 
@@ -59,6 +64,9 @@ importers:
       eslint-config-turbo: latest
     dependencies:
       eslint-config-turbo: 0.0.10_eslint@8.36.0
+
+  packages/tsconfig:
+    specifiers: {}
 
 packages:
 

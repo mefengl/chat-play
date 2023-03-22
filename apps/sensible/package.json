@@ -9,5 +9,8 @@
     "esbuild": "latest",
     "typescript": "latest",
     "eslint-config-custom": "workspace:*"
+  },
+  "dependencies": {
+    "chatgpt": "workspace:*"
   }
 }

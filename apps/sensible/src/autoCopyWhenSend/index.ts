@@ -1,5 +1,7 @@
 import onSend from "../onSend";
-import chatgpt from '../chatgpt';
+import ChatGPT from 'chatgpt'
+
+const chatgpt = new ChatGPT();
 
 export default function autoCopyWhenSend() {
   onSend(() => {
