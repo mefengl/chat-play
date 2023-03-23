@@ -14,12 +14,9 @@ importers:
 
   apps/hello:
     specifiers:
-      chatgpt: workspace:*
       esbuild: latest
       eslint-config-custom: workspace:*
       typescript: latest
-    dependencies:
-      chatgpt: link:../../packages/chatgpt
     devDependencies:
       esbuild: 0.17.12
       eslint-config-custom: link:../../packages/eslint-config-custom
@@ -27,12 +24,9 @@ importers:
 
   apps/infinite:
     specifiers:
-      chatgpt: workspace:*
       esbuild: latest
       eslint-config-custom: workspace:*
       typescript: latest
-    dependencies:
-      chatgpt: link:../../packages/chatgpt
     devDependencies:
       esbuild: 0.17.12
       eslint-config-custom: link:../../packages/eslint-config-custom
@@ -40,18 +34,15 @@ importers:
 
   apps/sensible:
     specifiers:
-      chatgpt: workspace:*
       esbuild: latest
       eslint-config-custom: workspace:*
       typescript: latest
-    dependencies:
-      chatgpt: link:../../packages/chatgpt
     devDependencies:
       esbuild: 0.17.12
       eslint-config-custom: link:../../packages/eslint-config-custom
       typescript: 5.0.2
 
-  packages/chatgpt:
+  packages/chat-kit:
     specifiers:
       eslint: latest
       eslint-config-custom: workspace:*
