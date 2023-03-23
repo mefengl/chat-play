@@ -1,3 +1,9 @@
+/*
+ *  The code in this function was adapted from the chatgptjs/chatgpt.js library,
+ *  authored by Adam Lui and 冯不游
+ *  (https://chatgptjs.org) and licensed under the MIT License.
+ */
+
 type Position = 'top' | 'bottom' | 'left' | 'right';
 
 class ChatGPT {
