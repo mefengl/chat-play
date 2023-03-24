@@ -1,6 +1,8 @@
-# chatgpt-kit
+# chat-kit
 
-it will include `chatgpt-element`, `chatgpt-status`, `chatgpt-utils`, `chatgpt-action`, and more
+it will include `chat-element`, `chat-status`, `chat-utils`, `chat-action`, and more
+
+> may also add another layer for https://platform.openai.com/docs/plugins/introduction , called chat-plugin
 
 ## Usage
 
@@ -18,7 +20,7 @@ details: https://github.com/chatgptjs/chatgpt.js/issues/34
 
 Q: then what's the difference between this repo and the old one?
 
-A: This repo don't need to make money, I do it for fun and hounor.
+A: This repo don't need to make money, I do it for fun and honor.
 
 Q: then what's the difference between this repo and the old one, again?
 
