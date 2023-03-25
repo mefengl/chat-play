@@ -1,4 +1,4 @@
-import { initInfoDivClone } from './chatgpt/infoDiv';
+import { initInfoDivClone } from './infoDiv';
 import autoCopyWhenSend from './autoCopyWhenSend';
 import sendLaterOrForceSend from './sendLaterOrForceSend';
 

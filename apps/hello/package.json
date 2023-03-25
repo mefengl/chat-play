@@ -11,5 +11,6 @@
     "eslint-config-custom": "workspace:*"
   },
   "dependencies": {
+    "chatkit": "workspace:*"
   }
 }

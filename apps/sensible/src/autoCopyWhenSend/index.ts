@@ -1,10 +1,8 @@
 import onSend from "../onSend";
-import ChatGPT from 'chatgpt'
-
-const chatgpt = new ChatGPT();
+import chatkit from "chatkit";
 
 export default function autoCopyWhenSend() {
   onSend(() => {
-    navigator.clipboard.writeText(chatgpt.getChatInput());
+    navigator.clipboard.writeText(chatkit.getTextareaValue());
   });
 }

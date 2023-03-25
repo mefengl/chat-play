@@ -1,5 +1,5 @@
 {
-  "name": "chat-kit",
+  "name": "chatkit",
   "author": "mefengl",
   "version": "0.0.1",
   "main": "./dist/index.js",

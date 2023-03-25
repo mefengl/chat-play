@@ -1,6 +1,4 @@
-import ChatGPT from 'chatgpt';
-
-const chatgpt = new ChatGPT();
+import chatkit from 'chatkit';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
@@ -10,7 +8,7 @@ async function initialize() {
 async function main() {
   await initialize();
   // Your code here
-  chatgpt.send('hello!');
+  chatkit.send('hello!');
 }
 
 (function () {

@@ -1,15 +1,15 @@
-import ChatGPT from "chatgpt"
-
-const chatgpt = new ChatGPT();
+import chatkit from "chatkit";
 
 function onSend(callback: () => void) {
-  const textarea = chatgpt.getTextarea();
+  const textarea = chatkit.getTextarea();
+  if (!textarea) return;
   textarea.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
       callback();
     }
   });
-  const sendButton = chatgpt.getSendButton();
+  const sendButton = chatkit.getSubmitButton();
+  if (!sendButton) return;
   sendButton.addEventListener('click', callback);
 }
 
