@@ -1,25 +1,24 @@
-import { getInfoDiv, getInfoDivClone } from "../chatgpt/infoDiv";
+import { getInfoDiv, getInfoDivClone } from "../infoDiv";
 import onSend from "../onSend";
-import ChatGPT from "chatgpt";
-
-const chatgpt = new ChatGPT();
+import chatkit from "chatkit";
 
 export default function sendLaterOrForceSend() {
   let waitForSecondEnter = false;
   onSend(async () => {
-    const stopGeneratingButton = chatgpt.getStopGeneratingButton();
+    const stopGeneratingButton = chatkit.getStopGeneratingButton();
     if (!stopGeneratingButton) return;
     if (waitForSecondEnter) {
       waitForSecondEnter = false;
       stopGeneratingButton.click();
-      chatgpt.getSendButton().click();
+      chatkit.getSubmitButton()?.click();
 
       // check if error
       setTimeout(() => {
         const infoDiv = getInfoDiv();
+        if (!infoDiv) return;
         console.log(infoDiv.innerHTML);
         if (infoDiv.innerHTML.toLowerCase().includes("error")) {
-          const regenerateButton = chatgpt.getRegenerateButton();
+          const regenerateButton = chatkit.getRegenerateButton();
           if (regenerateButton) regenerateButton.click();
         }
       }, 3000);
@@ -27,6 +26,7 @@ export default function sendLaterOrForceSend() {
     }
 
     const infoDivClone = getInfoDivClone();
+    if (!infoDivClone) return;
     infoDivClone.innerHTML = "Press enter again in 3 seconds to send";
     waitForSecondEnter = true;
 
@@ -34,7 +34,6 @@ export default function sendLaterOrForceSend() {
     setTimeout(() => {
       waitForSecondEnter = false;
       infoDivClone.innerHTML = "";
-    }
-      , 3000);
+    }, 3000);
   })
 }
