@@ -63,7 +63,7 @@ export function send(message:string) {
 export function waitForIdle() {
   return new Promise<void>(resolve => {
     const interval = setInterval(() => {
-      if (getRegenerateButton()) {
+      if (!getStopGeneratingButton()) {
         clearInterval(interval);
         resolve();
       }
