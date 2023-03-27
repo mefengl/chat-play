@@ -2,6 +2,8 @@
 
 it will include `chat-element`, `chat-status`, `chat-utils`, `chat-action`, and more
 
+it's not started with `chatgpt` prefix, cause it's not only for chatgpt
+
 > may also add another layer for https://platform.openai.com/docs/plugins/introduction , called chat-plugin
 
 ## Usage
