@@ -53,11 +53,17 @@ export function setTextarea(message:string) {
   textarea.dispatchEvent(new Event('input'));
 }
 
+export function click(element: HTMLElement) {
+  element.dispatchEvent(new MouseEvent('mousedown', { bubbles: true }));
+  element.dispatchEvent(new MouseEvent('mouseup', { bubbles: true }));
+  element.dispatchEvent(new MouseEvent('click', { bubbles: true }));
+}
+
 export function send(message:string) {
   setTextarea(message);
   const submitButton = getSubmitButton();
   if (!submitButton) return;
-  submitButton.click();
+  click(submitButton);
 }
 
 export function waitForIdle() {
