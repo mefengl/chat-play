@@ -1,3 +1,6 @@
+<h1>Warning</h1>
+<p>You may not be able to log in, or use ChatGPT due to "high usage demands". Use that script at your own risk.</p>
+
 # ChatGPT Infinite
 
 ChatGPT-Infinite is a UserScript that automates the process of generating questions in the OpenAI chat interface. This script asks ChatGPT to generate a question, and then asks the generated question back to ChatGPT.

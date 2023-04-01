@@ -12,7 +12,7 @@ async function startInfiniteLoop() {
     const question = extractQuestion(lastResponse);
     await chatkit.send(question + "\nanswer above question, and show me one more further question I can ask in the end prefixed with Q:");
     await chatkit.waitForIdle();
-    await sleep(5000);
+    await sleep(10000);
   }
 }
 
