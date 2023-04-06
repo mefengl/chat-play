@@ -1,16 +1,16 @@
+import { chatgpt } from "chatkit";
 import { getInfoDiv, getInfoDivClone } from "../infoDiv";
 import onSend from "../onSend";
-import chatkit from "chatkit";
 
 export default function sendLaterOrForceSend() {
   let waitForSecondEnter = false;
   onSend(async () => {
-    const stopGeneratingButton = chatkit.getStopGeneratingButton();
+    const stopGeneratingButton = chatgpt.getStopGeneratingButton();
     if (!stopGeneratingButton) return;
     if (waitForSecondEnter) {
       waitForSecondEnter = false;
       stopGeneratingButton.click();
-      chatkit.getSubmitButton()?.click();
+      chatgpt.getSubmitButton()?.click();
 
       // check if error
       setTimeout(() => {
@@ -18,7 +18,7 @@ export default function sendLaterOrForceSend() {
         if (!infoDiv) return;
         console.log(infoDiv.innerHTML);
         if (infoDiv.innerHTML.toLowerCase().includes("error")) {
-          const regenerateButton = chatkit.getRegenerateButton();
+          const regenerateButton = chatgpt.getRegenerateButton();
           if (regenerateButton) regenerateButton.click();
         }
       }, 3000);

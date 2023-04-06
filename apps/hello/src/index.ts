@@ -1,4 +1,4 @@
-import chatkit from 'chatkit';
+import { chatgpt } from 'chatkit';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
@@ -8,7 +8,7 @@ async function initialize() {
 async function main() {
   await initialize();
   // Your code here
-  chatkit.send('hello!');
+  chatgpt.send('hello!');
 }
 
 (function () {
