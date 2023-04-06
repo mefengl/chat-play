@@ -1,3 +1,5 @@
+import { chatgpt, bard, bingchat } from "chatkit"
+
 (function () {
   'use strict';
 
@@ -49,64 +51,6 @@
   update_menu();
 
   /* ************************************************************************* */
-  const chatgpt = {
-    getSubmitButton: function () {
-      const form = document.querySelector('form');
-      if (!form) return;
-      const buttons = form.querySelectorAll('button');
-      const result = buttons[buttons.length - 1];
-      return result;
-    },
-    getTextarea: function () {
-      const form = document.querySelector('form');
-      if (!form) return;
-      const textareas = form.querySelectorAll('textarea');
-      const result = textareas[0];
-      return result;
-    },
-    getRegenerateButton: function () {
-      const form = document.querySelector('form');
-      if (!form) return;
-      const buttons = form.querySelectorAll('button');
-      for (let i = 0; i < buttons.length; i++) {
-        const buttonText = buttons[i]?.textContent?.trim().toLowerCase();
-        if (buttonText?.includes('regenerate')) {
-          return buttons[i];
-        }
-      }
-    },
-    getStopGeneratingButton: function () {
-      const form = document.querySelector('form');
-      if (!form) return;
-      const buttons = form.querySelectorAll('button');
-      if (buttons.length === 0) return;
-      for (let i = 0; i < buttons.length; i++) {
-        const buttonText = buttons[i]?.textContent?.trim().toLowerCase();
-        if (buttonText?.includes('stop')) {
-          return buttons[i];
-        }
-      }
-    },
-    send: function (text) {
-      const textarea = this.getTextarea();
-      if (!textarea) return;
-      textarea.value = text;
-      textarea.dispatchEvent(new Event('input', { bubbles: true }));
-      textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
-    },
-    onSend: function (callback) {
-      const textarea = this.getTextarea();
-      if (!textarea) return;
-      textarea.addEventListener("keydown", function (event) {
-        if (event.key === "Enter" && !event.shiftKey) {
-          callback();
-        }
-      });
-      const sendButton = this.getSubmitButton();
-      if (!sendButton) return;
-      sendButton.addEventListener('mousedown', callback);
-    },
-  };
   // ChatGPT send prompt to other ai
   let chatgpt_last_prompt = '';
   $(() => {
@@ -124,10 +68,7 @@
   let last_trigger_time = +new Date();
   $(() => {
     if (location.href.includes("chat.openai")) {
-      console.log("chatgpt add value change listener");
       GM_addValueChangeListener("chatgpt_prompt_texts", (name, old_value, new_value) => {
-        console.log("prompt_texts changed in chatgpt");
-        console.log(new_value);
         if (+new Date() - last_trigger_time < 500) {
           return;
         }
@@ -143,7 +84,6 @@
               firstTime = false;
               const prompt_text = prompt_texts.shift();
               if (prompt_text === chatgpt_last_prompt) { continue; }
-              console.log("chatgpt send prompt_text", prompt_text);
               chatgpt.send(prompt_text);
             }
           }
@@ -154,64 +94,17 @@
   });
 
   /* ************************************************************************* */
-  const bard = {
-    getSubmitButton: function () {
-      return document.querySelector('button[aria-label="Send message"]');
-    },
-    getInputArea: function () {
-      return document.querySelector(".input-area");
-    },
-    getTextarea: function () {
-      const inputArea = this.getInputArea();
-      return inputArea.querySelector('textarea');
-    },
-    getRegenerateButton: function () {
-      return document.querySelector('button[aria-label="Retry"]');
-    },
-    getLastPrompt: function () {
-      const promptElements = document.querySelectorAll('.query-text');
-      const lastPrompt = promptElements[promptElements.length - 1];
-      return lastPrompt;
-    },
-    getLatestPromptText: function () {
-      const lastPrompt = this.getLastPrompt();
-      if (!lastPrompt) return "";
-      const lastPromptText = lastPrompt.textContent;
-      return lastPromptText;
-    },
-    send: function (text) {
-      const textarea = this.getTextarea();
-      textarea.value = text;
-      textarea.dispatchEvent(new Event('input'));
-      const submitButton = this.getSubmitButton();
-      submitButton.click();
-    },
-    onSend: function (callback) {
-      const textarea = this.getTextarea();
-      if (!textarea) return;
-      textarea.addEventListener("keydown", function (event) {
-        if (event.key === "Enter" && !event.shiftKey) {
-          callback();
-        }
-      });
-      const sendButton = this.getSubmitButton();
-      if (!sendButton) return;
-      sendButton.addEventListener('mousedown', callback);
-    },
-  };
   // Bard send prompt to other ai
   let bard_last_prompt = "";
   $(async () => {
     if (menu_all.bard && location.href.includes("bard.google")) {
       while (!bard.getSubmitButton()) { await new Promise(resolve => setTimeout(resolve, 500)); }
       bard.onSend(() => {
-        console.log("bard send");
         const textarea = bard.getTextarea();
         let prompt = textarea.value;
         if (!prompt) {
           prompt = bard.getLatestPromptText();
         }
-        console.log(prompt);
         bard_last_prompt = prompt;
         GM_setValue('chatgpt_prompt_texts', [prompt]);
         GM_setValue('bing_prompt_texts', [prompt]);
@@ -245,93 +138,14 @@
     });
   }
   /* ************************************************************************* */
-  const bing = {
-    getActionBar: function () {
-      return document.querySelector("cib-serp")?.shadowRoot?.querySelector("cib-action-bar")?.shadowRoot;
-    },
-    getSubmitButton: function () {
-      const actionBar = this.getActionBar();
-      if (!actionBar) { return null; }
-      return actionBar.querySelector('button[aria-label="Submit"]');
-    },
-    getTextarea: function () {
-      const actionBar = this.getActionBar();
-      if (!actionBar) { return null; }
-      return actionBar.querySelector('textarea');
-    },
-    getStopGeneratingButton: function () {
-      const actionBar = this.getActionBar();
-      if (!actionBar) { return null; }
-      const stopGeneratingButton = actionBar.querySelector('cib-typing-indicator')?.shadowRoot?.querySelector('button[aria-label="Stop Responding"]');
-      if (!stopGeneratingButton) { return null; }
-      if (stopGeneratingButton.disabled) { return null; }
-      return stopGeneratingButton;
-    },
-    getNewChatButton: function () {
-      const actionBar = this.getActionBar();
-      if (!actionBar) { return null; }
-      return actionBar.querySelector('button[aria-label="New topic"]');
-    },
-    getConversation: function () {
-      return document.querySelector("cib-serp")?.shadowRoot?.querySelector("cib-conversation")?.shadowRoot;
-    },
-    getChatTurns: function () {
-      const conversation = this.getConversation();
-      if (!conversation) { return null; }
-      return Array.from(conversation.querySelectorAll('cib-chat-turn')).map(t => t.shadowRoot);
-    },
-    getLastChatTurn: function () {
-      const chatTurns = this.getChatTurns();
-      if (!chatTurns) { return null; }
-      return chatTurns[chatTurns.length - 1];
-    },
-    getLastResponse: function () {
-      const lastChatTurn = this.getLastChatTurn();
-      if (!lastChatTurn) { return null; }
-      return lastChatTurn.querySelectorAll('cib-message-group')[1]?.shadowRoot;
-    },
-    getLastResponseText: function () {
-      const lastResponse = this.getLastResponse();
-      if (!lastResponse) { return null; }
-      return Array.from(lastResponse.querySelectorAll('cib-message'))
-        .map(m => m.shadowRoot)
-        .find(m => m.querySelector('cib-shared'))
-        .textContent.trim();
-    },
-    send: function (text) {
-      const textarea = this.getTextarea();
-      if (!textarea) { return null; }
-      textarea.value = text;
-      textarea.dispatchEvent(new Event('input'));
-      const submitButton = this.getSubmitButton();
-      if (!submitButton) { return null; }
-      submitButton.click();
-    },
-    onSend: function (callback) {
-      const textarea = this.getTextarea();
-      if (!textarea) return;
-      textarea.addEventListener("keydown", function (event) {
-        if (event.key === "Enter" && !event.shiftKey) {
-          callback();
-        }
-      });
-      const sendButton = this.getSubmitButton();
-      if (!sendButton) return;
-      sendButton.addEventListener('mousedown', callback);
-    }
-  };
   // bing send prompt to other ai
   let bing_last_prompt = "";
   $(async () => {
     if (menu_all.bing && location.href.includes("Bing+AI")) {
-      console.log("bing");
-      while (!bing.getSubmitButton()) { await new Promise(resolve => setTimeout(resolve, 500)); }
-      console.log("get bing submit button");
-      bing.onSend(() => {
-        console.log("bing send");
-        const textarea = bing.getTextarea();
+      while (!bingchat.getSubmitButton()) { await new Promise(resolve => setTimeout(resolve, 500)); }
+      bingchat.onSend(() => {
+        const textarea = bingchat.getTextarea();
         const prompt = textarea.value;
-        console.log(prompt);
         bing_last_prompt = prompt;
         GM_setValue('chatgpt_prompt_texts', [prompt]);
         GM_setValue('bard_prompt_texts', [prompt]);
@@ -353,12 +167,11 @@
           let firstTime = true;
           while (prompt_texts.length > 0) {
             if (!firstTime) { await new Promise(resolve => setTimeout(resolve, 2000)); }
-            if (!firstTime && bing.getStopGeneratingButton() != undefined) { continue; }
+            if (!firstTime && bingchat.getStopGeneratingButton() != undefined) { continue; }
             firstTime = false;
             const prompt_text = prompt_texts.shift();
             if (prompt_text === bing_last_prompt) { continue; }
-            console.log("bing send prompt_text", prompt_text);
-            bing.send(prompt_text);
+            bingchat.send(prompt_text);
           }
         }
       }, 0);
