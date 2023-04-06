@@ -38,6 +38,6 @@ To add support for other AI models, you will need to modify the script and add t
 
 This project is licensed under the MIT License.
 
-Repository link: https://github.com/mefengl/chat-playground
+Respository link: [chat-playground/apps/octopus](https://github.com/mefengl/chat-playground)
 
 Build code repository link: https://github.com/mefengl/chat-octopus (this repo only contains the built code for greasyfork to automatically update the script)
