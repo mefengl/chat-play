@@ -1,0 +1,16 @@
+{
+  "name": "hello",
+  "type": "module",
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "esbuild": "latest",
+    "typescript": "latest",
+    "eslint-config-custom": "workspace:*"
+  },
+  "dependencies": {
+    "chatkit": "workspace:*"
+  }
+}
