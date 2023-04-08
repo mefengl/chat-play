@@ -14,6 +14,7 @@ async function main(): Promise<void> {
 
     // Check if lastResponseElement has only one child
     if (lastResponseElement.childElementCount === 1) {
+      await new Promise<void>(resolve => setTimeout(resolve, 1000));
       await chatgpt.waitForIdle();
       // Duplicate the child
       const duplicatedChild = lastResponseElement.children[0].cloneNode(true) as HTMLElement;

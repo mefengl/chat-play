@@ -2,7 +2,7 @@ const metadata = `
 // ==UserScript==
 // @name         chatgpt twice
 // @namespace    https://github.com/mefengl
-// @version      0.0.4
+// @version      0.0.5
 // @description  ask question twice!
 // @author       mefengl
 // @match        https://chat.openai.com/*
