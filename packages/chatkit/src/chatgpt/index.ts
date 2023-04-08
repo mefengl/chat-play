@@ -60,6 +60,12 @@ export function send(message: string) {
   textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
 }
 
+export function regenerate() {
+  const regenerateButton = getRegenerateButton();
+  if (!regenerateButton) return;
+  regenerateButton.click();
+}
+
 export function onSend(callback: () => void) {
   const textarea = getTextarea();
   if (!textarea) return;
@@ -94,6 +100,7 @@ const chatgpt = {
   getTextareaValue,
   setTextarea,
   send,
+  regenerate,
   onSend,
   waitForIdle,
 };
