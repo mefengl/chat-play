@@ -1,3 +1,5 @@
+import { chatgpt } from "chatkit"
+
 (function () {
   'use strict';
 
@@ -214,60 +216,30 @@
 
   /* ************************************************************************* */
   // ChatGPT response to prompt_texts
-  const get_submit_button = () => {
-    const form = document.querySelector('form');
-    const buttons = form.querySelectorAll('button');
-    const result = buttons[buttons.length - 1]; // by textContent maybe better
-    return result;
-  };
-  const get_textarea = () => {
-    const form = document.querySelector('form');
-    const textareas = form.querySelectorAll('textarea');
-    const result = textareas[0];
-    return result;
-  };
-  const get_regenerate_button = () => {
-    const form = document.querySelector('form');
-    const buttons = form.querySelectorAll('button');
-    for (let i = 0; i < buttons.length; i++) {
-      const buttonText = buttons[i].textContent.trim().toLowerCase();
-      if (buttonText.includes('regenerate')) {
-        return buttons[i];
-      }
-    }
-  };
-
   let last_trigger_time = +new Date();
   $(() => {
     if (location.href.includes("chat.openai")) {
-      console.log("ChatGPT");
       GM_addValueChangeListener("prompt_texts", (name, old_value, new_value) => {
         if (+new Date() - last_trigger_time < 500) {
           return;
         }
-        last_trigger_time = new Date();
+        last_trigger_time = +new Date();
         setTimeout(async () => {
-          console.log("ChatGPT页面响应prompt_texts");
           const prompt_texts = new_value;
-          console.log(prompt_texts);
           if (prompt_texts.length > 0) {
-            console.log("进入处理");
             // get prompt_texts from local
             let firstTime = true;
             while (prompt_texts.length > 0) {
               if (!firstTime) {
                 await new Promise(resolve => setTimeout(resolve, 2000));
               }
-              if (!firstTime && get_regenerate_button() == undefined) {
+              if (!firstTime && chatgpt.getRegenerateButton() == undefined) {
                 continue;
               }
               firstTime = false;
               const prompt_text = prompt_texts.shift();
-              console.log(prompt_text);
-              // write the prompt_text
-              get_textarea().value = prompt_text;
               // submit
-              get_submit_button().click();
+              chatgpt.send(prompt_text);
             }
           }
         }, 0);
