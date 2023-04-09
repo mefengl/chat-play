@@ -8,7 +8,7 @@ it's not started with `chatgpt` prefix, cause it's not only for chatgpt
 
 ## Usage
 
-the best way to use these packages is to use [chatgpt-tampermonkey-starter](https://github.com/mefengl/chatgpt-tampermonkey-starter)
+the best way to use these packages is to use [chat-start](https://github.com/mefengl/chat-start).
 
 you can also install it via npm, but I don't publish it yet
 
