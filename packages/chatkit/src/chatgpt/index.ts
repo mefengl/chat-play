@@ -77,10 +77,14 @@ export function onSend(callback: () => void) {
   sendButton.addEventListener('mousedown', callback);
 }
 
+export function isGenerating() {
+  return getSubmitButton()?.firstElementChild?.childElementCount === 3;
+}
+
 export function waitForIdle() {
   return new Promise<void>(resolve => {
     const interval = setInterval(() => {
-      if (!getStopGeneratingButton()) {
+      if (!isGenerating()) {
         clearInterval(interval);
         resolve();
       }
@@ -100,6 +104,7 @@ const chatgpt = {
   send,
   regenerate,
   onSend,
+  isGenerating,
   waitForIdle,
 };
 

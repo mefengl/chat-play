@@ -6,9 +6,7 @@ This userscript is designed to make ChatGPT generate two responses to every ques
 
 ## Features
 
-- Automatically sends the same question twice to ChatGPT
-- Displays both generated answers on the same page
-- Works on OpenAI's ChatGPT website
+- Automatically regenerate responses
 
 ## Installation
 
