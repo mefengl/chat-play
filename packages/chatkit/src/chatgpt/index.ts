@@ -7,11 +7,9 @@ export function getTextarea() {
 };
 
 export function getSubmitButton() {
-  const form = document.querySelector('form');
-  if (!form) return;
-  const buttons = form.querySelectorAll('button');
-  const result = buttons[buttons.length - 1];
-  return result;
+  const textarea = getTextarea();
+  if (!textarea) return;
+  return textarea.nextElementSibling;
 };
 
 export function getRegenerateButton() {
@@ -79,10 +77,14 @@ export function onSend(callback: () => void) {
   sendButton.addEventListener('mousedown', callback);
 }
 
+export function isGenerating() {
+  return getSubmitButton()?.firstElementChild?.childElementCount === 3;
+}
+
 export function waitForIdle() {
   return new Promise<void>(resolve => {
     const interval = setInterval(() => {
-      if (!getStopGeneratingButton()) {
+      if (!isGenerating()) {
         clearInterval(interval);
         resolve();
       }
@@ -102,6 +104,7 @@ const chatgpt = {
   send,
   regenerate,
   onSend,
+  isGenerating,
   waitForIdle,
 };
 
