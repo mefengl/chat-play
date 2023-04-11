@@ -39,6 +39,25 @@ export function getChatTurns(): ShadowRoot[] | null {
   return Array.from(conversation.querySelectorAll('cib-chat-turn')).map(t => t.shadowRoot) as ShadowRoot[];
 }
 
+export function getSuggestionBar(): ShadowRoot | null {
+  const conversation = getConversation();
+  if (!conversation) { return null; }
+  return conversation.querySelector('cib-suggestion-bar')?.shadowRoot || null;
+}
+
+export function getSuggestionBarButtons(): HTMLElement[] {
+  const suggestionBar = getSuggestionBar();
+  if (!suggestionBar) { return []; }
+  const suggestionItems = Array.from(suggestionBar.querySelectorAll('cib-suggestion-item'));
+  return suggestionItems.map(i => i.shadowRoot?.querySelector('button') as HTMLElement);
+}
+
+export function getRegenerateButton(): HTMLElement | null {
+  const suggestionBarButtons = getSuggestionBarButtons();
+  if (!suggestionBarButtons.length) { return null; }
+  return suggestionBarButtons[0];
+}
+
 export function getLastChatTurn(): ShadowRoot | null {
   const chatTurns = getChatTurns();
   if (!chatTurns) { return null; }
