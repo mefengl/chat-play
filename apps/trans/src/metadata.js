@@ -1,7 +1,7 @@
 const metadata = `
 // ==UserScript==
 // @name         chatgpt-trans
-// @description
+// @description  let ChatGPT translate the web page you are reading in one click
 // @author       mefengl
 // @version      0.0.9
 // @namespace    https://github.com/mefengl
