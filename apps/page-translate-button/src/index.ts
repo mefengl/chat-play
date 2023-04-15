@@ -1,6 +1,8 @@
+import { chatgpt } from 'chatkit';
 import createButton from './createButton';
 import getParagraphs from './getParagraphs';
-import setListener from './setListener';
+
+declare function GM_setValue(name: string, value: any): void;
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
@@ -11,7 +13,7 @@ async function main() {
   await initialize();
   const key = 'prompt_texts';
   // ChatGPT response to prompt_texts
-  setListener(key);
+  chatgpt.setListener(key);
 
   const translateWeb = async () => {
     const paragraphs = getParagraphs();
