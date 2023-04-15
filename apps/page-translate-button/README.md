@@ -23,6 +23,10 @@ When you visit a webpage with the userscript installed, you'll see a "Translate 
 
 Contributions are welcome! Please feel free to submit issues or pull requests to improve this userscript.
 
+## Credits
+
+This userscript uses the [Mozilla Readability](https://github.com/mozilla/readability) library to extract content from webpages.
+
 ## License
 
 This project is licensed under the MIT License.
