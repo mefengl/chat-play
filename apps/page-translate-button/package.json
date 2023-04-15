@@ -1,5 +1,5 @@
 {
-  "name": "trans",
+  "name": "page-translate-button",
   "type": "module",
   "scripts": {
     "build": "node esbuild.config.js",

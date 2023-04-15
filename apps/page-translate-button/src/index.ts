@@ -1,5 +1,6 @@
 import { chatgpt } from 'chatkit';
-import SimpleArticleSegmentation from './SimpleArticleSegmentation';
+import createButton from './createButton';
+import getParagraphs from './getParagraphs';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
@@ -8,30 +9,14 @@ async function initialize() {
 
 async function main() {
   await initialize();
-  // Wait for the DOM to load before using Readability
-  try {
-    let docClone: Document = document.cloneNode(true) as Document;
-    let article: Readability.Article | null = new Readability(docClone).parse();
-
-    if (article && article.textContent) {
-      console.log("Extracted text content using Readability.js:");
-
-      const segmenter: SimpleArticleSegmentation = new SimpleArticleSegmentation(article.textContent);
-      const paragraphs: string[] = segmenter.segment();
-
-      console.log("Segmented text content:");
-      console.log(paragraphs);
-
-      const prompt_texts: string[] = paragraphs.map((paragraph: string) => {
-        return `${paragraph}\ntranslate above paragraph to Chinese:`;
-      });
-      GM_setValue("prompt_texts", prompt_texts);
-    } else {
-      console.warn("Readability.js could not extract any text content from this page.");
-    }
-  } catch (error) {
-    console.error("An error occurred while using Readability.js:", error);
-  }
+  const translateWeb = async () => {
+    const paragraphs = getParagraphs();
+    const prompt_texts: string[] = paragraphs.map((paragraph: string) => {
+      return `${paragraph}\ntranslate above paragraph to Chinese:`;
+    });
+    GM_setValue("prompt_texts", prompt_texts);
+  };
+  createButton(translateWeb);
   /* ************************************************************************* */
   // ChatGPT response to prompt_texts
   let last_trigger_time = +new Date();

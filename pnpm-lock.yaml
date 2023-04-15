@@ -78,7 +78,7 @@ importers:
         specifier: latest
         version: 5.0.4
 
-  apps/sensible:
+  apps/page-translate-button:
     dependencies:
       chatkit:
         specifier: workspace:*
@@ -94,7 +94,7 @@ importers:
         specifier: latest
         version: 5.0.4
 
-  apps/trans:
+  apps/sensible:
     dependencies:
       chatkit:
         specifier: workspace:*

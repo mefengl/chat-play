@@ -1,9 +1,9 @@
 const metadata = `
 // ==UserScript==
-// @name         chatgpt-trans
-// @description  let ChatGPT translate the web page you are reading in one click
+// @name         chatgpt-page-translate-button
+// @description  🍓 let ChatGPT translate the web page you are reading in one click
 // @author       mefengl
-// @version      0.0.9
+// @version      0.1.1
 // @namespace    https://github.com/mefengl
 // @require      https://cdn.jsdelivr.net/npm/moz-readability@0.2.1/Readability.min.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openai.com
