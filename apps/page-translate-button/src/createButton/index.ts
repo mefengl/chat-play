@@ -21,6 +21,7 @@ function createButton(callback: () => void) {
   button.style.padding = "10px 16px";
   button.style.fontSize = "18px";
   button.style.cursor = "pointer";
+  button.style.transition = "right 0.3s";
   document.body.appendChild(button);
 
   // hover to show, and hide when not hover
