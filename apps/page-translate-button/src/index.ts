@@ -18,7 +18,7 @@ async function main() {
   const translateWeb = async () => {
     const paragraphs = getParagraphs();
     const prompt_texts: string[] = paragraphs.map((paragraph: string) => {
-      return `${paragraph}\ntranslate above paragraph to Chinese:`;
+      return `${paragraph}\ntranslate above paragraph to Chinese with compact and intuitive format:`;
     });
     GM_setValue(key, prompt_texts);
   };
