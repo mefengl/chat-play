@@ -1,0 +1,10 @@
+repo:
+- '*'
+
+package:
+- packages/*
+- packages/**/*
+
+app:
+- apps/*
+- apps/**/*
