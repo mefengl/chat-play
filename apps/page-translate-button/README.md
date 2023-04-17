@@ -30,3 +30,7 @@ This userscript uses the [Mozilla Readability](https://github.com/mozilla/readab
 ## License
 
 This project is licensed under the MIT License.
+
+Respository link: [chat-play/apps/page-translate-button](https://github.com/mefengl/chat-play)
+
+Build code repository link: https://github.com/mefengl/chatgpt-page-translate-button (this repo only contains the built code for greasyfork to automatically update the script)
