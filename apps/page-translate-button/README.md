@@ -25,7 +25,7 @@ Contributions are welcome! Please feel free to submit issues or pull requests to
 
 ## Credits
 
-This userscript uses the [Mozilla Readability](https://github.com/mozilla/readability) library to extract content from webpages.
+- [Mozilla Readability](https://github.com/mozilla/readability): uses it to extract content from webpages, license: [LICENSES/mozilla-readability.md](LICENSES/mozilla-readability.md)
 
 ## License
 

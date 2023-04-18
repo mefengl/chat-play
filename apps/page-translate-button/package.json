@@ -7,8 +7,8 @@
   },
   "devDependencies": {
     "esbuild": "latest",
-    "typescript": "latest",
-    "eslint-config-custom": "workspace:*"
+    "eslint-config-custom": "workspace:*",
+    "typescript": "latest"
   },
   "dependencies": {
     "chatkit": "workspace:*"
