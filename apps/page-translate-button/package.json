@@ -8,7 +8,9 @@
   "devDependencies": {
     "esbuild": "latest",
     "eslint-config-custom": "workspace:*",
-    "typescript": "latest"
+    "typescript": "latest",
+    "tsconfig": "workspace:*",
+    "@types/tampermonkey": "latest"
   },
   "dependencies": {
     "chatkit": "workspace:*"

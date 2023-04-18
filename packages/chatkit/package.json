@@ -21,7 +21,8 @@
     "eslint-config-custom": "workspace:*",
     "tsup": "latest",
     "typescript": "latest",
-    "tsconfig": "workspace:*"
+    "tsconfig": "workspace:*",
+    "@types/tampermonkey": "latest"
   },
   "publishConfig": {
     "access": "public"
