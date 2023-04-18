@@ -92,13 +92,7 @@ function waitForIdle() {
   });
 }
 
-declare function GM_setValue(name: string, value: any): void;
-declare function GM_addValueChangeListener(
-  name: string,
-  listener: (name: string, oldValue: any, newValue: any, remote: boolean) => void
-): number;
-
-function setListener(key: string = "prompt_texts") {
+function setPromptListener(key: string = 'prompt_texts') {
   let last_trigger_time = +new Date();
   if (location.href.includes("chat.openai")) {
     GM_addValueChangeListener(key, async (name: string, old_value: string[], new_value: string[]) => {
@@ -180,7 +174,7 @@ const chatgpt = {
   onSend,
   isGenerating,
   waitForIdle,
-  setListener,
+  setPromptListener,
   getConversation,
   getModelSelectButton,
   isConversationStarted,
