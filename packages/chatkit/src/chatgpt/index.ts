@@ -1,4 +1,4 @@
-export function getTextarea() {
+function getTextarea() {
   const form = document.querySelector('form');
   if (!form) return;
   const textareas = form.querySelectorAll('textarea');
@@ -6,13 +6,13 @@ export function getTextarea() {
   return result;
 };
 
-export function getSubmitButton() {
+function getSubmitButton() {
   const textarea = getTextarea();
   if (!textarea) return;
   return textarea.nextElementSibling;
 };
 
-export function getRegenerateButton() {
+function getRegenerateButton() {
   const form = document.querySelector('form');
   if (!form) return;
   const buttons = form.querySelectorAll('button');
@@ -20,7 +20,7 @@ export function getRegenerateButton() {
   return result;
 };
 
-export function getStopGeneratingButton() {
+function getStopGeneratingButton() {
   const form = document.querySelector('form');
   if (!form) return;
   const buttons = form.querySelectorAll('button');
@@ -28,43 +28,43 @@ export function getStopGeneratingButton() {
   return result;
 };
 
-export function getLastResponseElement() {
+function getLastResponseElement() {
   const responseElements = document.querySelectorAll('.group.w-full');
   return responseElements[responseElements.length - 1];
 };
 
-export function getLastResponse() {
+function getLastResponse() {
   const lastResponseElement = getLastResponseElement();
   if (!lastResponseElement) return;
   const lastResponse = lastResponseElement.textContent;
   return lastResponse;
 };
 
-export function getTextareaValue() {
+function getTextareaValue() {
   return getTextarea()?.value || '';
 }
 
-export function setTextarea(message: string) {
+function setTextarea(message: string) {
   const textarea = getTextarea();
   if (!textarea) return;
   textarea.value = message;
   textarea.dispatchEvent(new Event('input'));
 }
 
-export function send(message: string) {
+function send(message: string) {
   setTextarea(message);
   const textarea = getTextarea();
   if (!textarea) return;
   textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
 }
 
-export function regenerate() {
+function regenerate() {
   const regenerateButton = getRegenerateButton();
   if (!regenerateButton) return;
   regenerateButton.click();
 }
 
-export function onSend(callback: () => void) {
+function onSend(callback: () => void) {
   const textarea = getTextarea();
   if (!textarea) return;
   textarea.addEventListener('keydown', function (event) {
@@ -77,11 +77,11 @@ export function onSend(callback: () => void) {
   sendButton.addEventListener('mousedown', callback);
 }
 
-export function isGenerating() {
+function isGenerating() {
   return getSubmitButton()?.firstElementChild?.childElementCount === 3;
 }
 
-export function waitForIdle() {
+function waitForIdle() {
   return new Promise<void>(resolve => {
     const interval = setInterval(() => {
       if (!isGenerating()) {
@@ -98,7 +98,7 @@ declare function GM_addValueChangeListener(
   listener: (name: string, oldValue: any, newValue: any, remote: boolean) => void
 ): number;
 
-export function setListener(key: string = "prompt_texts") {
+function setListener(key: string = "prompt_texts") {
   let last_trigger_time = +new Date();
   if (location.href.includes("chat.openai")) {
     GM_addValueChangeListener(key, async (name: string, old_value: string[], new_value: string[]) => {
@@ -126,6 +126,46 @@ export function setListener(key: string = "prompt_texts") {
   }
 }
 
+function getConversation(): HTMLElement | undefined {
+  return document.querySelector('div[class^="react-scroll-to-bottom"]')?.firstChild?.firstChild as HTMLElement;
+}
+
+function getModelSelectButton(): HTMLElement | undefined {
+  const conversation = getConversation();
+  if (!conversation) return;
+  return Array.from(conversation.querySelectorAll('button'))
+    .find(button => button.textContent?.trim().toLowerCase().includes('model'));
+}
+
+function isConversationStarted() {
+  return !getModelSelectButton();
+}
+
+function setPureConversation() {
+  const conversation = getConversation();
+  if (!conversation) return;
+  const firstChild = conversation.firstChild;
+  if (!firstChild) return;
+  const newDiv = document.createElement('div');
+  conversation.insertBefore(newDiv, firstChild.nextSibling);
+}
+
+function isHorizontalConversation() {
+  const conversation = getConversation();
+  if (!conversation) return true;
+  if (!isConversationStarted()) return true;
+  return conversation.classList.contains("grid");
+}
+
+function setHorizontalConversation() {
+  if (isHorizontalConversation()) return;
+  setPureConversation();
+  const conversation = getConversation();
+  if (!conversation) return;
+  conversation.classList.remove("flex", "flex-col", "items-center");
+  conversation.classList.add("grid", "grid-cols-2", "place-items-center");
+}
+
 const chatgpt = {
   getTextarea,
   getSubmitButton,
@@ -141,6 +181,12 @@ const chatgpt = {
   isGenerating,
   waitForIdle,
   setListener,
+  getConversation,
+  getModelSelectButton,
+  isConversationStarted,
+  setPureConversation,
+  isHorizontalConversation,
+  setHorizontalConversation,
 };
 
 export default chatgpt;
