@@ -6,13 +6,13 @@ function getTextarea() {
   return result;
 };
 
-function getSubmitButton() {
+export function getSubmitButton() {
   const textarea = getTextarea();
   if (!textarea) return;
   return textarea.nextElementSibling;
 };
 
-function getRegenerateButton() {
+export function getRegenerateButton() {
   const form = document.querySelector('form');
   if (!form) return;
   const buttons = form.querySelectorAll('button');
@@ -20,7 +20,7 @@ function getRegenerateButton() {
   return result;
 };
 
-function getStopGeneratingButton() {
+export function getStopGeneratingButton() {
   const form = document.querySelector('form');
   if (!form) return;
   const buttons = form.querySelectorAll('button');
@@ -28,43 +28,43 @@ function getStopGeneratingButton() {
   return result;
 };
 
-function getLastResponseElement() {
+export function getLastResponseElement() {
   const responseElements = document.querySelectorAll('.group.w-full');
   return responseElements[responseElements.length - 1];
 };
 
-function getLastResponse() {
+export function getLastResponse() {
   const lastResponseElement = getLastResponseElement();
   if (!lastResponseElement) return;
   const lastResponse = lastResponseElement.textContent;
   return lastResponse;
 };
 
-function getTextareaValue() {
+export function getTextareaValue() {
   return getTextarea()?.value || '';
 }
 
-function setTextarea(message: string) {
+export function setTextarea(message: string) {
   const textarea = getTextarea();
   if (!textarea) return;
   textarea.value = message;
   textarea.dispatchEvent(new Event('input'));
 }
 
-function send(message: string) {
+export function send(message: string) {
   setTextarea(message);
   const textarea = getTextarea();
   if (!textarea) return;
   textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
 }
 
-function regenerate() {
+export function regenerate() {
   const regenerateButton = getRegenerateButton();
   if (!regenerateButton) return;
   regenerateButton.click();
 }
 
-function onSend(callback: () => void) {
+export function onSend(callback: () => void) {
   const textarea = getTextarea();
   if (!textarea) return;
   textarea.addEventListener('keydown', function (event) {
@@ -77,11 +77,11 @@ function onSend(callback: () => void) {
   sendButton.addEventListener('mousedown', callback);
 }
 
-function isGenerating() {
+export function isGenerating() {
   return getSubmitButton()?.firstElementChild?.childElementCount === 3;
 }
 
-function waitForIdle() {
+export function waitForIdle() {
   return new Promise<void>(resolve => {
     const interval = setInterval(() => {
       if (!isGenerating()) {
@@ -92,7 +92,7 @@ function waitForIdle() {
   });
 }
 
-function setPromptListener(key: string = 'prompt_texts') {
+export function setPromptListener(key: string = 'prompt_texts') {
   let last_trigger_time = +new Date();
   if (location.href.includes("chat.openai")) {
     GM_addValueChangeListener(key, async (name: string, old_value: string[], new_value: string[]) => {
@@ -103,15 +103,13 @@ function setPromptListener(key: string = 'prompt_texts') {
       setTimeout(async () => {
         const prompt_texts = new_value;
         if (prompt_texts.length > 0) {
-          // get prompt_texts from local
           let firstTime = true;
           while (prompt_texts.length > 0) {
             if (!firstTime) { await new Promise(resolve => setTimeout(resolve, 2000)); }
-            if (!firstTime && chatgpt.isGenerating()) { continue; }
+            if (!firstTime && isGenerating()) { continue; }
             firstTime = false;
             const prompt_text = prompt_texts.shift() || '';
-            // submit
-            chatgpt.send(prompt_text);
+            send(prompt_text);
           }
         }
       }, 0);
@@ -120,22 +118,22 @@ function setPromptListener(key: string = 'prompt_texts') {
   }
 }
 
-function getConversation(): HTMLElement | undefined {
+export function getConversation(): HTMLElement | undefined {
   return document.querySelector('div[class^="react-scroll-to-bottom"]')?.firstChild?.firstChild as HTMLElement;
 }
 
-function getModelSelectButton(): HTMLElement | undefined {
+export function getModelSelectButton(): HTMLElement | undefined {
   const conversation = getConversation();
   if (!conversation) return;
   return Array.from(conversation.querySelectorAll('button'))
     .find(button => button.textContent?.trim().toLowerCase().includes('model'));
 }
 
-function isConversationStarted() {
+export function isConversationStarted() {
   return !getModelSelectButton();
 }
 
-function setPureConversation() {
+export function setPureConversation() {
   const conversation = getConversation();
   if (!conversation) return;
   const firstChild = conversation.firstChild;
@@ -144,14 +142,14 @@ function setPureConversation() {
   conversation.insertBefore(newDiv, firstChild.nextSibling);
 }
 
-function isHorizontalConversation() {
+export function isHorizontalConversation() {
   const conversation = getConversation();
   if (!conversation) return true;
   if (!isConversationStarted()) return true;
   return conversation.classList.contains("grid");
 }
 
-function setHorizontalConversation() {
+export function setHorizontalConversation() {
   if (isHorizontalConversation()) return;
   setPureConversation();
   const conversation = getConversation();
@@ -159,28 +157,3 @@ function setHorizontalConversation() {
   conversation.classList.remove("flex", "flex-col", "items-center");
   conversation.classList.add("grid", "grid-cols-2", "place-items-center");
 }
-
-const chatgpt = {
-  getTextarea,
-  getSubmitButton,
-  getRegenerateButton,
-  getStopGeneratingButton,
-  getLastResponseElement,
-  getLastResponse,
-  getTextareaValue,
-  setTextarea,
-  send,
-  regenerate,
-  onSend,
-  isGenerating,
-  waitForIdle,
-  setPromptListener,
-  getConversation,
-  getModelSelectButton,
-  isConversationStarted,
-  setPureConversation,
-  isHorizontalConversation,
-  setHorizontalConversation,
-};
-
-export default chatgpt;
