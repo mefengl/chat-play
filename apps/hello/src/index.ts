@@ -1,4 +1,5 @@
 import { chatgpt } from 'chatkit';
+import { send } from 'chatkit/chatgpt'
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
@@ -8,7 +9,9 @@ async function initialize() {
 async function main() {
   await initialize();
   // Your code here
-  chatgpt.send('hello!');
+  chatgpt.send('hello');
+  await chatgpt.waitForIdle();
+  send('hello from selctive import!');
 }
 
 (function () {

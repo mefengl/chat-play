@@ -1,4 +1,4 @@
-import { chatgpt, bard, bingchat } from "chatkit"
+import { chatgpt, bard, bing } from "chatkit"
 
 (function () {
   'use strict';
@@ -57,6 +57,7 @@ import { chatgpt, bard, bingchat } from "chatkit"
     if (menu_all.openai && location.href.includes("chat.openai")) {
       chatgpt.onSend(() => {
         const textarea = chatgpt.getTextarea();
+        if (!textarea) { return; }
         const prompt = textarea.value;
         chatgpt_last_prompt = prompt;
         GM_setValue('bard_prompt_texts', [prompt]);
@@ -101,6 +102,7 @@ import { chatgpt, bard, bingchat } from "chatkit"
       while (!bard.getSubmitButton()) { await new Promise(resolve => setTimeout(resolve, 500)); }
       bard.onSend(() => {
         const textarea = bard.getTextarea();
+        if (!textarea) { return; }
         let prompt = textarea.value;
         if (!prompt) {
           prompt = bard.getLatestPromptText();
@@ -142,9 +144,10 @@ import { chatgpt, bard, bingchat } from "chatkit"
   let bing_last_prompt = "";
   $(async () => {
     if (menu_all.bing && location.href.includes("Bing+AI")) {
-      while (!bingchat.getSubmitButton()) { await new Promise(resolve => setTimeout(resolve, 500)); }
-      bingchat.onSend(() => {
-        const textarea = bingchat.getTextarea();
+      while (!bing.getSubmitButton()) { await new Promise(resolve => setTimeout(resolve, 500)); }
+      bing.onSend(() => {
+        const textarea = bing.getTextarea();
+        if (!textarea) { return; }
         const prompt = textarea.value;
         bing_last_prompt = prompt;
         GM_setValue('chatgpt_prompt_texts', [prompt]);
@@ -159,7 +162,7 @@ import { chatgpt, bard, bingchat } from "chatkit"
       if (+new Date() - last_trigger_time_bing < 500) {
         return;
       }
-      last_trigger_time_bing = new Date();
+      last_trigger_time_bing = + new Date();
       setTimeout(async () => {
         const prompt_texts = new_value;
         if (prompt_texts.length > 0) {
@@ -167,11 +170,11 @@ import { chatgpt, bard, bingchat } from "chatkit"
           let firstTime = true;
           while (prompt_texts.length > 0) {
             if (!firstTime) { await new Promise(resolve => setTimeout(resolve, 2000)); }
-            if (!firstTime && bingchat.getStopGeneratingButton() != undefined) { continue; }
+            if (!firstTime && bing.getStopGeneratingButton() != undefined) { continue; }
             firstTime = false;
             const prompt_text = prompt_texts.shift();
             if (prompt_text === bing_last_prompt) { continue; }
-            bingchat.send(prompt_text);
+            bing.send(prompt_text);
           }
         }
       }, 0);

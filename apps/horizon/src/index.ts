@@ -1,4 +1,4 @@
-import { chatgpt } from 'chatkit';
+import { isHorizontalConversation, setHorizontalConversation } from 'chatkit/chatgpt';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
@@ -9,8 +9,8 @@ async function main() {
   await initialize();
 
   const checkAndUpdateConversation = () => {
-    if (!chatgpt.isHorizontalConversation()) {
-      chatgpt.setHorizontalConversation();
+    if (!isHorizontalConversation()) {
+      setHorizontalConversation();
     }
   };
 

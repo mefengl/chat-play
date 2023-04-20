@@ -1,4 +1,4 @@
-function getTextarea() {
+export function getTextarea() {
   const form = document.querySelector('form');
   if (!form) return;
   const textareas = form.querySelectorAll('textarea');

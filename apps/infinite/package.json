@@ -8,6 +8,7 @@
   "devDependencies": {
     "esbuild": "latest",
     "typescript": "latest",
+    "tsconfig": "workspace:*",
     "eslint-config-custom": "workspace:*"
   },
   "dependencies": {

@@ -4,7 +4,7 @@ const end = '// ==/UserScript==';
 const base = `
 // @name         chat-octopus
 // @namespace    https://github.com/mefengl
-// @version      0.2.12
+// @version      0.2.13
 // @description  🐙 let octopus send multiple messages for you
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openai.com
 // @author       mefengl

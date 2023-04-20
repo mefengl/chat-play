@@ -1,4 +1,4 @@
-import { chatgpt } from "chatkit"
+import { getRegenerateButton, send } from 'chatkit/chatgpt';
 
 (function () {
   'use strict';
@@ -233,13 +233,12 @@ import { chatgpt } from "chatkit"
               if (!firstTime) {
                 await new Promise(resolve => setTimeout(resolve, 2000));
               }
-              if (!firstTime && chatgpt.getRegenerateButton() == undefined) {
+              if (!firstTime && getRegenerateButton() == undefined) {
                 continue;
               }
               firstTime = false;
               const prompt_text = prompt_texts.shift();
-              // submit
-              chatgpt.send(prompt_text);
+              send(prompt_text);
             }
           }
         }, 0);

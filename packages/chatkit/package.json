@@ -1,18 +1,24 @@
 {
   "name": "chatkit",
   "author": "mefengl",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "sideEffects": false,
   "license": "MIT",
   "files": [
-    "dist/**"
+    "dist",
+    "chatgpt.js",
+    "chatgpt.d.ts",
+    "bing.js",
+    "bing.d.ts",
+    "bard.js",
+    "bard.d.ts"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "build": "tsup src/index.ts src/chatgpt/index.ts src/bing/index.ts src/bard/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts src/chatgpt/index.ts src/bing/index.ts src/bard/index.ts --format esm,cjs --dts --watch",
     "lint": "eslint \"src/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },

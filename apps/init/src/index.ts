@@ -1,4 +1,4 @@
-import { chatgpt } from 'chatkit';
+import { isConversationStarted, send } from 'chatkit/chatgpt';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
@@ -28,10 +28,10 @@ async function main() {
   await initialize();
 
   try {
-    if (chatgpt.isConversationStarted()) { return; }
+    if (isConversationStarted()) { return; }
     const url = 'https://pastebin.com/raw/TR3fNcGa';
     const text = await fetchTextFromUrl(url);
-    chatgpt.send(text);
+    send(text);
   } catch (error) {
     console.error('Failed to fetch the text:', error);
   }

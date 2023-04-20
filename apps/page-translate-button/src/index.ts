@@ -1,4 +1,4 @@
-import { chatgpt } from 'chatkit';
+import { setPromptListener } from 'chatkit/chatgpt';
 import createButton from './createButton';
 import getParagraphs from './getParagraphs';
 import MenuManager from './MenuManger';
@@ -19,8 +19,7 @@ async function main() {
   const chatLanguage = menuManager.getMenuValue("chat_language");
 
   const key = 'prompt_texts';
-  // ChatGPT response to prompt_texts
-  chatgpt.setPromptListener(key);
+  setPromptListener(key);
 
   const translateWeb = async () => {
     const paragraphs = getParagraphs();

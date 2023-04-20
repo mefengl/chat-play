@@ -1,17 +1,17 @@
-import { chatgpt } from 'chatkit';
 import askForLanguage from '../askForLanguage';
+import { send, waitForIdle, getLastResponse } from 'chatkit/chatgpt';
 
 async function startInfiniteLoop() {
   const language = await askForLanguage();
   if (!language) return;
-  chatgpt.send(`you can only answer question in ${language} language`);
-  await chatgpt.waitForIdle();
-  
+  send(`you can only answer question in ${language} language`);
+  await waitForIdle();
+
   while (true) {
-    const lastResponse = chatgpt.getLastResponse();
+    const lastResponse = getLastResponse();
     const question = extractQuestion(lastResponse);
-    await chatgpt.send(question + "\nanswer above question, and show me one more further question I can ask in the end prefixed with Q:");
-    await chatgpt.waitForIdle();
+    await send(question + "\nanswer above question, and show me one more further question I can ask in the end prefixed with Q:");
+    await waitForIdle();
     await sleep(10000);
   }
 }

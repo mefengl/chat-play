@@ -1,8 +1,7 @@
-import onSend from "../onSend";
-import { chatgpt } from "chatkit";
+import { getTextareaValue, onSend } from "chatkit/chatgpt";
 
 export default function autoCopyWhenSend() {
   onSend(() => {
-    navigator.clipboard.writeText(chatgpt.getTextareaValue());
+    navigator.clipboard.writeText(getTextareaValue());
   });
 }
