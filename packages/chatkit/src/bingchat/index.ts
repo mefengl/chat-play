@@ -101,20 +101,3 @@ export function onSend(callback: () => void): void {
   if (!sendButton) return;
   sendButton.addEventListener('mousedown', callback);
 }
-
-const bingchat = {
-  getActionBar,
-  getSubmitButton,
-  getTextarea,
-  getStopGeneratingButton,
-  getNewChatButton,
-  getConversation,
-  getChatTurns,
-  getLastChatTurn,
-  getLastResponse,
-  getLastResponseText,
-  send,
-  onSend,
-};
-
-export default bingchat;

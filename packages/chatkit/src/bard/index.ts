@@ -50,16 +50,3 @@ export function onSend(callback: () => void): void {
   if (!sendButton) return;
   sendButton.addEventListener('mousedown', callback);
 }
-
-const bard = {
-  getSubmitButton,
-  getInputArea,
-  getTextarea,
-  getRegenerateButton,
-  getLastPrompt,
-  getLatestPromptText,
-  send,
-  onSend,
-};
-
-export default bard;
