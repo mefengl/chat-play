@@ -12,7 +12,7 @@
 
 The default language for translation in the script is the browser's local language. If you need to change it, please click on Tampermonkey menu to make corresponding modifications.
 
-When you visit a webpage with the userscript installed, you'll see a Translate button at the topright corner of the page. Click the button to send the text from the webpage to ChatGPT for translation. The translated text will be displayed on the ChatGPT web interface.
+When you visit a webpage with the userscript installed, you'll see a Translate button at the topright corner of the page. Click the button to send the text from the webpage to ChatGPT for translation. **The translated text will be displayed on the ChatGPT web interface**.
 
 ## Contributing
 
