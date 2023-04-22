@@ -1,8 +1,12 @@
 # Chat-Octopus
 
-[![AI Friendly](https://img.shields.io/badge/AI-Friendly-pink?style=for-the-badge)](https://github.com/mefengl/made-by-ai)
-[![AI Assisted Maybe](https://img.shields.io/badge/AI%20Assisted-Maybe-yellow?style=for-the-badge)](https://github.com/mefengl/made-by-ai)
-[![Commit Messages by AI](https://img.shields.io/badge/Commit%20Messages%20by-AI-green?style=for-the-badge)](https://github.com/mefengl/made-by-ai)
+[![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
+[![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
+
+[![Daily downloads](https://img.shields.io/greasyfork/dd/462713)](https://greasyfork.org/zh-CN/scripts/462713-chat-octopus/stats)
+[![Total downloads](https://img.shields.io/greasyfork/dt/462713)](https://greasyfork.org/zh-CN/scripts/462713-chat-octopus/stats)
+
+[![License](https://img.shields.io/greasyfork/l/462713?color=&label=License)](https://opensource.org/licenses/MIT)
 
 Chat-Octopus is a userscript that enables you to automatically send messages between multiple AI language models, such as OpenAI's ChatGPT, Google's Bard, Microsoft Bing, and even more.
 

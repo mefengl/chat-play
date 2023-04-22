@@ -1,5 +1,14 @@
 # chatgpt-page-translate-button
 
+[![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
+[![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
+
+[![Daily downloads](https://img.shields.io/greasyfork/dd/464067)](https://greasyfork.org/zh-CN/scripts/464067-chatgpt-page-translate-button/stats)
+[![Total downloads](https://img.shields.io/greasyfork/dt/464067)](https://greasyfork.org/zh-CN/scripts/464067-chatgpt-page-translate-button/stats)
+
+[![License](https://img.shields.io/greasyfork/l/464067?color=&label=License)](https://opensource.org/licenses/MIT)
+
+
 🍓 let ChatGPT translate the web page you are reading in one click
 
 ## Installation

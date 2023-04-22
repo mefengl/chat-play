@@ -10,6 +10,7 @@ const base = `
 // @author       mefengl
 // @match        https://chat.openai.com/*
 // @grant        none
+// @license      MIT
 `;
 
 const i18n = `
