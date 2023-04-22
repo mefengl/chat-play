@@ -1,5 +1,13 @@
 # ChatGPT Twice
 
+[![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
+[![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
+
+[![Daily downloads](https://img.shields.io/greasyfork/dd/463688)](https://greasyfork.org/zh-CN/scripts/463688-chatgpt-twice/stats)
+[![Total downloads](https://img.shields.io/greasyfork/dt/463688)](https://greasyfork.org/zh-CN/scripts/463688-chatgpt-twice/stats)
+
+[![License](https://img.shields.io/greasyfork/l/463688?color=&label=License)](https://opensource.org/licenses/MIT)
+
 This userscript is designed to make ChatGPT generate two responses to every question, providing more variety in the answers.
 
 ## Features

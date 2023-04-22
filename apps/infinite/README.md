@@ -3,6 +3,14 @@
 
 # ChatGPT Infinite
 
+[![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
+[![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
+
+[![Daily downloads](https://img.shields.io/greasyfork/dd/462407)](https://greasyfork.org/zh-CN/scripts/462407-chatgpt-infinite/stats)
+[![Total downloads](https://img.shields.io/greasyfork/dt/462407)](https://greasyfork.org/zh-CN/scripts/462407-chatgpt-infinite/stats)
+
+[![License](https://img.shields.io/greasyfork/l/462407?color=&label=License)](https://opensource.org/licenses/MIT)
+
 ChatGPT-Infinite is a UserScript that automates the process of generating questions in the OpenAI chat interface. This script asks ChatGPT to generate a question, and then asks the generated question back to ChatGPT.
 
 ## Stop
