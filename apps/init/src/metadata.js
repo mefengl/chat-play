@@ -2,7 +2,7 @@ const metadata = `
 // ==UserScript==
 // @name chatgpt-init
 // @namespace https://github.com/mefengl
-// @version 0.1.0
+// @version ${process.env.npm_package_version}
 // @description Init ChatGPT with prompt from internet
 // @author mefengl
 // @match https://chat.openai.com/*

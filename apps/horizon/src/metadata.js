@@ -5,7 +5,7 @@ const base = `
 // @name         chatgpt-horizon
 // @description  Horizontal the conversation in ChatGPT
 // @author       mefengl
-// @version      0.2.0
+// @version      ${process.env.npm_package_version}
 // @namespace    https://github.com/mefengl
 // @require
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openai.com

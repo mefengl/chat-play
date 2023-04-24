@@ -1,6 +1,8 @@
 {
   "name": "doozy",
   "type": "module",
+  "version": "0.8.0",
+  "private": true,
   "scripts": {
     "build": "node esbuild.config.js",
     "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"

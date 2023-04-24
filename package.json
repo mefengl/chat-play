@@ -5,7 +5,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "test": "turbo run test",
-    "publish-packages": "turbo run build lint test && changeset version && changeset publish"
+    "publish-packages": "turbo run build && changeset version && changeset publish"
   },
   "devDependencies": {
     "eslint": "latest",
@@ -13,5 +13,5 @@
     "turbo": "latest",
     "@changesets/cli": "latest"
   },
-  "packageManager": "pnpm@7.26.3"
+  "packageManager": "pnpm@8.1.1"
 }

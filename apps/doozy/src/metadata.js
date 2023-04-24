@@ -4,7 +4,7 @@ const end = '// ==/UserScript==';
 const base = `
 // @name         Doozy
 // @namespace    https://github.com/mefengl
-// @version      0.8.0
+// @version      ${process.env.npm_package_version}
 // @description  A wonderful day spent with ChatGPT
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openai.com
 // @author       mefengl
