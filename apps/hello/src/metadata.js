@@ -2,7 +2,7 @@ const metadata = `
 // ==UserScript==
 // @name chatgpt-hello
 // @namespace https://github.com/mefengl
-// @version 0.0.0
+// @version ${process.env.npm_package_version}
 // @description A template for userscript use chat-kit
 // @author chat-kit
 // @match https://chat.openai.com/*

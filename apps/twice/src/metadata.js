@@ -4,7 +4,7 @@ const end = '// ==/UserScript==';
 const base = `
 // @name         chatgpt twice
 // @namespace    https://github.com/mefengl
-// @version      0.1.0
+// @version      ${process.env.npm_package_version}
 // @description  ask question twice!
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openai.com
 // @author       mefengl

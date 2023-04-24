@@ -1,5 +1,5 @@
 {
-  "name": "chatkit",
+  "name": "@mefengl/chatkit",
   "author": "mefengl",
   "version": "0.1.0",
   "main": "./dist/index.js",
@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "build": "tsup src/index.ts src/chatgpt/index.ts src/bing/index.ts src/bard/index.ts --format esm,cjs --dts",
-    "dev": "tsup src/index.ts src/chatgpt/index.ts src/bing/index.ts src/bard/index.ts --format esm,cjs --dts --watch",
+    "dev": "npm run build -- --watch",
     "lint": "eslint \"src/**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },

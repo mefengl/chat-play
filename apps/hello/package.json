@@ -1,6 +1,8 @@
 {
   "name": "hello",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "build": "node esbuild.config.js",
     "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"

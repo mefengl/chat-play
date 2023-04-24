@@ -1,6 +1,8 @@
 {
   "name": "octopus",
   "type": "module",
+  "version": "0.2.13",
+  "private": true,
   "scripts": {
     "build": "node esbuild.config.js",
     "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
