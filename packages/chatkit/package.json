@@ -1,7 +1,23 @@
 {
   "name": "@mefengl/chatkit",
+  "version": "0.1.5",
+  "description": "A toolkit provide useful functions for chatbot development.",
+  "keywords": [
+    "chatgpt",
+    "bing",
+    "bard",
+    "tampermonkey"
+  ],
+  "homepage": "https://github.com/mefengl/chat-play/tree/main/packages/chatkit#readme",
+  "bugs": {
+    "url": "https://github.com/mefengl/chat-play/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mefengl/chat-play.git",
+    "directory": "packages/chatkit"
+  },
   "author": "mefengl",
-  "version": "0.1.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
