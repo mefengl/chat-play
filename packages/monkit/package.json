@@ -1,0 +1,43 @@
+{
+  "name": "@mefengl/monkit",
+  "version": "0.0.2",
+  "description": "A toolkit provide useful functions for tampermonkey scripts development.",
+  "keywords": [
+    "tampermonkey"
+  ],
+  "homepage": "https://github.com/mefengl/chat-play/tree/main/packages/monkit#readme",
+  "bugs": {
+    "url": "https://github.com/mefengl/chat-play/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mefengl/chat-play.git",
+    "directory": "packages/monkit"
+  },
+  "author": "mefengl",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "npm run build -- --watch",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-custom": "workspace:*",
+    "tsup": "latest",
+    "typescript": "latest",
+    "tsconfig": "workspace:*",
+    "@types/tampermonkey": "latest"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
