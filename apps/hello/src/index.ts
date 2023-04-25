@@ -1,5 +1,5 @@
-import { chatgpt } from 'chatkit';
-import { send } from 'chatkit/chatgpt'
+import { chatgpt } from '@mefengl/chatkit';
+import { send } from '@mefengl/chatkit/chatgpt'
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));

@@ -1,4 +1,4 @@
-import { setPromptListener } from 'chatkit/chatgpt';
+import { setPromptListener } from '@mefengl/chatkit/chatgpt';
 import createButton from './createButton';
 import getParagraphs from './getParagraphs';
 import MenuManager from './MenuManger';

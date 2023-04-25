@@ -1,4 +1,4 @@
-import { getRegenerateButton, send } from 'chatkit/chatgpt';
+import { getRegenerateButton, send } from '@mefengl/chatkit/chatgpt';
 
 (function () {
   'use strict';

@@ -1,4 +1,4 @@
-import { waitForIdle, getLastResponseElement, regenerate } from 'chatkit/chatgpt';
+import { waitForIdle, getLastResponseElement, regenerate } from '@mefengl/chatkit/chatgpt';
 
 async function initialize(): Promise<void> {
   await new Promise<void>(resolve => window.addEventListener('load', resolve));
