@@ -44,4 +44,4 @@ This project is licensed under the MIT License.
 
 Respository link: [chat-play/apps/octopus](https://github.com/mefengl/chat-play)
 
-Build code repository link: https://github.com/mefengl/chat-octopus (this repo only contains the built code for greasyfork to automatically update the script)
+Build code repository link: https://github.com/mefengl/chat-scripts (this repo only contains the built code for greasyfork to automatically update the script)
