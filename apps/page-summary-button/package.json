@@ -1,0 +1,21 @@
+{
+  "name": "page-summary-button",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "esbuild": "latest",
+    "eslint-config-custom": "workspace:*",
+    "typescript": "latest",
+    "tsconfig": "workspace:*",
+    "@types/tampermonkey": "latest"
+  },
+  "dependencies": {
+    "@mefengl/chatkit": "workspace:*",
+    "@mefengl/monkit": "workspace:*"
+  }
+}
