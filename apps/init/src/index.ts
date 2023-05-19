@@ -1,4 +1,4 @@
-import { isConversationStarted, send } from '@mefengl/chatkit/chatgpt';
+import { isConversationStarted, send } from 'chatkit/chatgpt';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));

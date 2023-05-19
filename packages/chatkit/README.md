@@ -13,7 +13,7 @@ the best way to use these packages is to use [chat-start](https://github.com/mef
 you can also install it via npm(or any other package manager):
 
 ```shell
-npm i @mefengl/chatkit
+npm i chatkit
 ```
 
 Oh, document? We need a document. But I haven't written it yet.

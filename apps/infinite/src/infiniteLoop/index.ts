@@ -1,5 +1,5 @@
 import askForLanguage from '../askForLanguage';
-import { send, waitForIdle, getLastResponse } from '@mefengl/chatkit/chatgpt';
+import { send, waitForIdle, getLastResponse } from 'chatkit/chatgpt';
 
 async function startInfiniteLoop() {
   const language = await askForLanguage();

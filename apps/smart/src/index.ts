@@ -1,4 +1,4 @@
-import { onSend, getTextareaValue, setTextarea } from '@mefengl/chatkit/chatgpt';
+import { onSend, getTextareaValue, setTextarea } from 'chatkit/chatgpt';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));

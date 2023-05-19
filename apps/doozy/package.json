@@ -1,7 +1,7 @@
 {
   "name": "doozy",
   "type": "module",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js",
@@ -15,6 +15,6 @@
     "@types/tampermonkey": "latest"
   },
   "dependencies": {
-    "@mefengl/chatkit": "workspace:*"
+    "chatkit": "workspace:*"
   }
 }

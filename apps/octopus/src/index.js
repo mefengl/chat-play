@@ -1,4 +1,4 @@
-import { chatgpt, bard, bing } from "@mefengl/chatkit"
+import { chatgpt, bard, bing } from "chatkit"
 
 (function () {
   'use strict';

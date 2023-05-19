@@ -1,4 +1,4 @@
-import { isHorizontalConversation, setHorizontalConversation } from '@mefengl/chatkit/chatgpt';
+import { isHorizontalConversation, setHorizontalConversation } from 'chatkit/chatgpt';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
