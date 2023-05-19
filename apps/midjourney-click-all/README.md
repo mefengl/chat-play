@@ -1,5 +1,13 @@
 # midjourney-click-all 🚀
 
+[![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
+[![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
+
+[![Daily downloads](https://img.shields.io/greasyfork/dd/466654)](https://greasyfork.org/scripts/466654/stats)
+[![Total downloads](https://img.shields.io/greasyfork/dt/466654)](https://greasyfork.org/scripts/466654/stats)
+
+[![License](https://img.shields.io/greasyfork/l/466654?color=&label=License)](https://opensource.org/licenses/MIT)
+
 Hello, lovely people! 👋🎉 Welcome to the repository for the `midjourney-click-all` userscript. Ever found yourself in the middle of a journey on Discord and wished for a simpler way to engage with the platform? This script has got you covered! It introduces an 'ALL' button that, once clicked, triggers all buttons in a row instantly. A true timesaver, isn't it? 🚀👀
 
 ## 📖 Notes
