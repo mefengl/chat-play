@@ -44,6 +44,14 @@ export function getRegenerateButton() {
   return result;
 };
 
+export function getContinueGeneratingButton() {
+  const form = document.querySelector('form');
+  if (!form) return;
+  const buttons = form.querySelectorAll('button');
+  const result = Array.from(buttons).find(button => button.textContent?.trim().toLowerCase().includes('continue generating'));
+  return result;
+};
+
 export function getStopGeneratingButton() {
   const form = document.querySelector('form');
   if (!form) return;
