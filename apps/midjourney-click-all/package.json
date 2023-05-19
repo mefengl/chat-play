@@ -1,0 +1,19 @@
+{
+  "name": "midjourney-click-all",
+  "type": "module",
+  "version": "0.0.4",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "esbuild": "latest",
+    "typescript": "latest",
+    "tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*"
+  },
+  "dependencies": {
+    "midkit": "workspace:*"
+  }
+}

@@ -118,6 +118,25 @@ importers:
         specifier: latest
         version: 5.0.4
 
+  apps/midjourney-click-all:
+    dependencies:
+      midkit:
+        specifier: workspace:*
+        version: link:../../packages/midkit
+    devDependencies:
+      esbuild:
+        specifier: latest
+        version: 0.17.19
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      typescript:
+        specifier: latest
+        version: 5.0.4
+
   apps/octopus:
     dependencies:
       chatkit:
@@ -270,6 +289,27 @@ importers:
       eslint-config-turbo:
         specifier: latest
         version: 1.9.4(eslint@8.40.0)
+
+  packages/midkit:
+    devDependencies:
+      '@types/tampermonkey':
+        specifier: latest
+        version: 4.0.10
+      eslint:
+        specifier: latest
+        version: 8.40.0
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../tsconfig
+      tsup:
+        specifier: latest
+        version: 6.7.0(typescript@5.0.4)
+      typescript:
+        specifier: latest
+        version: 5.0.4
 
   packages/monkit:
     devDependencies:
