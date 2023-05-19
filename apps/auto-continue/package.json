@@ -1,0 +1,19 @@
+{
+  "name": "chatgpt-auto-continue",
+  "type": "module",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "esbuild": "latest",
+    "typescript": "latest",
+    "tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*"
+  },
+  "dependencies": {
+    "chatkit": "workspace:*"
+  }
+}

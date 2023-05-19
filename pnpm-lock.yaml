@@ -17,6 +17,25 @@ importers:
         specifier: latest
         version: 1.9.8
 
+  apps/auto-continue:
+    dependencies:
+      chatkit:
+        specifier: workspace:*
+        version: link:../../packages/chatkit
+    devDependencies:
+      esbuild:
+        specifier: latest
+        version: 0.17.19
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      typescript:
+        specifier: latest
+        version: 5.0.4
+
   apps/doozy:
     dependencies:
       chatkit:
