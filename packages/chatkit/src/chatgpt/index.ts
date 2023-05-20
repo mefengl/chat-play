@@ -161,6 +161,14 @@ export function getModelSelectButton(): HTMLElement | undefined {
     .find(button => button.textContent?.trim().toLowerCase().includes('model'));
 }
 
+export function getNewModelSelectButtons(): HTMLElement[] {
+  return Array.from(document.querySelectorAll("[class^='group/button']"))
+}
+
+export function hasNewModelSelectButtons(): boolean {
+  return getNewModelSelectButtons().length > 0;
+}
+
 export function isConversationStarted() {
   return !getModelSelectButton();
 }
