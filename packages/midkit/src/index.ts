@@ -81,8 +81,8 @@ export async function midjourneyBotInstalled(): Promise<boolean> {
   return !!getMidjourneyButtonInUseAppsMenu();
 }
 
-export function getButtonContainers(): Element[] {
-  return Array.from(document.querySelectorAll("[id^='message-accessorie'] [class^='children']"));
+export function getButtonContainers(container: Element = document.body,): Element[] {
+  return Array.from(container.querySelectorAll("[id^='message-accessorie'] [class^='children']"));
 }
 
 const CLONE_BUTTON_CLASS = 'cloned-button';
@@ -115,7 +115,7 @@ export function isSubmitting(): boolean {
 export async function checkSubmitStatus(): Promise<never> {
   while (true) {
     await sleep(100);
-    console.log(isSubmitting()? 'Submitting...' : 'Ready');
+    console.log(isSubmitting() ? 'Submitting...' : 'Ready');
   }
 }
 
@@ -191,4 +191,23 @@ export async function smartClickAllButtons(temp: Element): Promise<void> {
   } else {
     await clickAllButtonsWithConfirm(temp);
   }
+}
+
+export function getScrollerInner(): HTMLElement | null {
+  return document.querySelector("[data-list-id='chat-messages']");
+}
+
+export function onScrollerInnerChange(callback: (node: Element) => void): MutationObserver | null {
+  let observer = new MutationObserver(mutations => {
+    for (let mutation of mutations) {
+      for (let node of Array.from(mutation.addedNodes)) {
+        if (node.nodeName.toLowerCase() === 'li' && node instanceof Element)
+          callback(node);
+      }
+    }
+  });
+  const scrollerInner = getScrollerInner();
+  if (!scrollerInner) return null;
+  observer.observe(scrollerInner, { childList: true });
+  return observer;
 }
