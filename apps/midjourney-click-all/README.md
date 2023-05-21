@@ -12,7 +12,7 @@ Hello, lovely people! 👋🎉 Welcome to the repository for the `midjourney-cli
 
 ## 📖 Notes
 
-This script has just been released! Currently, it can only add an ALL button to existing button containers, but don't worry, it will become more powerful over time. So go ahead and give it a try! 🤠
+This script has just been released! It will become more powerful over time. So go ahead and give it a try! 🤠
 
 ## 📝 Script Description 
 
