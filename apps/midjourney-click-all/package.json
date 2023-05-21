@@ -1,7 +1,7 @@
 {
   "name": "midjourney-click-all",
   "type": "module",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js",

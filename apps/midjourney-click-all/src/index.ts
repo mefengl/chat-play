@@ -27,8 +27,11 @@ function addClickAllButton(root: Element | undefined) {
 async function main() {
   await initialize();
   addClickAllButton(undefined);
-  onUrlChange(() => addClickAllButton(undefined));
   onScrollerInnerChange(addClickAllButton);
+  onUrlChange(() => {
+    addClickAllButton(undefined);
+    onScrollerInnerChange(addClickAllButton);
+  });
 }
 
 (function () {

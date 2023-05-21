@@ -1,5 +1,11 @@
 # midjourney-click-all
 
+## 0.2.1
+
+### Patch Changes
+
+- fix: relisten scroller inner change on url change
+
 ## 0.2.0
 
 ### Minor Changes
