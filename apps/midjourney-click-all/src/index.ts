@@ -6,7 +6,7 @@ import {
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
-  await new Promise(resolve => setTimeout(resolve, 10000));
+  await new Promise(resolve => setTimeout(resolve, 6000));
 }
 
 async function main() {
