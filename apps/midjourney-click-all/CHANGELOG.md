@@ -1,5 +1,16 @@
 # midjourney-click-all
 
+## 0.2.0
+
+### Minor Changes
+
+- feat: add click all button when url change
+
+### Patch Changes
+
+- Updated dependencies
+  - @mefengl/monkit@0.0.4
+
 ## 0.1.0
 
 ### Minor Changes

@@ -1,3 +1,4 @@
+import { onUrlChange } from '@mefengl/monkit';
 import {
   getButtonContainers,
   getButtons,
@@ -26,6 +27,7 @@ function addClickAllButton(root: Element | undefined) {
 async function main() {
   await initialize();
   addClickAllButton(undefined);
+  onUrlChange(() => addClickAllButton(undefined));
   onScrollerInnerChange(addClickAllButton);
 }
 

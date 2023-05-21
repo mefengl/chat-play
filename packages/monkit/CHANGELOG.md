@@ -1,5 +1,11 @@
 # @mefengl/monkit
 
+## 0.0.4
+
+### Patch Changes
+
+- feat: add onUrlChange function
+
 ## 0.0.2
 
 ### Patch Changes
