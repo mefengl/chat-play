@@ -1,5 +1,11 @@
 # sensible
 
+## 0.7.1
+
+### Patch Changes
+
+- feat: remove the warring before inputbox
+
 ## 0.7.0
 
 ### Minor Changes

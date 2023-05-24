@@ -13,4 +13,5 @@ async function main() {
 (function () {
   main();
   document.querySelector("a.underline[href$='release-notes']")?.parentElement?.remove();
+  document.querySelector('form')?.previousElementSibling?.remove();
 }());
