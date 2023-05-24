@@ -1,5 +1,11 @@
 # sensible
 
+## 0.7.0
+
+### Minor Changes
+
+- feat: hide the warring at the bottom
+
 ## 0.6.3
 
 ### Patch Changes
