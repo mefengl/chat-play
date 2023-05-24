@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/greasyfork/l/460863?color=&label=License)](https://opensource.org/licenses/MIT)
 
 - [x] copy my message to clipboard when send it
-- [x] hide the warrings around the inputbox
+- [x] hide the warring at the bottom
 
 > 📝 GitHub: [chat-play/apps/sensible](https://github.com/mefengl/chat-play)
 
