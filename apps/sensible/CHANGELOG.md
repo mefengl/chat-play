@@ -1,5 +1,11 @@
 # sensible
 
+## 0.7.2
+
+### Patch Changes
+
+- fix: add both remove code into async main
+
 ## 0.7.1
 
 ### Patch Changes
