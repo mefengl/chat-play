@@ -2,6 +2,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
 [![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
+[![Twitter Follow](https://img.shields.io/twitter/follow/mefengl?style=social)](https://twitter.com/mefengl)
 
 [![Daily downloads](https://img.shields.io/greasyfork/dd/466322)](https://greasyfork.org/zh-CN/scripts/466322-chatgpt-page-summary-button/stats)
 [![Total downloads](https://img.shields.io/greasyfork/dt/466322)](https://greasyfork.org/zh-CN/scripts/466322-chatgpt-page-summary-button/stats)
