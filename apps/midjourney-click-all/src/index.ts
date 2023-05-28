@@ -24,13 +24,30 @@ function addClickAllButton(root: Element | undefined) {
   }
 }
 
+function addClickAllButtonWithCheck(root: Element | undefined) {
+  if (!root?.querySelector('.cloned-button'))
+    addClickAllButton(root);
+}
+
+async function checkClickAllButtonFiveTimes(root: Element | undefined) {
+  for (let i = 0; i < 5; i++) {
+    await new Promise(resolve => setTimeout(resolve, 3000));
+    addClickAllButtonWithCheck(root);
+  }
+}
+
+async function addClickAllButtonWithCheckFiveTimes(root: Element | undefined) {
+  addClickAllButton(root);
+  await checkClickAllButtonFiveTimes(root);
+}
+
 async function main() {
   await initialize();
   addClickAllButton(undefined);
-  onScrollerInnerChange(addClickAllButton);
+  onScrollerInnerChange(addClickAllButtonWithCheckFiveTimes);
   onUrlChange(() => {
     addClickAllButton(undefined);
-    onScrollerInnerChange(addClickAllButton);
+    onScrollerInnerChange(addClickAllButtonWithCheckFiveTimes);
   });
 }
 

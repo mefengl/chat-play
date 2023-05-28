@@ -1,5 +1,11 @@
 # midjourney-click-all
 
+## 0.3.0
+
+### Minor Changes
+
+- fix: now it also work to the buttons that are not immediately visible
+
 ## 0.2.1
 
 ### Patch Changes
