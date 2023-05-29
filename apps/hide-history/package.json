@@ -1,0 +1,20 @@
+{
+  "name": "hide-history",
+  "type": "module",
+  "version": "0.2.3",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "esbuild": "latest",
+    "typescript": "latest",
+    "tsconfig": "workspace:*",
+    "eslint-config-custom": "workspace:*",
+    "@types/tampermonkey": "latest"
+  },
+  "dependencies": {
+    "chatkit": "workspace:*"
+  }
+}
