@@ -8,7 +8,13 @@
 
 [![License](https://img.shields.io/greasyfork/l/467416?color=&label=License)](https://opensource.org/licenses/MIT)
 
-This UserScript allows you to selectively hide chat history in the sidebar on the OpenAI Chat platform. The options available include "Today", "Yesterday", "Previous 7 Days", and "Previous 30 Days". You can easily toggle which timeframes you'd like to be hidden.
+<img src="https://pub-a57c0ab473094e398e91626882bd3cb6.r2.dev/chatgpt-hide-history/chatgpt-hide-history-showcase.png" width="350">
+
+This UserScript allows you to selectively hide chat history in the sidebar on the OpenAI Chat platform. The options available include "Today", "Yesterday", "Previous 7 Days", and "Previous 30 Days".
+
+You can easily toggle which timeframes you'd like to be hidden:
+
+<img src="https://pub-a57c0ab473094e398e91626882bd3cb6.r2.dev/chatgpt-hide-history/chatgpt-hide-history-menu.png" width="200">
 
 ## Usage 🛠️
 
