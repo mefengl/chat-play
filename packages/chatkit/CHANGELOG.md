@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.2.0
+
+### Minor Changes
+
+- 1eb7f31: feat: add functions about historyblocks
+
 ## 0.1.8
 
 ### Patch Changes

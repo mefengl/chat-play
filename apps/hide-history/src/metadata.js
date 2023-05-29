@@ -19,7 +19,7 @@ const base = `
 const i18n = `
 // @name:en      chatgpt-hide-history
 // @description:en 🙈 Seletively hide chat history in sidebar such as "Today", "Yesterday", "Previous 7 Days", etc.
-// @name:zh-CN   隐藏聊天历史
+// @name:zh-CN   chatgpt-隐藏聊天历史
 // @description:zh-CN 🙈 选择性地隐藏边栏中的聊天历史，如 "今天"，"昨天"，"前7天" 等等.
 // @name:es      ocultar-historial-chatgpt
 // @description:es 🙈 Ocultar selectivamente el historial de chat en la barra lateral como "Hoy", "Ayer", "Últimos 7 días", etc.
