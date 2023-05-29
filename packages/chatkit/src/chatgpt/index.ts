@@ -22,6 +22,35 @@ https://github.com/chatgptjs/chatgpt.js/pull/21
 This comment will be deleted after the report process is completed.
  */
 
+export function getNav(): HTMLElement | null {
+  return document.querySelector('nav');
+}
+
+export function getHistoryBlocks(): HTMLElement[] | [] {
+  const nav = getNav();
+  if (!nav) return [];
+  const result = Array.from(nav.querySelectorAll('ol')).map(ol => ol.parentElement as HTMLElement);
+  return result;
+}
+
+export function getHistoryBlockTitle(historyBlock: HTMLElement): string {
+  return historyBlock.querySelector('h3')?.textContent || '';
+}
+
+interface HistoryBlock {
+  block: HTMLElement;
+  title: string;
+}
+
+export function getHistoryBlocksWithTitle(): HistoryBlock[] | [] {
+  const historyBlocks = getHistoryBlocks();
+  const result = historyBlocks.map(historyBlock => ({
+    block: historyBlock,
+    title: getHistoryBlockTitle(historyBlock),
+  }));
+  return result;
+}
+
 export function getTextarea() {
   const form = document.querySelector('form');
   if (!form) return;
