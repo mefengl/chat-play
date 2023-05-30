@@ -1,5 +1,11 @@
 # hide-history
 
+## 0.2.5
+
+### Patch Changes
+
+- fix: use setinterval to prevent nav refresh
+
 ## 0.2.4
 
 ### Patch Changes

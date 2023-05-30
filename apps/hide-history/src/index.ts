@@ -32,9 +32,11 @@ async function main() {
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
 
-  getHistoryBlocksWithTitle()
-    .filter(block => hideMap[block.title])
-    .forEach(historyBlock => historyBlock.block.style.display = 'none');
+  setInterval(() => {
+    getHistoryBlocksWithTitle()
+      .filter(block => hideMap[block.title])
+      .forEach(historyBlock => historyBlock.block.style.display = 'none');
+  }, 1000);
 }
 
 (function () {
