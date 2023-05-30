@@ -219,6 +219,31 @@ importers:
         specifier: latest
         version: 5.0.4
 
+  apps/page-anki-button:
+    dependencies:
+      '@mefengl/monkit':
+        specifier: workspace:*
+        version: link:../../packages/monkit
+      chatkit:
+        specifier: workspace:*
+        version: link:../../packages/chatkit
+    devDependencies:
+      '@types/tampermonkey':
+        specifier: latest
+        version: 4.0.10
+      esbuild:
+        specifier: latest
+        version: 0.17.19
+      eslint-config-custom:
+        specifier: workspace:*
+        version: link:../../packages/eslint-config-custom
+      tsconfig:
+        specifier: workspace:*
+        version: link:../../packages/tsconfig
+      typescript:
+        specifier: latest
+        version: 5.0.4
+
   apps/page-summary-button:
     dependencies:
       '@mefengl/monkit':

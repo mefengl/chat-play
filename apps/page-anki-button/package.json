@@ -1,0 +1,21 @@
+{
+  "name": "page-anki-button",
+  "type": "module",
+  "version": "0.0.3",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "esbuild": "latest",
+    "eslint-config-custom": "workspace:*",
+    "typescript": "latest",
+    "tsconfig": "workspace:*",
+    "@types/tampermonkey": "latest"
+  },
+  "dependencies": {
+    "chatkit": "workspace:*",
+    "@mefengl/monkit": "workspace:*"
+  }
+}
