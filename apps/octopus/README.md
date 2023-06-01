@@ -9,13 +9,12 @@
 
 [![License](https://img.shields.io/greasyfork/l/462713?color=&label=License)](https://opensource.org/licenses/MIT)
 
-Chat-Octopus is a userscript that enables you to automatically send messages between multiple AI language models, such as OpenAI's ChatGPT, Google's Bard, Microsoft Bing, and even more.
+Chat-Octopus is a userscript that enables you to send message to multiple AI language models, such as OpenAI's ChatGPT, Google's Bard, Microsoft Bing, and even more.
 
 ## Features
 
-- Automatically send messages between multiple AI language models (e.g., ChatGPT, Bard, Bing, etc.)
+- Send message to multiple AI language models (e.g., ChatGPT, Bard, Bing, etc.)
 - Customizable script settings through the userscript manager's menu
-- Synchronized message sending and receiving
 
 ## Installation
 
