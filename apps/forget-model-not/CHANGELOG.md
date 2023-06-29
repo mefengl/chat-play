@@ -1,5 +1,11 @@
 # chatgpt-forget-model-not
 
+## 0.0.7
+
+### Patch Changes
+
+- doc: update the title's emoji~
+
 ## 0.0.6
 
 ### Patch Changes
