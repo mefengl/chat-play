@@ -55,6 +55,9 @@ async function main() {
 
   const defaultModelIndex = useLocalStorage('defaultModelIndex', '1');
 
+  while(!hasNewModelSelectButtons()) {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
   getNewModelSelectButtons().forEach((button, index) =>
     button.addEventListener('click', () => {
       defaultModelIndex.value = index;

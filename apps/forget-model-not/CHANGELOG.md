@@ -1,5 +1,11 @@
 # chatgpt-forget-model-not
 
+## 0.0.4
+
+### Patch Changes
+
+- fix: make the click event listener more stable
+
 ## 0.0.3
 
 ### Patch Changes
