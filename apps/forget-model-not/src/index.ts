@@ -48,27 +48,27 @@ async function main() {
 
   function update_menu() {
     updateMenuCommand("always_gpt4", "Always GPT4: ", true);
-
     GM_setValue("menu_id", menu_id);
   }
   update_menu();
 
   const defaultModelIndex = useLocalStorage('defaultModelIndex', '1');
 
-  while(!hasNewModelSelectButtons()) {
-    await new Promise(resolve => setTimeout(resolve, 1000));
-  }
-  getNewModelSelectButtons().forEach((button, index) =>
-    button.addEventListener('click', () => {
-      defaultModelIndex.value = index;
-    })
-  );
-
   setInterval(async () => {
-    hasNewModelSelectButtons() &&
+    if (hasNewModelSelectButtons()) {
       getNewModelSelectButtons()[
         menu_all.always_gpt4 ? 1 : defaultModelIndex.value
       ].click();
+    }
+
+    getNewModelSelectButtons().forEach((button, index) => {
+      if (button.getAttribute('listener') !== 'true') {
+        button.setAttribute('listener', 'true');
+        button.addEventListener('click', () => {
+          defaultModelIndex.value = index;
+        });
+      }
+    });
   }, 1000);
 }
 

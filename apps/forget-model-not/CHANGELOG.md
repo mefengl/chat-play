@@ -1,5 +1,11 @@
 # chatgpt-forget-model-not
 
+## 0.0.5
+
+### Patch Changes
+
+- fix: more stable event listener adder
+
 ## 0.0.4
 
 ### Patch Changes
