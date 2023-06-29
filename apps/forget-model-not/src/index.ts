@@ -61,7 +61,6 @@ async function main() {
   getNewModelSelectButtons().forEach((button, index) =>
     button.addEventListener('click', () => {
       defaultModelIndex.value = index;
-      console.log(`defaultModelIndex: ${defaultModelIndex.value}`);
     })
   );
 
