@@ -9,7 +9,7 @@
 
 [![License](https://img.shields.io/greasyfork/l/469753?color=&label=License)](https://opensource.org/licenses/MIT)
 
-## Remember Last Model
+## See you again~
 
 The script remember the last selected model, your choice is remembered even after closing the tab or browser. 
 

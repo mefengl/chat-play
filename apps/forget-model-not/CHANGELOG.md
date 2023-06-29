@@ -1,5 +1,11 @@
 # chatgpt-forget-model-not
 
+## 0.0.8
+
+### Patch Changes
+
+- doc: romantic description
+
 ## 0.0.7
 
 ### Patch Changes

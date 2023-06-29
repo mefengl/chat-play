@@ -3,7 +3,7 @@ const end = '// ==/UserScript==';
 
 const base = `
 // @name         ChatGPT Forget-Model-Not 🌺
-// @description  🔄 Automatically select the last model used when it appears in ChatGPT!
+// @description  See you again~
 // @author       mefengl
 // @version      ${process.env.npm_package_version}
 // @namespace    https://github.com/mefengl
@@ -18,25 +18,25 @@ const base = `
 
 const i18n = `
 // @name:en      ChatGPT Forget-Model-Not 🌺
-// @description:en 🔄 Automatically select the last model used when it appears in ChatGPT!
+// @description:en See you again~
 // @name:zh-CN   ChatGPT 勿忘模型 🌺
-// @description:zh-CN 🔄 当上次使用的模型在 ChatGPT 中出现时，自动选择！
+// @description:zh-CN 再见~
 // @name:es      ChatGPT Olvida-Modelo-No 🌺
-// @description:es 🔄 ¡Selecciona automáticamente el último modelo utilizado cuando aparece en ChatGPT!
+// @description:es Hasta luego~
 // @name:hi      ChatGPT मॉडल-न-भूलो 🌺
-// @description:hi 🔄 ChatGPT में पिछले मॉडल का उपयोग करने के दिखने पर स्वचालित रूप से चुनें!
+// @description:hi फिर मिलेंगे~
 // @name:ar      ChatGPT نموذج-لا-تنسى 🌺
-// @description:ar 🔄 حدد النموذج الأخير المستخدم تلقائياً عندما يظهر في ChatGPT!
+// @description:ar أراك لاحقا~
 // @name:pt      ChatGPT Esquece-Modelo-Não 🌺
-// @description:pt 🔄 Selecione automaticamente o último modelo usado quando ele aparecer no ChatGPT!
+// @description:pt Até mais~
 // @name:ru      ChatGPT Не Забывай Модель 🌺
-// @description:ru 🔄 Автоматически выбирает последнюю использованную модель, когда она появляется в ChatGPT!
+// @description:ru Увидимся~
 // @name:ja      ChatGPT モデル忘れずに 🌺
-// @description:ja 🔄 ChatGPTで最後に使用したモデルが表示されたら、自動的に選択します！
+// @description:ja またね~
 // @name:de      ChatGPT Vergiss-Modell-Nicht 🌺
-// @description:de 🔄 Wählen Sie automatisch das zuletzt verwendete Modell aus, wenn es in ChatGPT erscheint!
+// @description:de Bis dann~
 // @name:fr      ChatGPT N'oubliez pas le modèle 🌺
-// @description:fr 🔄 Sélectionnez automatiquement le dernier modèle utilisé lorsqu'il apparaît dans ChatGPT!
+// @description:fr À bientôt~
 `;
 
 const metadata = `${start}${base}${i18n}${end}`;
