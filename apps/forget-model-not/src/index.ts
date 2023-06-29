@@ -54,10 +54,14 @@ async function main() {
 
   const defaultModelIndex = useLocalStorage('defaultModelIndex', '1');
 
+  if (menu_all.always_gpt4) {
+    defaultModelIndex.value = 1;
+  }
+
   setInterval(async () => {
     if (hasNewModelSelectButtons()) {
       getNewModelSelectButtons()[
-        menu_all.always_gpt4 ? 1 : defaultModelIndex.value
+        defaultModelIndex.value
       ].click();
     }
 

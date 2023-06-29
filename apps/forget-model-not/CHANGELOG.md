@@ -1,5 +1,11 @@
 # chatgpt-forget-model-not
 
+## 0.0.6
+
+### Patch Changes
+
+- fix: alway gpt4 only work after load, so it won't switch back when user want gpt3.5
+
 ## 0.0.5
 
 ### Patch Changes
