@@ -1,4 +1,4 @@
-# chatgpt-always-gpt4
+# chatgpt-forget-model-not
 
 ## 0.0.3
 

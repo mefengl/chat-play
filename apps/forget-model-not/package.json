@@ -1,5 +1,5 @@
 {
-  "name": "chatgpt-always-gpt4",
+  "name": "chatgpt-forget-model-not",
   "type": "module",
   "version": "0.0.3",
   "private": true,
@@ -11,7 +11,8 @@
     "esbuild": "latest",
     "typescript": "latest",
     "tsconfig": "workspace:*",
-    "eslint-config-custom": "workspace:*"
+    "eslint-config-custom": "workspace:*",
+    "@types/tampermonkey": "latest"
   },
   "dependencies": {
     "chatkit": "workspace:*"
