@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.2.1
+
+### Patch Changes
+
+- fix: now send function work as normal
+
 ## 0.2.0
 
 ### Minor Changes

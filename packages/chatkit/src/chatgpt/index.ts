@@ -109,14 +109,17 @@ export function setTextarea(message: string) {
   const textarea = getTextarea();
   if (!textarea) return;
   textarea.value = message;
-  textarea.dispatchEvent(new Event('input'));
+  textarea.dispatchEvent(new Event('input', { bubbles: true }));
 }
 
-export function send(message: string) {
+export async function send(message: string) {
   setTextarea(message);
   const textarea = getTextarea();
   if (!textarea) return;
-  textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+  while (textarea.value === message) {
+    textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    await new Promise(resolve => setTimeout(resolve, 100));
+  }
 }
 
 export function regenerate() {
@@ -170,7 +173,7 @@ export function setPromptListener(key: string = 'prompt_texts') {
             if (!firstTime && isGenerating()) { continue; }
             firstTime = false;
             const prompt_text = prompt_texts.shift() || '';
-            send(prompt_text);
+            await send(prompt_text);
           }
         }
       }, 0);
