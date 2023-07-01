@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.1.7
+
+### Patch Changes
+
+- misc: update the button text to TL;DR , cause it more i18n
+
 ## 0.1.6
 
 ### Patch Changes

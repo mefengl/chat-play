@@ -7,7 +7,7 @@ function createButton(callback: () => void) {
 
   // create the button
   const button = document.createElement("button");
-  button.innerHTML = "网页总结";
+  button.innerHTML = "TL;DR";
   button.style.position = "fixed";
   button.style.width = "140px";
   button.style.top = "180px";
