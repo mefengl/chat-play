@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.2.0
+
+### Minor Changes
+
+- 71b5d8b: feat: add language menu
+
 ## 0.1.7
 
 ### Patch Changes
