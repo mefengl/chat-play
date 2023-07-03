@@ -6,7 +6,6 @@
 */
 
 interface Menu {
-  chat_language: string;
   [key: string]: string | boolean;
 }
 
