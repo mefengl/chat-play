@@ -1,8 +1,7 @@
 import { setPromptListener } from 'chatkit/chatgpt';
 import createButton from './createButton';
 import getParagraphs from './getParagraphs';
-import MenuManager from './MenuManger';
-import { getLocalLanguage } from '@mefengl/monkit';
+import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));

@@ -1,5 +1,12 @@
 # midjourney-click-all
 
+## 0.3.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @mefengl/monkit@0.1.0
+
 ## 0.3.0
 
 ### Minor Changes

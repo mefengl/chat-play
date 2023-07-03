@@ -1,5 +1,11 @@
 # @mefengl/monkit
 
+## 0.1.0
+
+### Minor Changes
+
+- feat: add MenuManger class
+
 ## 0.0.4
 
 ### Patch Changes

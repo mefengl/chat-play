@@ -1,6 +1,6 @@
 {
   "name": "@mefengl/monkit",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "A toolkit provide useful functions for tampermonkey scripts development.",
   "keywords": [
     "tampermonkey"

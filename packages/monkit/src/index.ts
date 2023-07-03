@@ -12,3 +12,5 @@ export function onUrlChange(callback: (newUrl: string) => void): number {
     if (oldHref !== newHref) callback(oldHref = newHref);
   }, 1000);
 }
+
+export * from './MenuManger';

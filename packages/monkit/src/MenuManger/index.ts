@@ -1,3 +1,10 @@
+/* Add the following to Tampermonkey script header:
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_registerMenuCommand
+// @grant        GM_unregisterMenuCommand
+*/
+
 interface Menu {
   chat_language: string;
   [key: string]: string | boolean;
@@ -7,7 +14,7 @@ interface MenuId {
   [key: string]: number;
 }
 
-class MenuManager {
+export class MenuManager {
   private menu_all: Menu;
   private menu_id: MenuId;
 
@@ -64,5 +71,3 @@ class MenuManager {
     return this.menu_all[name];
   }
 }
-
-export default MenuManager;

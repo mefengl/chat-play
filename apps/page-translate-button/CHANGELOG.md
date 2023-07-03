@@ -1,5 +1,12 @@
 # page-translate-button
 
+## 0.4.9
+
+### Patch Changes
+
+- Updated dependencies
+  - @mefengl/monkit@0.1.0
+
 ## 0.4.8
 
 ### Patch Changes
