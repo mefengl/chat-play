@@ -1,4 +1,5 @@
 import { isHorizontalConversation, setHorizontalConversation } from 'chatkit/chatgpt';
+import { MenuManager } from '@mefengl/monkit';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
@@ -7,6 +8,14 @@ async function initialize() {
 
 async function main() {
   await initialize();
+
+  const defaultMenu = {
+    "Horizontal": false,
+    "Vertical": true,
+  };
+  const menuManager = new MenuManager(defaultMenu);
+  const horizontal = menuManager.getMenuValue("Horizontal");
+  const vertical = menuManager.getMenuValue("Vertical");
 
   const checkAndUpdateConversation = () => {
     if (!isHorizontalConversation()) {

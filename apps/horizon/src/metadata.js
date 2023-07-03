@@ -11,7 +11,10 @@ const base = `
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openai.com
 // @license      MIT
 // @match        https://chat.openai.com/*
-// @grant        none
+// @grant        GM_setValue
+// @grant        GM_getValue
+// @grant        GM_registerMenuCommand
+// @grant        GM_unregisterMenuCommand
 `;
 
 const i18n = `
