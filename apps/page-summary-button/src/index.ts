@@ -28,7 +28,12 @@ async function main() {
     console.log(prompt_texts);
     GM_setValue(key, prompt_texts);
   };
-  createButton(summaryWeb);
+
+  let buttonText = "Page Summary";
+  if (navigator.language.startsWith("zh")) {
+    buttonText = "页面摘要";
+  }
+  createButton(summaryWeb, buttonText);
 }
 
 (function () {

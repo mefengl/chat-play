@@ -27,7 +27,12 @@ async function main() {
     });
     GM_setValue(key, prompt_texts);
   };
-  createButton(translateWeb);
+
+  let buttonText = "Page Translate";
+  if (navigator.language.startsWith("zh")) {
+    buttonText = "页面翻译";
+  }
+  createButton(translateWeb, buttonText);
 }
 
 (function () {

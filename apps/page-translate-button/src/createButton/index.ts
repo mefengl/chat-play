@@ -1,4 +1,4 @@
-function createButton(callback: () => void) {
+function createButton(callback: () => void, buttonText: string) {
   // if origin end with 'chat.openai.com', then return
   if (window.location.href.includes("chat.openai")) { return; }
 
@@ -7,7 +7,7 @@ function createButton(callback: () => void) {
 
   // create the button
   const button = document.createElement("button");
-  button.innerHTML = "网页翻译";
+  button.innerHTML = buttonText;
   button.style.position = "fixed";
   button.style.width = "140px";
   button.style.top = "120px";

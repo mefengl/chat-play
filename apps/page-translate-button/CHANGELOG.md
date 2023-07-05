@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.4.10
+
+### Patch Changes
+
+- add back Chinese hint
+
 ## 0.4.9
 
 ### Patch Changes
