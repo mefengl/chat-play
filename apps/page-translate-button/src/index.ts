@@ -22,8 +22,9 @@ async function main() {
 
   const translateWeb = async () => {
     const paragraphs = getParagraphs();
-    const prompt_texts: string[] = paragraphs.map((paragraph: string) => {
-      return `"""\n${paragraph}\n"""\ntranslate above paragraphs in """ to ${chatLanguage} with compact and intuitive format (use Markdown syntax to optimize the display format):`;
+    const lenParagraphs = paragraphs.length;
+    const prompt_texts: string[] = paragraphs.map((paragraph: string, index: number) => {
+      return `"""\n${paragraph}\n${index}/${lenParagraphs}\n"""\ntranslate above paragraphs in """ to ${chatLanguage} with compact and intuitive format (use Markdown syntax to optimize the display format):`;
     });
     GM_setValue(key, prompt_texts);
   };
