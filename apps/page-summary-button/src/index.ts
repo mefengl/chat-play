@@ -19,11 +19,13 @@ async function main() {
 
   const key = 'prompt_texts';
   setPromptListener(key);
+
   const summaryWeb = async () => {
     const paragraphs = getParagraphs();
     console.log(paragraphs);
-    const prompt_texts: string[] = paragraphs.map((paragraph: string) => {
-      return `"""\n${paragraph}\n"""\nSummarize this paragraph into a bulleted list of the most important information, prefix with emoji, in ${chatLanguage} language. Use Markdown syntax to optimize the display format:`;
+    const lenParagraphs = paragraphs.length;
+    const prompt_texts: string[] = paragraphs.map((paragraph: string, index: number) => {
+      return `"""\n${paragraph}\n${index + 1}/${lenParagraphs}\n"""\nSummarize this paragraph into a bulleted list of the most important information, prefix with emoji, in ${chatLanguage} language. Use Markdown syntax to optimize the display format:`;
     });
     console.log(prompt_texts);
     GM_setValue(key, prompt_texts);

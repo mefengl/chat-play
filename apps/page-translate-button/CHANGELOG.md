@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.4.11
+
+### Patch Changes
+
+- update: add page index
+
 ## 0.4.10
 
 ### Patch Changes
