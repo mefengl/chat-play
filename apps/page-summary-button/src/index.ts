@@ -27,7 +27,6 @@ async function main() {
     const prompt_texts: string[] = paragraphs.map((paragraph: string, index: number) => {
       return `"""\n${paragraph}\n${index + 1}/${lenParagraphs}\n"""\nSummarize this paragraph into a bulleted list of the most important information, prefix with emoji, in ${chatLanguage} language. Use Markdown syntax to optimize the display format:`;
     });
-    console.log(prompt_texts);
     GM_setValue(key, prompt_texts);
   };
 
