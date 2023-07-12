@@ -8,6 +8,14 @@ This repo contains a variety of scripts that can be found in the `apps` folder, 
 
 Feel free to explore the repository, and let me know if you have any questions or suggestions. Enjoy! 🥳
 
+## Todos 🎏
+
+- Try to use MDX to generate the documentation
+- Remove the annoying badges from the README
+- Recommand other scripts in the README
+- Extract the common logic of page-button into monkit
+- Update MenuManager to support more menu types
+
 ## Details
 
 Here's a snapshot of what's inside:
