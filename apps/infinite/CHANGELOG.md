@@ -1,5 +1,11 @@
 # infinite
 
+## 0.5.0
+
+### Minor Changes
+
+- Ask for more detailed answer
+
 ## 0.4.5
 
 ### Patch Changes
