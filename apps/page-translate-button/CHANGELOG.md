@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.5.0
+
+### Minor Changes
+
+- Update: add radio to character texts, double the single paragraph length
+
 ## 0.4.11
 
 ### Patch Changes
