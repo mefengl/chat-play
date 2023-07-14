@@ -12,7 +12,7 @@ async function startInfiniteLoop() {
     const question = extractQuestion(lastResponse);
     await send(question + "\nanswer above question in 1000 words, and show me one more further question I can ask in the end prefixed with Q:");
     await waitForIdle();
-    await sleep(10000);
+    await sleep(3000);
   }
 }
 

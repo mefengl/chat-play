@@ -1,5 +1,11 @@
 # infinite
 
+## 0.5.1
+
+### Patch Changes
+
+- Update wait time, 3s instead of 10s
+
 ## 0.5.0
 
 ### Minor Changes
