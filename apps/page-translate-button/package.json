@@ -1,21 +1,22 @@
 {
   "name": "page-translate-button",
   "type": "module",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js",
     "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
   },
   "devDependencies": {
+    "@types/tampermonkey": "latest",
     "esbuild": "latest",
     "eslint-config-custom": "workspace:*",
-    "typescript": "latest",
     "tsconfig": "workspace:*",
-    "@types/tampermonkey": "latest"
+    "typescript": "latest"
   },
   "dependencies": {
+    "@mefengl/monkit": "workspace:*",
     "chatkit": "workspace:*",
-    "@mefengl/monkit": "workspace:*"
+    "sweetalert2": "^11.7.18"
   }
 }

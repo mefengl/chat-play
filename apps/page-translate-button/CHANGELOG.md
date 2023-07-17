@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.6.0
+
+### Minor Changes
+
+- feat: Allow custom input
+
 ## 0.5.0
 
 ### Minor Changes

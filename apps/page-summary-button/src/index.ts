@@ -2,6 +2,8 @@ import { setPromptListener } from 'chatkit/chatgpt';
 import createButton from './createButton';
 import getParagraphs from './getParagraphs';
 import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
+import SimpleArticleSegmentation from './SimpleArticleSegmentation';
+import Swal from 'sweetalert2';
 
 async function initialize() {
   await new Promise(resolve => window.addEventListener('load', resolve));
@@ -17,6 +19,30 @@ async function main() {
   const menuManager = new MenuManager(defaultMenu);
   const chatLanguage = menuManager.getMenuValue("chat_language");
 
+  GM_registerMenuCommand('📝 Input', () => {
+    Swal.fire({
+      title: 'Please input the text you want to deal with',
+      input: 'text',
+      inputPlaceholder: 'Enter your text here'
+    }).then((result) => {
+      if (result.value) {
+        const text = result.value;
+        const segmenter: SimpleArticleSegmentation = new SimpleArticleSegmentation(text);
+        const paragraphs: string[] = segmenter.segment();
+        console.log(paragraphs);
+        const lenParagraphs = paragraphs.length;
+        const prompt_texts: string[] = paragraphs.map((paragraph: string, index: number) => {
+          return `"""\n${paragraph}\n${index + 1}/${lenParagraphs}\n"""`;
+        });
+        GM_setValue('prompt_texts', prompt_texts.map(p =>
+          `Answer me in ${chatLanguage} language with good segmentation,\n`
+          + `\nSummarize below paragraph into a bulleted list of the most important information, prefix with emoji:\n\n${p}`
+          + `\n\nps: answer in ${chatLanguage} language`
+        ));
+      }
+    });
+  });
+
   const key = 'prompt_texts';
   setPromptListener(key);
 
@@ -25,9 +51,13 @@ async function main() {
     console.log(paragraphs);
     const lenParagraphs = paragraphs.length;
     const prompt_texts: string[] = paragraphs.map((paragraph: string, index: number) => {
-      return `"""\n${paragraph}\n${index + 1}/${lenParagraphs}\n"""\nSummarize this paragraph into a bulleted list of the most important information, prefix with emoji, in ${chatLanguage} language. Use Markdown syntax to optimize the display format:`;
+      return `"""\n${paragraph}\n${index + 1}/${lenParagraphs}\n"""`;
     });
-    GM_setValue(key, prompt_texts);
+    GM_setValue('prompt_texts', prompt_texts.map(p =>
+      `Answer me in ${chatLanguage} language with good segmentation,\n`
+      + `\nSummarize below paragraph into a bulleted list of the most important information, prefix with emoji:\n\n${p}`
+      + `\n\nps: answer in ${chatLanguage} language`
+    ));
   };
 
   let buttonText = "Page Summary";

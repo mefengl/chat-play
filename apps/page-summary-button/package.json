@@ -1,7 +1,7 @@
 {
   "name": "page-summary-button",
   "type": "module",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js",
@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "chatkit": "workspace:*",
-    "@mefengl/monkit": "workspace:*"
+    "@mefengl/monkit": "workspace:*",
+    "sweetalert2": "^11.7.18"
   }
 }
