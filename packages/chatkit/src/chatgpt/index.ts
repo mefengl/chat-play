@@ -166,14 +166,14 @@ export function setPromptListener(key: string = 'prompt_texts') {
       last_trigger_time = +new Date();
       setTimeout(async () => {
         const prompt_texts = new_value;
+        let waitTime = (prompt_texts.length > 60 && !document.hasFocus()) ? 40 * 1000 : 2000;
         if (prompt_texts.length > 0) {
           let firstTime = true;
           while (prompt_texts.length > 0) {
-            if (!firstTime) { await new Promise(resolve => setTimeout(resolve, 2000)); }
+            if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
             if (!firstTime && isGenerating()) { continue; }
             firstTime = false;
-            const prompt_text = prompt_texts.shift() || '';
-            await send(prompt_text);
+            await send(prompt_texts.shift() || '');
           }
         }
       }, 0);

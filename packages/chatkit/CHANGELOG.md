@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.2.2
+
+### Patch Changes
+
+- fix: send slower when not focused to avoid limit error
+
 ## 0.2.1
 
 ### Patch Changes
