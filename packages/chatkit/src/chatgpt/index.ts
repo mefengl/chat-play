@@ -166,10 +166,11 @@ export function setPromptListener(key: string = 'prompt_texts') {
       last_trigger_time = +new Date();
       setTimeout(async () => {
         const prompt_texts = new_value;
-        let waitTime = (prompt_texts.length > 60 && !document.hasFocus()) ? 40 * 1000 : 2000;
+        const isLong = prompt_texts.length > 60;
         if (prompt_texts.length > 0) {
           let firstTime = true;
           while (prompt_texts.length > 0) {
+            const waitTime = (isLong && !document.hasFocus()) ? 30 * 1000 : 2000;
             if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
             if (!firstTime && isGenerating()) { continue; }
             firstTime = false;
