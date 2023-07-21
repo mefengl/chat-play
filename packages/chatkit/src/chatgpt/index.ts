@@ -172,7 +172,12 @@ export function setPromptListener(key: string = 'prompt_texts') {
           while (prompt_texts.length > 0) {
             const waitTime = (isLong && !document.hasFocus()) ? 30 * 1000 : 2000;
             if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
-            if (!firstTime && isGenerating()) { continue; }
+            if (!firstTime && isGenerating()) { 
+              continue; 
+            } else if (getContinueGeneratingButton()) {
+              getContinueGeneratingButton()?.click();
+              continue;
+            }
             firstTime = false;
             await send(prompt_texts.shift() || '');
           }
