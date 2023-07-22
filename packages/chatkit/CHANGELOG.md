@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.3.0
+
+### Minor Changes
+
+- Add(chatkit): add claude base utils, also with a page-button script
+
 ## 0.2.2
 
 ### Patch Changes
