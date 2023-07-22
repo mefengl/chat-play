@@ -1,5 +1,10 @@
+export function getFieldset() {
+  const fieldsets = document.querySelectorAll('fieldset');
+  return fieldsets[fieldsets.length - 1];
+}
+
 export function getTextarea() {
-  const fieldset = document.querySelector('fieldset');
+  const fieldset = getFieldset();
   if (!fieldset) return;
   return fieldset.querySelector('p');
 };
@@ -11,7 +16,8 @@ export function setTextarea(message: string) {
 }
 
 export function getSubmitButton() {
-  return document.querySelector('[aria-label="Send Message"]');
+  const fieldset = getFieldset();
+  return fieldset.querySelector('button');
 };
 
 export async function send(message: string) {
@@ -19,8 +25,16 @@ export async function send(message: string) {
   const textarea = getTextarea();
   if (!textarea) return;
   while (textarea.textContent === message) {
-    textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
     await new Promise(resolve => setTimeout(resolve, 100));
+    getSubmitButton()?.click();
+  }
+
+  // ensure the message is sent
+  for (let i = 0; i < 10; i++) {
+    if (isGenerating()) {
+      return;
+    }
+    await new Promise(resolve => setTimeout(resolve, 1000));
   }
 }
 
@@ -30,7 +44,7 @@ export function isGenerating() {
 
 export function setPromptListener(key: string = 'prompt_texts') {
   let last_trigger_time = +new Date();
-  if (location.href.includes("chat.openai")) {
+  if (location.href.includes("claude.ai")) {
     GM_addValueChangeListener(key, async (name: string, old_value: string[], new_value: string[]) => {
       if (+new Date() - last_trigger_time < 500) {
         return;
