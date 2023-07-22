@@ -2,6 +2,8 @@
 
 🍓 let Claude translate the web page you are reading in one click
 
+> if you prefer ChatGPT: [chatgpt-page-translate-button](https://greasyfork.org/scripts/464067)
+
 ## Usage
 
 When you visit a webpage with the userscript installed, you'll see a Translate button at the topright corner of the page. Click the button to send the text from the webpage to Claude for translation. **The translated text will be displayed on the Claude web interface**.
