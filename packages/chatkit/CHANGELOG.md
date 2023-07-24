@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.3.1
+
+### Patch Changes
+
+- fix: handle common network error by regenerate in prompt listener
+
 ## 0.3.0
 
 ### Minor Changes
