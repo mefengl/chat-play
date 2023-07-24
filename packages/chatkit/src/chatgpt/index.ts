@@ -172,10 +172,15 @@ export function setPromptListener(key: string = 'prompt_texts') {
           while (prompt_texts.length > 0) {
             const waitTime = (isLong && !document.hasFocus()) ? 30 * 1000 : 2000;
             if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
-            if (!firstTime && isGenerating()) { 
-              continue; 
+            if (!firstTime && isGenerating()) {
+              continue;
             } else if (getContinueGeneratingButton()) {
               getContinueGeneratingButton()?.click();
+              continue;
+            } else if (getRegenerateButton()) {
+              // If has regenerate button, often means network error, wait 10 seconds and try again
+              await new Promise(resolve => setTimeout(resolve, 10 * 1000));
+              getRegenerateButton()?.click();
               continue;
             }
             firstTime = false;
