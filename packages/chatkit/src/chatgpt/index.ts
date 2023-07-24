@@ -177,8 +177,8 @@ export function setPromptListener(key: string = 'prompt_texts') {
             } else if (getContinueGeneratingButton()) {
               getContinueGeneratingButton()?.click();
               continue;
-            } else if (getRegenerateButton()) {
-              // If has regenerate button, often means network error, wait 10 seconds and try again
+            } else if (getRegenerateButton() && !getTextarea()) {
+              // If has regenerate button without textarea, often means network error, wait 10 seconds and try again
               await new Promise(resolve => setTimeout(resolve, 10 * 1000));
               getRegenerateButton()?.click();
               continue;
