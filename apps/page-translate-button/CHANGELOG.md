@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.7.0
+
+### Minor Changes
+
+- feat: result split into paragraphs for better reading
+
 ## 0.6.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.2.0
+
+### Minor Changes
+
+- feat: result split into paragraphs for better reading
+
 ## 0.1.1
 
 ### Patch Changes
