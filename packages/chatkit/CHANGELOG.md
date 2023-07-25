@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.4.0
+
+### Minor Changes
+
+- feat: add getResponseElementHTMLs function
+
 ## 0.3.1
 
 ### Patch Changes

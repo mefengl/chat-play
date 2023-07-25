@@ -1,5 +1,16 @@
 # page-translate-button
 
+## 0.6.0
+
+### Minor Changes
+
+- feat: add read mode that can be opened in menu
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.4.0
+
 ## 0.5.0
 
 ### Minor Changes
