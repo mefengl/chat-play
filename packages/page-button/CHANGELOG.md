@@ -1,5 +1,11 @@
 # @mefengl/monkit
 
+## 0.2.0
+
+### Minor Changes
+
+- update(font): use LXGW WenKai Screen
+
 ## 0.1.0
 
 ### Minor Changes
