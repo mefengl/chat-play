@@ -1,9 +1,10 @@
-import { setPromptListener } from 'chatkit/chatgpt';
+import { getResponseElementHTMLs, setPromptListener } from 'chatkit/chatgpt';
+import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
+import { displayHTML } from 'page-button';
+import Swal from 'sweetalert2';
 import createButton from './createButton';
 import getParagraphs from './getParagraphs';
-import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
 import SimpleArticleSegmentation from './SimpleArticleSegmentation';
-import Swal from 'sweetalert2';
 
 async function initialize() {
   await new Promise(r => window.addEventListener('load', r));
@@ -28,4 +29,14 @@ async function initialize() {
   setPromptListener('prompt_texts');
 
   createButton(async () => setPrompts(getParagraphs()), navigator.language.startsWith("zh") ? "页面翻译" : "Page Translate");
+
+  // Read Mode
+  function displayReadMode() {
+    let html = getResponseElementHTMLs();
+    if (html.length === 0) {
+      html = ['<p>No responses available.</p>'];
+    }
+    displayHTML(html);
+  }
+  GM_registerMenuCommand("📖 Read Mode", displayReadMode);
 })();

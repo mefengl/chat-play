@@ -15,8 +15,9 @@
     "typescript": "latest"
   },
   "dependencies": {
-    "@mefengl/monkit": "workspace:*",
     "chatkit": "workspace:*",
+    "@mefengl/monkit": "workspace:*",
+    "page-button": "workspace:*",
     "sweetalert2": "^11.7.18"
   }
 }

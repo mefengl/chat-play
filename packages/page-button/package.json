@@ -1,0 +1,43 @@
+{
+  "name": "page-button",
+  "version": "0.1.0",
+  "description": "A toolkit provide useful functions for page-button.",
+  "keywords": [],
+  "homepage": "https://github.com/mefengl/chat-play/tree/main/packages/page-button#readme",
+  "bugs": {
+    "url": "https://github.com/mefengl/chat-play/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mefengl/chat-play.git",
+    "directory": "packages/page-button"
+  },
+  "author": "mefengl",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "npm run build -- --watch",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-custom": "workspace:*",
+    "tsup": "latest",
+    "typescript": "latest",
+    "tsconfig": "workspace:*"
+  },
+  "dependencies": {
+    "sweetalert2": "^11.7.18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
