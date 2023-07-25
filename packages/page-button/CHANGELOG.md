@@ -1,5 +1,11 @@
 # @mefengl/monkit
 
+## 0.2.1
+
+### Patch Changes
+
+- update(style): set a more reasonable height and width of the modal
+
 ## 0.2.0
 
 ### Minor Changes

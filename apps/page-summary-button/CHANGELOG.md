@@ -1,5 +1,12 @@
 # page-translate-button
 
+## 0.6.2
+
+### Patch Changes
+
+- Updated dependencies
+  - page-button@0.2.1
+
 ## 0.6.1
 
 ### Patch Changes

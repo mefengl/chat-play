@@ -2,7 +2,7 @@ import Swal from 'sweetalert2';
 
 export async function displayHTML(html: string[]) {
   let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  let swalWidth = screenWidth < 800 ? '100%' : '800px';
+  let swalWidth = screenWidth < 800 ? '80%' : '800px';
 
   if (!document.head.querySelector('#LXGWStyle')) {
     let link = document.createElement('link');
@@ -18,7 +18,7 @@ export async function displayHTML(html: string[]) {
     style.id = 'readModeStyle';
     style.innerHTML = `
       .text-left { text-align: left !important; }
-      .scrollable { max-height: 80vh; overflow-y: auto; }
+      .scrollable { max-height: 90vh; overflow-y: auto; }
       .swal-font { font-family: "LXGW WenKai Screen", sans-serif; }
   `;
     document.head.appendChild(style);
@@ -28,7 +28,7 @@ export async function displayHTML(html: string[]) {
     title: '',
     html: html.join('<br />'),
     width: swalWidth,
-    padding: '3em',
+    padding: '0em',
     background: '#fff',
     backdrop: 'rgba(128,128,128,0.4)',
     showConfirmButton: false,
