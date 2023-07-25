@@ -89,6 +89,10 @@ export function getStopGeneratingButton() {
   return result;
 };
 
+export function getResponseElementHTMLs() {
+  return Array.from(document.querySelectorAll(".markdown")).map(m => m.innerHTML);
+}
+
 export function getLastResponseElement() {
   const responseElements = document.querySelectorAll('.group.w-full');
   return responseElements[responseElements.length - 1];
