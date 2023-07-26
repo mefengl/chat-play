@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.8.3
+
+### Patch Changes
+
+- update: remove useless """ quote
+
 ## 0.8.2
 
 ### Patch Changes

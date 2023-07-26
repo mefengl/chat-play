@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.2.2
+
+### Patch Changes
+
+- update: remove useless """ quote
+
 ## 0.2.1
 
 ### Patch Changes
