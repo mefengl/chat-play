@@ -1,5 +1,12 @@
 # claude-page-translate-button
 
+## 0.2.4
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.5.1
+
 ## 0.2.3
 
 ### Patch Changes

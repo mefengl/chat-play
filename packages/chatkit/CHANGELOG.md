@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.5.1
+
+### Patch Changes
+
+- fix: trigger input event to make button clickable
+
 ## 0.5.0
 
 ### Minor Changes

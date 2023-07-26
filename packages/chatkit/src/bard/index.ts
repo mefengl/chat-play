@@ -23,6 +23,7 @@ export function setTextarea(message: string) {
   const textarea = getTextarea();
   if (!textarea) return;
   textarea.value = message;
+  textarea.dispatchEvent(new Event('input', { bubbles: true }));
 }
 
 export function getRegenerateButton(): HTMLElement | null {
