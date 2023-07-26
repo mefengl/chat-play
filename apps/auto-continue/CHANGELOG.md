@@ -1,5 +1,12 @@
 # chatgpt-auto-continue
 
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.5.0
+
 ## 0.0.9
 
 ### Patch Changes

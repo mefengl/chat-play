@@ -1,3 +1,11 @@
+export function getSparkleResting(): Element | null {
+  return document.querySelector("img[src*=sparkle_resting]");
+}
+
+export function getSparkleThinking(): Element | null {
+  return document.querySelector("img[src*=sparkle_thinking]");
+}
+
 export function getSubmitButton(): HTMLElement | null {
   return document.querySelector('button[aria-label="Send message"]');
 }
@@ -9,6 +17,12 @@ export function getInputArea(): HTMLElement | null {
 export function getTextarea(): HTMLTextAreaElement | null {
   const inputArea = getInputArea();
   return inputArea ? inputArea.querySelector('textarea') : null;
+}
+
+export function setTextarea(message: string) {
+  const textarea = getTextarea();
+  if (!textarea) return;
+  textarea.value = message;
 }
 
 export function getRegenerateButton(): HTMLElement | null {
@@ -28,14 +42,26 @@ export function getLatestPromptText(): string {
   return lastPromptText || "";
 }
 
-export function send(text: string): void {
+export function isGenerating() {
+  return getSparkleThinking() !== null;
+}
+
+export async function send(message: string) {
+  setTextarea(message);
   const textarea = getTextarea();
   if (!textarea) return;
-  textarea.value = text;
-  textarea.dispatchEvent(new Event('input'));
-  const submitButton = getSubmitButton();
-  if (!submitButton) return;
-  submitButton.click();
+  while (textarea.value === message) {
+    await new Promise(resolve => setTimeout(resolve, 100));
+    getSubmitButton()?.click();
+  }
+
+  // ensure the message is sent
+  for (let i = 0; i < 10; i++) {
+    if (isGenerating()) {
+      return;
+    }
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
 }
 
 export function onSend(callback: () => void): void {
@@ -49,4 +75,33 @@ export function onSend(callback: () => void): void {
   const sendButton = getSubmitButton();
   if (!sendButton) return;
   sendButton.addEventListener('mousedown', callback);
+}
+
+export function setPromptListener(key: string = 'prompt_texts') {
+  let last_trigger_time = +new Date();
+  if (location.href.includes("bard.google")) {
+    GM_addValueChangeListener(key, async (name: string, old_value: string[], new_value: string[]) => {
+      if (+new Date() - last_trigger_time < 500) {
+        return;
+      }
+      last_trigger_time = +new Date();
+      setTimeout(async () => {
+        const prompt_texts = new_value;
+        const isLong = prompt_texts.length > 60;
+        if (prompt_texts.length > 0) {
+          let firstTime = true;
+          while (prompt_texts.length > 0) {
+            const waitTime = (isLong && !document.hasFocus()) ? 30 * 1000 : 2000;
+            if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
+            if (!firstTime && isGenerating()) {
+              continue;
+            }
+            firstTime = false;
+            await send(prompt_texts.shift() || "");
+          }
+        }
+      }, 0);
+      GM_setValue(key, []);
+    });
+  }
 }

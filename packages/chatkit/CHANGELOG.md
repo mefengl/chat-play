@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.5.0
+
+### Minor Changes
+
+- feat(bard): add functions for page-button
+
 ## 0.4.0
 
 ### Minor Changes

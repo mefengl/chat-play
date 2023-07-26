@@ -20,6 +20,10 @@ export function getSubmitButton() {
   return fieldset.querySelector('button');
 };
 
+export function isGenerating() {
+  return getSubmitButton()?.hasAttribute('disabled');
+}
+
 export async function send(message: string) {
   setTextarea(message);
   const textarea = getTextarea();
@@ -36,10 +40,6 @@ export async function send(message: string) {
     }
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
-}
-
-export function isGenerating() {
-  return getSubmitButton()?.hasAttribute('disabled');
 }
 
 export function setPromptListener(key: string = 'prompt_texts') {
