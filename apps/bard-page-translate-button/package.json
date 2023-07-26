@@ -1,0 +1,22 @@
+{
+  "name": "bard-page-translate-button",
+  "type": "module",
+  "version": "0.1.1",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "@types/tampermonkey": "latest",
+    "esbuild": "latest",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "@mefengl/monkit": "workspace:*",
+    "chatkit": "workspace:*",
+    "sweetalert2": "^11.7.18"
+  }
+}
