@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.8.6
+
+### Patch Changes
+
+- chore(readme): add bard-page-button
+
 ## 0.8.5
 
 ### Patch Changes

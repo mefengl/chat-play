@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.2.5
+
+### Patch Changes
+
+- chore(readme): add bard-page-button
+
 ## 0.2.4
 
 ### Patch Changes

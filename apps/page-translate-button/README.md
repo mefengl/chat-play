@@ -4,6 +4,8 @@
 
 > if you prefer Claude: [claude-page-translate-button](https://greasyfork.org/scripts/471467)
 
+> if you prefer Bard: [bard-page-translate-button](https://greasyfork.org/scripts/471758)
+
 ## Installation
 
 1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/) or [Greasemonkey](https://www.greasespot.net/).
