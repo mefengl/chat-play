@@ -2,8 +2,8 @@ import { setPromptListener } from 'chatkit/bard';
 import createButton from './createButton';
 import getParagraphs from './getParagraphs';
 import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
-import SimpleArticleSegmentation from './SimpleArticleSegmentation';
-import Swal from 'sweetalert2';
+// import SimpleArticleSegmentation from './SimpleArticleSegmentation';
+// import Swal from 'sweetalert2';
 
 async function initialize() {
   await new Promise(r => window.addEventListener('load', r));
@@ -18,12 +18,12 @@ async function initialize() {
 
   const setPrompts = (paras: string[]) => GM_setValue('prompt_texts', paras.map((p, i) => `Answer me in several paragraphs in ${lang} language,\nTranslate below paragraphs:\n\n${p}${i + 1}/${paras.length}\n\nps: answer in several paragraphs in ${lang} language`));
 
-  GM_registerMenuCommand('📝 Input', () => {
-    Swal.fire({ title: 'Please input the text you want to deal with', input: 'text', inputPlaceholder: 'Enter your text here' })
-      .then((result) => {
-        if (result.value) setPrompts(new SimpleArticleSegmentation(result.value).segment());
-      });
-  });
+  // GM_registerMenuCommand('📝 Input', () => {
+  //   Swal.fire({ title: 'Please input the text you want to deal with', input: 'text', inputPlaceholder: 'Enter your text here' })
+  //     .then((result) => {
+  //       if (result.value) setPrompts(new SimpleArticleSegmentation(result.value).segment());
+  //     });
+  // });
 
   setPromptListener('prompt_texts');
 
