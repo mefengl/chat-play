@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.5.2
+
+### Patch Changes
+
+- fix: avoid select last response's hide markdown
+
 ## 0.5.1
 
 ### Patch Changes

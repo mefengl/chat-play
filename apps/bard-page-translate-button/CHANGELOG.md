@@ -1,5 +1,13 @@
 # bard-page-translate-button
 
+## 0.1.3
+
+### Patch Changes
+
+- chore: try to add read mode
+- Updated dependencies
+  - chatkit@0.5.2
+
 ## 0.1.2
 
 ### Patch Changes

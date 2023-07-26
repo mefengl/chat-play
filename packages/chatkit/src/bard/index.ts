@@ -30,6 +30,10 @@ export function getRegenerateButton(): HTMLElement | null {
   return document.querySelector('button[aria-label="Retry"]');
 }
 
+export function getResponseElementHTMLs() {
+  return Array.from(document.querySelectorAll(".model-response-text .markdown")).map(m => m.innerHTML);
+}
+
 export function getLastPrompt(): Element | null {
   const promptElements = document.querySelectorAll('.query-text');
   const lastPrompt = promptElements[promptElements.length - 1];

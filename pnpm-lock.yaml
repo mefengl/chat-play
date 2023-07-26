@@ -48,6 +48,9 @@ importers:
       chatkit:
         specifier: workspace:*
         version: link:../../packages/chatkit
+      page-button:
+        specifier: workspace:*
+        version: link:../../packages/page-button
       sweetalert2:
         specifier: ^11.7.18
         version: 11.7.18
