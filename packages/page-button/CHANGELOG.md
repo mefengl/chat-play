@@ -1,5 +1,11 @@
 # @mefengl/monkit
 
+## 0.2.2
+
+### Patch Changes
+
+- fix: the scrollPos now realeated to the url
+
 ## 0.2.1
 
 ### Patch Changes

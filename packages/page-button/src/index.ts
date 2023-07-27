@@ -37,13 +37,13 @@ export async function displayHTML(html: string[]) {
     willClose: () => {
       const scrollable = document.querySelector('.scrollable');
       if (scrollable) {
-        localStorage.setItem('scrollPos', `${scrollable.scrollTop}`);
+        localStorage.setItem('scrollPos' + window.location.href, `${scrollable.scrollTop}`);
       }
     },
     didOpen: () => {
       const scrollable = document.querySelector('.scrollable');
       if (scrollable) {
-        scrollable.scrollTop = parseInt(localStorage.getItem('scrollPos') || '0');
+        scrollable.scrollTop = parseInt(localStorage.getItem('scrollPos' + window.location.href) || '0');
       }
     }
   });
