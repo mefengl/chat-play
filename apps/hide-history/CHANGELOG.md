@@ -1,5 +1,12 @@
 # hide-history
 
+## 0.2.14
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.6.0
+
 ## 0.2.13
 
 ### Patch Changes

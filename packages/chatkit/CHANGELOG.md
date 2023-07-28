@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.6.0
+
+### Minor Changes
+
+- fix(chatgpt): new getButton function to fit the new button ui
+
 ## 0.5.2
 
 ### Patch Changes
