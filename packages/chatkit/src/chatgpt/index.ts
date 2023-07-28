@@ -65,28 +65,21 @@ export function getSubmitButton() {
   return textarea.nextElementSibling;
 };
 
+export function getButton(text: string) {
+  return Array.from(document.querySelectorAll('button[as="button"]'))
+    .find(button => button.textContent?.trim().toLowerCase().includes(text)) as HTMLButtonElement | undefined;
+}
+
 export function getRegenerateButton() {
-  const form = document.querySelector('form');
-  if (!form) return;
-  const buttons = form.querySelectorAll('button');
-  const result = Array.from(buttons).find(button => button.textContent?.trim().toLowerCase().includes('regenerate'));
-  return result;
+  return getButton('regenerate');
 };
 
 export function getContinueGeneratingButton() {
-  const form = document.querySelector('form');
-  if (!form) return;
-  const buttons = form.querySelectorAll('button');
-  const result = Array.from(buttons).find(button => button.textContent?.trim().toLowerCase().includes('continue generating'));
-  return result;
+  return getButton('continue');
 };
 
 export function getStopGeneratingButton() {
-  const form = document.querySelector('form');
-  if (!form) return;
-  const buttons = form.querySelectorAll('button');
-  const result = Array.from(buttons).find(button => button.textContent?.trim().toLowerCase().includes('stop generating'));
-  return result;
+  return getButton('stop');
 };
 
 export function getResponseElementHTMLs() {
