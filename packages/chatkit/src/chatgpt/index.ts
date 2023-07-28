@@ -244,3 +244,12 @@ export function setHorizontalConversation() {
   conversation.classList.remove("flex", "flex-col", "items-center");
   conversation.classList.add("grid", "grid-cols-2", "place-items-center");
 }
+
+export function getShareChatButton() {
+  return document.querySelector('button[aria-label="Share chat"]');
+}
+
+export function getCopyLinkButton() {
+  return Array.from(document.querySelectorAll('button[as="button"]'))
+    .filter(button => button.textContent?.trim().toLowerCase().includes('copy link'))[0];
+}
