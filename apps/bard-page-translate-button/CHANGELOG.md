@@ -1,5 +1,11 @@
 # bard-page-translate-button
 
+## 0.1.6
+
+### Patch Changes
+
+- chore: add updateURL for page-buttons
+
 ## 0.1.5
 
 ### Patch Changes

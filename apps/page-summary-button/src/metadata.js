@@ -1,3 +1,9 @@
+import { fileURLToPath } from 'url';
+function generateUpdateURL() {
+    let filePath = fileURLToPath(import.meta.url).split('/apps/')[1].split('/src')[0];
+    return `https://github.com/mefengl/chat-scripts/raw/main/${filePath}/script.user.js`;
+}
+
 const start = '// ==UserScript==';
 const end = '// ==/UserScript==';
 
@@ -16,6 +22,7 @@ const base = `
 // @grant        GM_registerMenuCommand
 // @grant        GM_unregisterMenuCommand
 // @grant        GM_addValueChangeListener
+// @updateURL    ${generateUpdateURL()}
 `;
 
 const i18n = `

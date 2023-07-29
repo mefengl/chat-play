@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.2.8
+
+### Patch Changes
+
+- chore: add updateURL for page-buttons
+
 ## 0.2.7
 
 ### Patch Changes

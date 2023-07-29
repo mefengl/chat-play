@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.6.9
+
+### Patch Changes
+
+- chore: add updateURL for page-buttons
+
 ## 0.6.8
 
 ### Patch Changes
