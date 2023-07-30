@@ -4,7 +4,7 @@ function getParagraphs() {
   try {
     let docClone: Document = document.cloneNode(true) as Document;
     let article: Readability.Article | null = new Readability(docClone).parse();
-    if (article && article.textContent) {
+    if (article?.textContent) {
       const segmenter: SimpleArticleSegmentation = new SimpleArticleSegmentation(article.textContent);
       const paragraphs: string[] = segmenter.segment();
 
