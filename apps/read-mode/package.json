@@ -1,0 +1,21 @@
+{
+  "name": "read-mode",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.config.js",
+    "lint": "pnpm eslint 'src/**/*.{js,ts,tsx}'"
+  },
+  "devDependencies": {
+    "@types/tampermonkey": "latest",
+    "esbuild": "latest",
+    "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "chatkit": "workspace:*",
+    "page-button": "workspace:*"
+  }
+}
