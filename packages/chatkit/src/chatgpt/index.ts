@@ -65,6 +65,11 @@ export function getSubmitButton() {
   return textarea.nextElementSibling;
 };
 
+export function getInitialButtons() {
+  return Array.from(document.querySelectorAll('button[as="button"]'))
+    .filter(button => button.querySelectorAll('.truncate').length === 2) as HTMLButtonElement[];
+}
+
 export function getFollowUpButtons() {
   return Array.from(document.querySelectorAll('button[as="button"]'))
     .filter(button => button.textContent?.trim().match(/[.!?]$/)) as HTMLButtonElement[];
