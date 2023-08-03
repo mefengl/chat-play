@@ -65,6 +65,20 @@ export function getSubmitButton() {
   return textarea.nextElementSibling;
 };
 
+export function getFollowUpButtons() {
+  return Array.from(document.querySelectorAll('button[as="button"]'))
+    .filter(button => button.textContent?.trim().match(/[.!?]$/)) as HTMLButtonElement[];
+}
+
+export function clickFollowUpButton(index: number) {
+  const followUpButtons = getFollowUpButtons();
+  if (followUpButtons.length === 0) return;
+  if (index === undefined || index < 0 || index >= followUpButtons.length) {
+    index = Math.floor(Math.random() * followUpButtons.length);
+  }
+  followUpButtons[index].click();
+}
+
 export function getButton(text: string) {
   return Array.from(document.querySelectorAll('button[as="button"]'))
     .find(button => button.textContent?.trim().toLowerCase().includes(text)) as HTMLButtonElement | undefined;
