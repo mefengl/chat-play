@@ -16,7 +16,7 @@ async function initialize() {
   const menu = new MenuManager({ "chat_language": getLocalLanguage() || "Chinese" });
   const lang = menu.getMenuValue("chat_language");
 
-  const setPrompts = (paras: string[]) => GM_setValue('prompt_texts', paras.map((p, i) => `Answer me in several paragraphs in ${lang} language,\nTranslate below paragraphs:\n\n${p}${i + 1}/${paras.length}\n\nps: answer in several paragraphs in ${lang} language`));
+  const setPrompts = (paras: string[]) => GM_setValue('prompt_texts', paras.map((p, i) => `Answer me in several paragraphs in ${lang} language,\nTranslate below paragraphs:\n\n${p}${i + 1}/${paras.length}\n\nps: translate in several paragraphs in ${lang} language`));
 
   GM_registerMenuCommand('📝 Input', () => {
     Swal.fire({ title: 'Please input the text you want to deal with', input: 'text', inputPlaceholder: 'Enter your text here' })

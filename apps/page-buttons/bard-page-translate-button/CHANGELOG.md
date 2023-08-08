@@ -1,5 +1,11 @@
 # bard-page-translate-button
 
+## 0.1.7
+
+### Patch Changes
+
+- update: add translate one more time to avoid llm summary
+
 ## 0.1.6
 
 ### Patch Changes

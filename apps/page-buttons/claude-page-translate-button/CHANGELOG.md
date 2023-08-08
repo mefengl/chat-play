@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.2.9
+
+### Patch Changes
+
+- update: add translate one more time to avoid llm summary
+
 ## 0.2.8
 
 ### Patch Changes

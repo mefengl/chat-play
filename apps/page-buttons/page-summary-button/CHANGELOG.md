@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.6.10
+
+### Patch Changes
+
+- update: add translate one more time to avoid llm summary
+
 ## 0.6.9
 
 ### Patch Changes
