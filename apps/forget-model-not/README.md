@@ -1,13 +1,10 @@
 # ChatGPT Forget-Model-Not 🌺
 
-[![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
-[![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
-[![Twitter Follow](https://img.shields.io/twitter/follow/mefengl?style=social)](https://twitter.com/mefengl)
+## Deprecated
 
-[![Daily downloads](https://img.shields.io/greasyfork/dd/469753)](https://greasyfork.org/scripts/469753/stats)
-[![Total downloads](https://img.shields.io/greasyfork/dt/469753)](https://greasyfork.org/scripts/469753/stats)
+Since the [Updates to ChatGPT (August 3)](https://help.openai.com/en/articles/6825453-chatgpt-release-notes), this feature is also available in the official version of ChatGPT.
 
-[![License](https://img.shields.io/greasyfork/l/469753?color=&label=License)](https://opensource.org/licenses/MIT)
+So you don't need to use this script anymore.
 
 ## See you again~
 

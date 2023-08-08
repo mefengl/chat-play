@@ -1,5 +1,11 @@
 # chatgpt-forget-model-not
 
+## 0.0.18
+
+### Patch Changes
+
+- deprecated: add deprecated note
+
 ## 0.0.17
 
 ### Patch Changes
