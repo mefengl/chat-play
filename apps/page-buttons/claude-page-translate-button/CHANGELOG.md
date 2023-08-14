@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.2.10
+
+### Patch Changes
+
+- fix: fix the bug that ignore short article
+
 ## 0.2.9
 
 ### Patch Changes

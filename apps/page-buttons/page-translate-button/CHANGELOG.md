@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.8.12
+
+### Patch Changes
+
+- fix: fix the bug that ignore short article
+
 ## 0.8.11
 
 ### Patch Changes

@@ -42,7 +42,7 @@ class SimpleArticleSegmentation {
         }
       }
 
-      if (paragraph.length >= MIN_PARAGRAPH_LENGTH) {
+      if (paragraph.length > 0) {
         paragraphs.push(paragraph);
       }
     }
