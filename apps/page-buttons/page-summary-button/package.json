@@ -1,7 +1,7 @@
 {
   "name": "page-summary-button",
   "type": "module",
-  "version": "0.6.11",
+  "version": "0.6.12",
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js",

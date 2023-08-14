@@ -1,5 +1,12 @@
 # bard-page-translate-button
 
+## 0.1.9
+
+### Patch Changes
+
+- Updated dependencies
+  - page-button@0.3.0
+
 ## 0.1.8
 
 ### Patch Changes
