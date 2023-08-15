@@ -1,5 +1,16 @@
 # bard-page-translate-button
 
+## 0.2.0
+
+### Minor Changes
+
+- update: extract the common page-button funcions into page-button package
+
+### Patch Changes
+
+- Updated dependencies
+  - page-button@0.4.0
+
 ## 0.1.9
 
 ### Patch Changes

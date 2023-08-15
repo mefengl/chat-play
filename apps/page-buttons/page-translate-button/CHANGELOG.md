@@ -1,5 +1,16 @@
 # page-translate-button
 
+## 0.9.0
+
+### Minor Changes
+
+- update: extract the common page-button funcions into page-button package
+
+### Patch Changes
+
+- Updated dependencies
+  - page-button@0.4.0
+
 ## 0.8.13
 
 ### Patch Changes
