@@ -39,3 +39,6 @@ export async function displayHTML(html: string[]) {
     }
   });
 }
+
+export * from './SimpleArticleSegmentation';
+export * from './getParagraphs';

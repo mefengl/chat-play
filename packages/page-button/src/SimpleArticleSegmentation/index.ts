@@ -2,7 +2,7 @@ const MIN_PARAGRAPH_LENGTH: number = 3200;
 const MAX_PARAGRAPH_LENGTH: number = 3600;
 const TOKEN_LETTER_TO_CHARACTER_RATIO: number = 0.6;
 
-class SimpleArticleSegmentation {
+export class SimpleArticleSegmentation {
   private text: string;
 
   constructor(text: string) {
@@ -50,5 +50,3 @@ class SimpleArticleSegmentation {
     return paragraphs;
   }
 }
-
-export default SimpleArticleSegmentation;

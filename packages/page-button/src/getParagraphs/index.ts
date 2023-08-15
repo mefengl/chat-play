@@ -1,9 +1,12 @@
-import SimpleArticleSegmentation from "../SimpleArticleSegmentation";
+import { SimpleArticleSegmentation } from '../SimpleArticleSegmentation';
 
-function getParagraphs() {
+export function getParagraphs() {
   try {
     let docClone: Document = document.cloneNode(true) as Document;
+
+    // @ts-expect-error: Cannot find namespace 'Readability'.
     let article: Readability.Article | null = new Readability(docClone).parse();
+
     if (article?.textContent) {
       const segmenter: SimpleArticleSegmentation = new SimpleArticleSegmentation(article.textContent);
       const paragraphs: string[] = segmenter.segment();
@@ -23,5 +26,3 @@ function getParagraphs() {
     return [];
   }
 }
-
-export default getParagraphs;

@@ -1,9 +1,8 @@
 import { setPromptListener } from 'chatkit/claude';
-import createButton from './createButton';
-import getParagraphs from './getParagraphs';
 import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
-import SimpleArticleSegmentation from './SimpleArticleSegmentation';
+import { SimpleArticleSegmentation, getParagraphs } from 'page-button';
 import Swal from 'sweetalert2';
+import createButton from './createButton';
 
 async function initialize() {
   await new Promise(r => window.addEventListener('load', r));
