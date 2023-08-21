@@ -1,12 +1,15 @@
 # ChatGPT Auto-Continue 🔄
 
-[![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
-[![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
-[![Twitter Follow](https://img.shields.io/twitter/follow/mefengl?style=social)](https://twitter.com/mefengl)
+It will click the `Continue Generating` button when it appears, handling errors such as network issues. That's it!
 
-[![Daily downloads](https://img.shields.io/greasyfork/dd/466663)](https://greasyfork.org/scripts/466663/stats)
-[![Total downloads](https://img.shields.io/greasyfork/dt/466663)](https://greasyfork.org/scripts/466663/stats)
+## Repo
 
-[![License](https://img.shields.io/greasyfork/l/466663?color=&label=License)](https://opensource.org/licenses/MIT)
+[https://github.com/mefengl/chat-play](https://github.com/mefengl/chat-play)
 
-It will click the `Continue Gnerating` button when it appears, that's it!
+It would be great if you could give me a star ⭐️!
+
+## License
+
+MIT
+
+Enjoy!

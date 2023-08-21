@@ -1,5 +1,11 @@
 # chatgpt-auto-continue
 
+## 1.0.0
+
+### Major Changes
+
+- update: make it be able to also handle error
+
 ## 0.0.13
 
 ### Patch Changes
