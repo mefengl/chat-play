@@ -1,5 +1,11 @@
 # bard-page-translate-button
 
+## 0.3.0
+
+### Minor Changes
+
+- update: use textarea instead text to support multiple lines of text
+
 ## 0.2.0
 
 ### Minor Changes

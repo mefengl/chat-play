@@ -1,5 +1,11 @@
 # page-summary-button
 
+## 0.8.0
+
+### Minor Changes
+
+- update: use textarea instead text to support multiple lines of text
+
 ## 0.7.0
 
 ### Minor Changes

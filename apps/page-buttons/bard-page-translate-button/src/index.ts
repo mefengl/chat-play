@@ -19,7 +19,7 @@ async function initialize() {
   const setPrompts = (paras: string[]) => GM_setValue('prompt_texts', paras.map((p, i) => `Answer me in several paragraphs in ${lang} language,\nTranslate below paragraphs:\n\n${p}${i + 1}/${paras.length}\n\nps: translate in several paragraphs in ${lang} language`));
 
   // GM_registerMenuCommand('📝 Input', () => {
-  //   Swal.fire({ title: 'Please input the text you want to deal with', input: 'text', inputPlaceholder: 'Enter your text here' })
+  //   Swal.fire({ title: 'Please input the text you want to deal with', input: 'textarea', inputPlaceholder: 'Enter your text here' })
   //     .then((result) => {
   //       if (result.value) setPrompts(new SimpleArticleSegmentation(result.value).segment());
   //     });
