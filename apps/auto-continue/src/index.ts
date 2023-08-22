@@ -10,7 +10,7 @@ async function main() {
   let firstTime = true;
   setInterval(async () => {
     while (true) {
-      const waitTime = (!document.hasFocus()) ? 5 * 1000 : 2000;
+      const waitTime = (!document.hasFocus()) ? 20 * 1000 : 2000;
       if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
       if (!firstTime && isGenerating()) {
         continue;
@@ -19,7 +19,7 @@ async function main() {
         continue;
       } else if (getRegenerateButton() && !getTextarea()) {
         // If has regenerate button without textarea, often means network error, wait 10 seconds and try again
-        await new Promise(resolve => setTimeout(resolve, 10 * 1000));
+        await new Promise(resolve => setTimeout(resolve, 2 * 1000));
         getRegenerateButton()?.click();
         continue;
       }
