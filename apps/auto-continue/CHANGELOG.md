@@ -1,5 +1,11 @@
 # chatgpt-auto-continue
 
+## 1.1.0
+
+### Minor Changes
+
+- Limit the number of retries within one minute.
+
 ## 1.0.1
 
 ### Patch Changes
