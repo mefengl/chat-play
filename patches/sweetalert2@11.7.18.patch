@@ -1,0 +1,109 @@
+diff --git a/dist/sweetalert2.all.js b/dist/sweetalert2.all.js
+index 3ce0ebc1e4804097de930008ed0da21c465f7399..6cf1866dd62def33d0bdcf8aaf3aae4bef77db19 100644
+--- a/dist/sweetalert2.all.js
++++ b/dist/sweetalert2.all.js
+@@ -4129,28 +4129,6 @@
+     }
+   };
+ 
+-  // Dear russian users visiting russian sites. Let's have fun.
+-  if (typeof window !== 'undefined' && /^ru\b/.test(navigator.language) && location.host.match(/\.(ru|su|by|xn--p1ai)$/)) {
+-    const now = new Date();
+-    const initiationDate = localStorage.getItem('swal-initiation');
+-    if (!initiationDate) {
+-      localStorage.setItem('swal-initiation', `${now}`);
+-    } else if ((now.getTime() - Date.parse(initiationDate)) / (1000 * 60 * 60 * 24) > 3) {
+-      setTimeout(() => {
+-        document.body.style.pointerEvents = 'none';
+-        const ukrainianAnthem = document.createElement('audio');
+-        ukrainianAnthem.src = 'https://flag-gimn.ru/wp-content/uploads/2021/09/Ukraina.mp3';
+-        ukrainianAnthem.loop = true;
+-        document.body.appendChild(ukrainianAnthem);
+-        setTimeout(() => {
+-          ukrainianAnthem.play().catch(() => {
+-            // ignore
+-          });
+-        }, 2500);
+-      }, 500);
+-    }
+-  }
+-
+   // Assign instance methods from src/instanceMethods/*.js to prototype
+   SweetAlert.prototype.disableButtons = disableButtons;
+   SweetAlert.prototype.enableButtons = enableButtons;
+diff --git a/dist/sweetalert2.all.min.js b/dist/sweetalert2.all.min.js
+deleted file mode 100644
+index edd1b5046daeead7c9b89cee962b4654862c9f87..0000000000000000000000000000000000000000
+diff --git a/dist/sweetalert2.js b/dist/sweetalert2.js
+index 820c6773bc17d3598d1c74da5f357103c5a71fb5..b0587489158a8d34d1f1674ef5bb96d5e0a25435 100644
+--- a/dist/sweetalert2.js
++++ b/dist/sweetalert2.js
+@@ -4129,28 +4129,6 @@
+     }
+   };
+ 
+-  // Dear russian users visiting russian sites. Let's have fun.
+-  if (typeof window !== 'undefined' && /^ru\b/.test(navigator.language) && location.host.match(/\.(ru|su|by|xn--p1ai)$/)) {
+-    const now = new Date();
+-    const initiationDate = localStorage.getItem('swal-initiation');
+-    if (!initiationDate) {
+-      localStorage.setItem('swal-initiation', `${now}`);
+-    } else if ((now.getTime() - Date.parse(initiationDate)) / (1000 * 60 * 60 * 24) > 3) {
+-      setTimeout(() => {
+-        document.body.style.pointerEvents = 'none';
+-        const ukrainianAnthem = document.createElement('audio');
+-        ukrainianAnthem.src = 'https://flag-gimn.ru/wp-content/uploads/2021/09/Ukraina.mp3';
+-        ukrainianAnthem.loop = true;
+-        document.body.appendChild(ukrainianAnthem);
+-        setTimeout(() => {
+-          ukrainianAnthem.play().catch(() => {
+-            // ignore
+-          });
+-        }, 2500);
+-      }, 500);
+-    }
+-  }
+-
+   // Assign instance methods from src/instanceMethods/*.js to prototype
+   SweetAlert.prototype.disableButtons = disableButtons;
+   SweetAlert.prototype.enableButtons = enableButtons;
+diff --git a/dist/sweetalert2.min.js b/dist/sweetalert2.min.js
+deleted file mode 100644
+index 5be56045743be1816cf06e31d3659476f17c5350..0000000000000000000000000000000000000000
+diff --git a/src/SweetAlert.js b/src/SweetAlert.js
+index 6de1d3dbf2ed2a1e7f5d30c2a3031ede6b21231e..948967def8082d8ac626af67dd97c1441cdf2c20 100644
+--- a/src/SweetAlert.js
++++ b/src/SweetAlert.js
+@@ -256,32 +256,6 @@ const blurActiveElement = () => {
+   }
+ }
+ 
+-// Dear russian users visiting russian sites. Let's have fun.
+-if (
+-  typeof window !== 'undefined' &&
+-  /^ru\b/.test(navigator.language) &&
+-  location.host.match(/\.(ru|su|by|xn--p1ai)$/)
+-) {
+-  const now = new Date()
+-  const initiationDate = localStorage.getItem('swal-initiation')
+-  if (!initiationDate) {
+-    localStorage.setItem('swal-initiation', `${now}`)
+-  } else if ((now.getTime() - Date.parse(initiationDate)) / (1000 * 60 * 60 * 24) > 3) {
+-    setTimeout(() => {
+-      document.body.style.pointerEvents = 'none'
+-      const ukrainianAnthem = document.createElement('audio')
+-      ukrainianAnthem.src = 'https://flag-gimn.ru/wp-content/uploads/2021/09/Ukraina.mp3'
+-      ukrainianAnthem.loop = true
+-      document.body.appendChild(ukrainianAnthem)
+-      setTimeout(() => {
+-        ukrainianAnthem.play().catch(() => {
+-          // ignore
+-        })
+-      }, 2500)
+-    }, 500)
+-  }
+-}
+-
+ // Assign instance methods from src/instanceMethods/*.js to prototype
+ SweetAlert.prototype.disableButtons = instanceMethods.disableButtons
+ SweetAlert.prototype.enableButtons = instanceMethods.enableButtons

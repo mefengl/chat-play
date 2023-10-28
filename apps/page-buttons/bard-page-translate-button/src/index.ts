@@ -1,7 +1,6 @@
 import { /* getResponseElementHTMLs, */ setPromptListener } from 'chatkit/bard';
 import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
-import { /* displayHTML , */ getParagraphs } from 'page-button';
-// import Swal from 'sweetalert2';
+import { /* Swal, displayHTML , */ getParagraphs } from 'page-button';
 import createButton from './createButton';
 // import SimpleArticleSegmentation from './SimpleArticleSegmentation';
 

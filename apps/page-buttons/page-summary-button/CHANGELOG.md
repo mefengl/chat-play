@@ -1,5 +1,13 @@
 # page-summary-button
 
+## 0.8.1
+
+### Patch Changes
+
+- Patch sweetalert2 to remove non-essential code elements
+- Updated dependencies
+  - page-button@0.4.1
+
 ## 0.8.0
 
 ### Minor Changes

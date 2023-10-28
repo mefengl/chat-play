@@ -1,5 +1,13 @@
 # page-translate-button
 
+## 0.10.1
+
+### Patch Changes
+
+- Patch sweetalert2 to remove non-essential code elements
+- Updated dependencies
+  - page-button@0.4.1
+
 ## 0.10.0
 
 ### Minor Changes

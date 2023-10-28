@@ -8,10 +8,15 @@
     "publish-packages": "turbo run build && changeset version && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "latest",
     "eslint": "latest",
     "eslint-config-custom": "workspace:*",
-    "turbo": "latest",
-    "@changesets/cli": "latest"
+    "turbo": "latest"
   },
-  "packageManager": "pnpm@8.7.5"
+  "packageManager": "pnpm@8.7.5",
+  "pnpm": {
+    "patchedDependencies": {
+      "sweetalert2@11.7.18": "patches/sweetalert2@11.7.18.patch"
+    }
+  }
 }

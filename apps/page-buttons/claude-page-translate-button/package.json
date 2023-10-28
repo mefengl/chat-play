@@ -1,7 +1,7 @@
 {
   "name": "claude-page-translate-button",
   "type": "module",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js",
@@ -17,7 +17,6 @@
   "dependencies": {
     "chatkit": "workspace:*",
     "@mefengl/monkit": "workspace:*",
-    "page-button": "workspace:*",
-    "sweetalert2": "^11.7.18"
+    "page-button": "workspace:*"
   }
 }

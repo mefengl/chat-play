@@ -1,6 +1,6 @@
 {
   "name": "page-button",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "A toolkit provide useful functions for page-button.",
   "keywords": [],
   "homepage": "https://github.com/mefengl/chat-play/tree/main/packages/page-button#readme",
@@ -30,9 +30,9 @@
   "devDependencies": {
     "eslint": "latest",
     "eslint-config-custom": "workspace:*",
+    "tsconfig": "workspace:*",
     "tsup": "latest",
-    "typescript": "latest",
-    "tsconfig": "workspace:*"
+    "typescript": "latest"
   },
   "dependencies": {
     "sweetalert2": "^11.7.18"

@@ -1,7 +1,6 @@
 import { getResponseElementHTMLs, setPromptListener } from 'chatkit/chatgpt';
 import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
-import { displayHTML, SimpleArticleSegmentation, getParagraphs } from 'page-button';
-import Swal from 'sweetalert2';
+import { Swal, displayHTML, SimpleArticleSegmentation, getParagraphs } from 'page-button';
 import createButton from './createButton';
 
 async function initialize() {

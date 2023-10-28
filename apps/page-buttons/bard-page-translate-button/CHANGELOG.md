@@ -1,5 +1,13 @@
 # bard-page-translate-button
 
+## 0.3.1
+
+### Patch Changes
+
+- Patch sweetalert2 to remove non-essential code elements
+- Updated dependencies
+  - page-button@0.4.1
+
 ## 0.3.0
 
 ### Minor Changes

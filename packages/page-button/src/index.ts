@@ -1,4 +1,5 @@
 import Swal from 'sweetalert2';
+export { Swal };
 
 export async function displayHTML(html: string[]) {
   let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;

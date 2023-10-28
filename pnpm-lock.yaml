@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  sweetalert2@11.7.18:
+    hash: f6fyhrnxzcw7s2jwg2q3jn75v4
+    path: patches/sweetalert2@11.7.18.patch
+
 importers:
 
   .:
@@ -240,9 +245,6 @@ importers:
       page-button:
         specifier: workspace:*
         version: link:../../../packages/page-button
-      sweetalert2:
-        specifier: ^11.7.18
-        version: 11.7.18
     devDependencies:
       '@types/tampermonkey':
         specifier: latest
@@ -271,9 +273,6 @@ importers:
       page-button:
         specifier: workspace:*
         version: link:../../../packages/page-button
-      sweetalert2:
-        specifier: ^11.7.18
-        version: 11.7.18
     devDependencies:
       '@types/tampermonkey':
         specifier: latest
@@ -302,9 +301,6 @@ importers:
       page-button:
         specifier: workspace:*
         version: link:../../../packages/page-button
-      sweetalert2:
-        specifier: ^11.7.18
-        version: 11.7.18
     devDependencies:
       '@types/tampermonkey':
         specifier: latest
@@ -333,9 +329,6 @@ importers:
       page-button:
         specifier: workspace:*
         version: link:../../../packages/page-button
-      sweetalert2:
-        specifier: ^11.7.18
-        version: 11.7.18
     devDependencies:
       '@types/tampermonkey':
         specifier: latest
@@ -460,7 +453,7 @@ importers:
     dependencies:
       eslint-config-turbo:
         specifier: latest
-        version: 1.10.11(eslint@8.47.0)
+        version: 1.10.11(eslint@8.52.0)
 
   packages/midkit:
     devDependencies:
@@ -508,7 +501,7 @@ importers:
     dependencies:
       sweetalert2:
         specifier: ^11.7.18
-        version: 11.7.18
+        version: 11.7.18(patch_hash=f6fyhrnxzcw7s2jwg2q3jn75v4)
     devDependencies:
       eslint:
         specifier: latest
@@ -1152,13 +1145,13 @@ packages:
       eslint-visitor-keys: 3.4.2
     dev: true
 
-  /@eslint-community/eslint-utils@4.3.0(eslint@8.47.0):
+  /@eslint-community/eslint-utils@4.3.0(eslint@8.52.0):
     resolution: {integrity: sha512-v3oplH6FYCULtFuCeqyuTd9D2WKO937Dxdq+GmHOLL72TTRriLxz2VLlNfkZRsvj6PKnOPAtuT6dwrs/pA5DvA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
     dependencies:
-      eslint: 8.47.0
+      eslint: 8.52.0
       eslint-visitor-keys: 3.4.2
     dev: false
 
@@ -1205,8 +1198,8 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@eslint/js@8.47.0:
-    resolution: {integrity: sha512-P6omY1zv5MItm93kLM8s2vr1HICJH8v0dvddDhysbIuZ+vcjOHg5Zbkf1mTkcmi2JA9oBG2anOkRnW8WJTS8Og==}
+  /@eslint/js@8.52.0:
+    resolution: {integrity: sha512-mjZVbpaeMZludF2fsWLD0Z9gCref1Tk4i9+wddjRvpUNqqcndPkBD09N/Mapey0b3jaXbLm2kICwFv2E64QinA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: false
 
@@ -1219,6 +1212,18 @@ packages:
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@humanwhocodes/config-array@0.11.13:
+    resolution: {integrity: sha512-JSBDMiDKSzQVngfRjOdFXgFfklaXI4K9nLF49Auh21lmBWRLIK3+xTErTWD4KU54pb6coM6ESE7Awz/FNU3zgQ==}
+    engines: {node: '>=10.10.0'}
+    dependencies:
+      '@humanwhocodes/object-schema': 2.0.1
+      debug: 4.3.4
+      minimatch: 3.1.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /@humanwhocodes/module-importer@1.0.1:
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
@@ -1226,6 +1231,11 @@ packages:
 
   /@humanwhocodes/object-schema@1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
+    dev: true
+
+  /@humanwhocodes/object-schema@2.0.1:
+    resolution: {integrity: sha512-dvuCeX5fC9dXgJn9t+X5atfmgQAzUOWqS1254Gh0m6i8wKd10ebXkfNKiRK+1GWi/yTvvLDHpoxLr0xxxeslWw==}
+    dev: false
 
   /@manypkg/find-root@1.1.0:
     resolution: {integrity: sha512-mki5uBvhHzO8kYYix/WRy2WX8S3B5wdVSc9D6KcU5lQNglP2yt58/VfLuAK49glRXChosY8ap2oJ1qgma3GUVA==}
@@ -1290,6 +1300,10 @@ packages:
   /@types/tampermonkey@4.0.10:
     resolution: {integrity: sha512-E3SYtXgeXG/nnq6uAPiZh7i0XA8jLbtiXraxxHTnsSjzQcQMxWBzbcoGkHgiC+zbHXxxkynUT9zt85SpF8loNw==}
     dev: true
+
+  /@ungap/structured-clone@1.2.0:
+    resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+    dev: false
 
   /acorn-jsx@5.3.2(acorn@8.9.0):
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -1806,22 +1820,22 @@ packages:
     resolution: {integrity: sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==}
     engines: {node: '>=10'}
 
-  /eslint-config-turbo@1.10.11(eslint@8.47.0):
+  /eslint-config-turbo@1.10.11(eslint@8.52.0):
     resolution: {integrity: sha512-NMzy6Mabjag6yTo01MsOJjbZoz0FV58L3+vOPcHU2vFP/9fIGG8yY8dtBvo+GPdffCXDdbOwZrdHZmC+s5SGvg==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
-      eslint: 8.47.0
-      eslint-plugin-turbo: 1.10.11(eslint@8.47.0)
+      eslint: 8.52.0
+      eslint-plugin-turbo: 1.10.11(eslint@8.52.0)
     dev: false
 
-  /eslint-plugin-turbo@1.10.11(eslint@8.47.0):
+  /eslint-plugin-turbo@1.10.11(eslint@8.52.0):
     resolution: {integrity: sha512-horw5Ri7GScrB3yKYE7HUa34VhGCIPKKXmlAQDcvjLtMyrDytUD4/qVat4Ca3EQetk12wqoRdIEbMevby1PRNw==}
     peerDependencies:
       eslint: '>6.6.0'
     dependencies:
       dotenv: 16.0.3
-      eslint: 8.47.0
+      eslint: 8.52.0
     dev: false
 
   /eslint-scope@7.2.2:
@@ -1886,18 +1900,19 @@ packages:
       - supports-color
     dev: true
 
-  /eslint@8.47.0:
-    resolution: {integrity: sha512-spUQWrdPt+pRVP1TTJLmfRNJJHHZryFmptzcafwSvHsceV81djHOdnEeDmkdotZyLNjDhrOasNK8nikkoG1O8Q==}
+  /eslint@8.52.0:
+    resolution: {integrity: sha512-zh/JHnaixqHZsolRB/w9/02akBk9EPrOs9JwcTP2ek7yL5bVvXuRariiaAjjoJ5DvuwQ1WAE/HsMz+w17YgBCg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     hasBin: true
     dependencies:
-      '@eslint-community/eslint-utils': 4.3.0(eslint@8.47.0)
+      '@eslint-community/eslint-utils': 4.3.0(eslint@8.52.0)
       '@eslint-community/regexpp': 4.6.2
       '@eslint/eslintrc': 2.1.2
-      '@eslint/js': 8.47.0
-      '@humanwhocodes/config-array': 0.11.10
+      '@eslint/js': 8.52.0
+      '@humanwhocodes/config-array': 0.11.13
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
+      '@ungap/structured-clone': 1.2.0
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.3
@@ -3251,9 +3266,10 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /sweetalert2@11.7.18:
+  /sweetalert2@11.7.18(patch_hash=f6fyhrnxzcw7s2jwg2q3jn75v4):
     resolution: {integrity: sha512-Njl5JTDasSP8yRX9cpLdy2fdxHZYPYNmiIGNZykF2Zt1UHIvurwt/W2LmlGe5RbyMDHYDXuHqlD1Q8Vr5/mqlA==}
     dev: false
+    patched: true
 
   /term-size@2.2.1:
     resolution: {integrity: sha512-wK0Ri4fOGjv/XPy8SBHZChl8CM7uMc5VML7SqiQ0zG7+J5Vr+RMQDoHa2CNT6KHUnTGIXH34UDMkPzAUyapBZg==}
