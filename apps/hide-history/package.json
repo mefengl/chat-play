@@ -1,7 +1,7 @@
 {
   "name": "hide-history",
   "type": "module",
-  "version": "0.2.14",
+  "version": "0.2.15",
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js",

@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.7.0
+
+### Minor Changes
+
+- Create a function named "sendArray" and modify the existing send function to handle high delay responses, such as those from GPT-4
+
 ## 0.6.0
 
 ### Minor Changes

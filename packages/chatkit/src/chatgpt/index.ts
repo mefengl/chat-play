@@ -112,6 +112,12 @@ export async function send(message: string) {
     textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
     await new Promise(resolve => setTimeout(resolve, 100));
   }
+  for (let i = 0; i < 10; i++) {
+    if (isGenerating()) {
+      break;
+    }
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
 }
 
 export function regenerate() {
@@ -148,6 +154,30 @@ export function waitForIdle() {
   });
 }
 
+export async function sendArray(messages: string[]) {
+  let firstTime = true;
+  const isLong = messages.length > 60;
+  while (messages.length > 0) {
+    const waitTime = (isLong && !document.hasFocus()) ? 20 * 1000 : 2000;
+    if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
+    if (isGenerating()) {
+      continue;
+    } else if (getContinueGeneratingButton()) {
+      getContinueGeneratingButton()?.click();
+      continue;
+    } else if (getRegenerateButton() && !getTextarea()) {
+      await new Promise(resolve => setTimeout(resolve, 10 * 1000));
+      getRegenerateButton()?.click();
+      continue;
+    }
+    firstTime = false;
+    if (messages.length === 0) {
+      break;
+    }
+    await send(messages.shift() || '');
+  }
+}
+
 export function setPromptListener(key: string = 'prompt_texts') {
   let last_trigger_time = +new Date();
   if (location.href.includes("chat.openai")) {
@@ -157,33 +187,9 @@ export function setPromptListener(key: string = 'prompt_texts') {
       }
       last_trigger_time = +new Date();
       setTimeout(async () => {
-        const prompt_texts = new_value;
-        const isLong = prompt_texts.length > 60;
-        if (prompt_texts.length > 0) {
-          let firstTime = true;
-          while (true) {
-            const waitTime = (isLong && !document.hasFocus()) ? 20 * 1000 : 2000;
-            if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
-            if (!firstTime && isGenerating()) {
-              continue;
-            } else if (getContinueGeneratingButton()) {
-              getContinueGeneratingButton()?.click();
-              continue;
-            } else if (getRegenerateButton() && !getTextarea()) {
-              // If has regenerate button without textarea, often means network error, wait 10 seconds and try again
-              await new Promise(resolve => setTimeout(resolve, 10 * 1000));
-              getRegenerateButton()?.click();
-              continue;
-            }
-            firstTime = false;
-            if (prompt_texts.length === 0) {
-              break;
-            }
-            await send(prompt_texts.shift() || '');
-          }
-        }
+        sendArray(new_value);
+        GM_setValue(key, []);
       }, 0);
-      GM_setValue(key, []);
     });
   }
 }
