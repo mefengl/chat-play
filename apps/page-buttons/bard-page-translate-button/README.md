@@ -6,6 +6,10 @@
 
 > if you prefer Claude: [claude-page-translate-button](https://greasyfork.org/scripts/471467)
 
+## Chrome Extension dev ing...
+
+[*Doozy: AI made easy*, Waitlist](https://docs.google.com/forms/d/e/1FAIpQLSco0ORt6OejFDi04wat5ZzrOblHHEzu_qAswneexrQ4A60Xsw/viewform?usp=sf_link)
+
 ## Usage
 
 When you visit a webpage with the userscript installed, you'll see a Translate button at the topright corner of the page. Click the button to send the text from the webpage to Bard for translation. **The translated text will be displayed on the Bard web interface**.

@@ -6,6 +6,10 @@
 
 > if you prefer Bard: [bard-page-translate-button](https://greasyfork.org/scripts/471758)
 
+## Chrome Extension dev ing...
+
+[*Doozy: AI made easy*, Waitlist](https://docs.google.com/forms/d/e/1FAIpQLSco0ORt6OejFDi04wat5ZzrOblHHEzu_qAswneexrQ4A60Xsw/viewform?usp=sf_link)
+
 ## Installation
 
 1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/) or [Greasemonkey](https://www.greasespot.net/).
