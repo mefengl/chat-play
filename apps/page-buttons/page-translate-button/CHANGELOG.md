@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.10.3
+
+### Patch Changes
+
+- update readme for new Chrome extension waitlist
+
 ## 0.10.2
 
 ### Patch Changes

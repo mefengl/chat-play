@@ -1,5 +1,11 @@
 # page-summary-button
 
+## 0.8.3
+
+### Patch Changes
+
+- update readme for new Chrome extension waitlist
+
 ## 0.8.2
 
 ### Patch Changes

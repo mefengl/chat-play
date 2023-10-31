@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.4.3
+
+### Patch Changes
+
+- update readme for new Chrome extension waitlist
+
 ## 0.4.2
 
 ### Patch Changes

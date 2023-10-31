@@ -1,5 +1,11 @@
 # bard-page-translate-button
 
+## 0.3.3
+
+### Patch Changes
+
+- update readme for new Chrome extension waitlist
+
 ## 0.3.2
 
 ### Patch Changes
