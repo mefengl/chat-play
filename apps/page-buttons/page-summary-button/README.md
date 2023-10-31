@@ -4,7 +4,7 @@
 
 ## Chrome Extension dev ing...
 
-[*Doozy: AI made easy*, Waitlist](https://docs.google.com/forms/d/e/1FAIpQLSco0ORt6OejFDi04wat5ZzrOblHHEzu_qAswneexrQ4A60Xsw/viewform?usp=sf_link)
+[*Doozy: AI made easy*, Waitlist](https://docs.google.com/forms/d/e/1FAIpQLSco0ORt6OejFDi04wat5ZzrOblHHEzu_qAswneexrQ4A60Xsw/viewform?usp=sf_link): I really think it will be very useful. There won't be any junk mail or anything like that here. If you think this script is good, or can be even better, sign up and you can use it right away. There's an early product screenshot inside.
 
 ## Installation
 

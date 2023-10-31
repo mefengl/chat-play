@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.10.4
+
+### Patch Changes
+
+- update the waitlist description
+
 ## 0.10.3
 
 ### Patch Changes

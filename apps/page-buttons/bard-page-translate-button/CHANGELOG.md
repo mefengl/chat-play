@@ -1,5 +1,11 @@
 # bard-page-translate-button
 
+## 0.3.4
+
+### Patch Changes
+
+- update the waitlist description
+
 ## 0.3.3
 
 ### Patch Changes

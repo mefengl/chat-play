@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.4.4
+
+### Patch Changes
+
+- update the waitlist description
+
 ## 0.4.3
 
 ### Patch Changes

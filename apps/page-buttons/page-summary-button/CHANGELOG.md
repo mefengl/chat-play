@@ -1,5 +1,11 @@
 # page-summary-button
 
+## 0.8.4
+
+### Patch Changes
+
+- update the waitlist description
+
 ## 0.8.3
 
 ### Patch Changes
