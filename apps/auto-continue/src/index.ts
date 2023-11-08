@@ -14,7 +14,7 @@ async function main() {
   let firstTime = true;
   setInterval(async () => {
     const currentTime = new Date().getTime();
-    if (lastRetryTime && (currentTime - lastRetryTime >= 60 * 1000)) {
+    if (lastRetryTime && (currentTime - lastRetryTime >= 5 * 60 * 1000)) {
       retryCount = 0;
     }
 
@@ -29,7 +29,7 @@ async function main() {
       } else if (getRegenerateButton() && !getTextarea()) {
         // If has regenerate button without textarea, often means network error
         // in this case, retry is safe.
-        // But Openai's other error handling is not safe to retry, so we limit it to 3 retries in 1 minute.
+        // But Openai's other error handling is not safe to retry, so we limit it to 3 retries in 5 minute.
         if (retryCount < maxRetries) {
           await new Promise(resolve => setTimeout(resolve, 2 * 1000));
           getRegenerateButton()?.click();
