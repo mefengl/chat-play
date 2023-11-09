@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.7.1
+
+### Patch Changes
+
+- add claude first time send delay
+
 ## 0.7.0
 
 ### Minor Changes

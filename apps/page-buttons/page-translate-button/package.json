@@ -1,7 +1,7 @@
 {
   "name": "page-translate-button",
   "type": "module",
-  "version": "0.10.4",
+  "version": "0.10.5",
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js",

@@ -1,5 +1,13 @@
 # chatgpt-auto-continue
 
+## 1.1.2
+
+### Patch Changes
+
+- 40cfc3f: set max retries' windo to 5 minutes
+- Updated dependencies
+  - chatkit@0.7.1
+
 ## 1.1.1
 
 ### Patch Changes

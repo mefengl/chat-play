@@ -57,6 +57,7 @@ export function setPromptListener(key: string = 'prompt_texts') {
           let firstTime = true;
           while (prompt_texts.length > 0) {
             const waitTime = (isLong && !document.hasFocus()) ? 20 * 1000 : 2000;
+            if (firstTime) { await new Promise(resolve => setTimeout(resolve, 2000)); }
             if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
             if (!firstTime && isGenerating()) {
               continue;
