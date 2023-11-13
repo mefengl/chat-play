@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.8.0
+
+### Minor Changes
+
+- make chatgpt's core function fit the new UI
+
 ## 0.7.1
 
 ### Patch Changes
