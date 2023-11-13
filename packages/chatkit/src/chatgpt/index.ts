@@ -35,7 +35,14 @@ export function getTextarea() {
   return result;
 };
 
+function getNewSubmitButton() {
+  return document.querySelector('button[data-testid="send-button"]');
+}
+
 export function getSubmitButton() {
+  if (getNewSubmitButton()) {
+    return getNewSubmitButton();
+  }
   const textarea = getTextarea();
   if (!textarea) return;
   return textarea.nextElementSibling;
@@ -73,8 +80,12 @@ export function getContinueGeneratingButton() {
   return getButton('continue');
 };
 
+function getNewStopGeneratingButton() {
+  return document.querySelector('button[aria-label="Stop generating"]');
+}
+
 export function getStopGeneratingButton() {
-  return getButton('stop');
+  return getNewStopGeneratingButton() || getButton('stop');
 };
 
 export function getResponseElementHTMLs() {
@@ -140,6 +151,9 @@ export function onSend(callback: () => void) {
 }
 
 export function isGenerating() {
+  if (getNewStopGeneratingButton()) {
+    return true;
+  }
   return getSubmitButton()?.firstElementChild?.childElementCount === 3;
 }
 
