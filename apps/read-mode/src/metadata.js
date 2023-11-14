@@ -9,14 +9,15 @@ const end = '// ==/UserScript==';
 
 const base = `
 // @name         chatgpt-read-mode
-// @description  🍞 show a modal for Read
+// @description  🍞 show a modal for Read, also support Claude
 // @author       mefengl
 // @version      ${process.env.npm_package_version}
 // @namespace    https://github.com/mefengl
 // @require      https://cdn.jsdelivr.net/npm/@mozilla/readability@0.4.3/Readability.min.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openai.com
 // @license      MIT
-// @match        *://*/*
+// @match        https://chat.openai.com/*
+// @match        https://claude.ai/*
 // @grant        GM_registerMenuCommand
 // @updateURL    ${generateUpdateURL()}
 `;
