@@ -20,6 +20,14 @@ export function getSubmitButton() {
   return fieldset.querySelector('button');
 };
 
+export function getPromptElementHTMLs() {
+  return Array.from(document.querySelectorAll('.ReactMarkdown.place-self-end > .contents')).map(m => m.innerHTML);
+}
+
+export function getResponseElementHTMLs() {
+  return Array.from(document.querySelectorAll('.ReactMarkdown.place-self-start > .contents')).map(m => m.innerHTML);
+}
+
 export function isGenerating() {
   return getSubmitButton()?.hasAttribute('disabled');
 }

@@ -1,6 +1,6 @@
-import { setPromptListener } from 'chatkit/claude';
+import { getResponseElementHTMLs, setPromptListener } from 'chatkit/claude';
 import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
-import { Swal, SimpleArticleSegmentation, getParagraphs } from 'page-button';
+import { Swal, SimpleArticleSegmentation, getParagraphs, displayHTML } from 'page-button';
 import createButton from './createButton';
 
 async function initialize() {
@@ -26,4 +26,14 @@ async function initialize() {
   setPromptListener('prompt_texts');
 
   createButton(async () => setPrompts(getParagraphs()), navigator.language.startsWith("zh") ? "页面翻译" : "Page Translate");
+
+  // Read Mode
+  function displayReadMode() {
+    let elements = getResponseElementHTMLs();
+    if (elements.length === 0) {
+      elements = ['<p>No responses available.</p>'];
+    }
+    displayHTML(`<div class="ReactMarkdown break-words text-stone-900 gap-3 grid">${elements.join("")}</div>`)
+  }
+  GM_registerMenuCommand("📖 Read Mode", displayReadMode);
 })();
