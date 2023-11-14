@@ -1,5 +1,12 @@
 # sensible
 
+## 0.7.17
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.0
+
 ## 0.7.16
 
 ### Patch Changes

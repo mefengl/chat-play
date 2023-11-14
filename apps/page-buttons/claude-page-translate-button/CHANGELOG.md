@@ -1,5 +1,16 @@
 # claude-page-translate-button
 
+## 0.5.0
+
+### Minor Changes
+
+- chatkit(claude): add getResponseElementsHTML function so that read mode is supported in Claude page
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.0
+
 ## 0.4.8
 
 ### Patch Changes

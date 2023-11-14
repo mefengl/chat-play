@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.0
+
+### Minor Changes
+
+- chatkit(claude): add getResponseElementsHTML function so that read mode is supported in Claude page
+
 ## 0.8.0
 
 ### Minor Changes
