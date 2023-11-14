@@ -1,5 +1,11 @@
 # bard-page-translate-button
 
+## 0.4.0
+
+### Minor Changes
+
+- read mode now support markdown
+
 ## 0.3.7
 
 ### Patch Changes

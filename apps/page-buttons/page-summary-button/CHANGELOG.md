@@ -1,5 +1,11 @@
 # page-summary-button
 
+## 0.9.0
+
+### Minor Changes
+
+- read mode now support markdown
+
 ## 0.8.7
 
 ### Patch Changes

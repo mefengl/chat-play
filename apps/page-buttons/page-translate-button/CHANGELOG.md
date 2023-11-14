@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.11.0
+
+### Minor Changes
+
+- read mode now support markdown
+
 ## 0.10.7
 
 ### Patch Changes
