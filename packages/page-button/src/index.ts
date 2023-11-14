@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2';
 export { Swal };
 
-export async function displayHTML(html: string[]) {
+export async function displayHTML(html: string) {
   let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   let swalWidth = screenWidth < 800 ? '80%' : '800px';
 
@@ -18,7 +18,7 @@ export async function displayHTML(html: string[]) {
 
   Swal.fire({
     title: '',
-    html: html.join('<br />'),
+    html,
     width: swalWidth,
     padding: '0em',
     background: '#fff',

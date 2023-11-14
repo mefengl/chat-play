@@ -11,11 +11,11 @@ async function initialize() {
 
   // Read Mode
   function displayReadMode() {
-    let html = getResponseElementHTMLs();
-    if (html.length === 0) {
-      html = ['<p>No responses available.</p>'];
+    let elements = getResponseElementHTMLs();
+    if (elements.length === 0) {
+      elements = ['<p>No responses available.</p>'];
     }
-    displayHTML(html);
+    displayHTML(`<div class="relative p-2 markdown prose w-full break-words dark:prose-invert light">${elements.join("")}</div>`)
   }
   GM_registerMenuCommand("📖 Read Mode", displayReadMode);
 })();
