@@ -38,6 +38,14 @@ Video Demo: https://www.bilibili.com/video/BV18T411q7aU
 
 To add support for other AI models, you will need to modify the script and add the necessary configurations, such as URL patterns and DOM selectors, for each new AI model. The script is designed to be extensible, so you can easily add support for additional AI models.
 
+## Join Our Discord Community!
+
+🚀 We've launched a Discord channel for faster, collaborative discussions.
+
+👉 Join us here: [Discord Channel](https://discord.gg/pwTKpnc2sF)
+
+Stay connected for updates, support, and community interaction. See you there!
+
 ## License
 
 This project is licensed under the MIT License.

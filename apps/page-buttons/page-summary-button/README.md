@@ -2,10 +2,6 @@
 
 🍓 let ChatGPT summarize the web page you are reading in one click
 
-## Chrome Extension dev ing...
-
-[*Doozy: AI made easy*, Waitlist](https://docs.google.com/forms/d/e/1FAIpQLSco0ORt6OejFDi04wat5ZzrOblHHEzu_qAswneexrQ4A60Xsw/viewform?usp=sf_link): I really think it will be very useful. There won't be any junk mail or anything like that here. If you think this script is good, or can be even better, sign up and you can use it right away. There's an early product screenshot inside.
-
 ## Installation
 
 1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/) or [Greasemonkey](https://www.greasespot.net/).
@@ -16,9 +12,13 @@
 
 When you visit a webpage with the userscript installed, you'll see a Summary button at the top right corner of the page. Click the button to send the text from the webpage to ChatGPT for summarization. **The summarized text will be displayed on the ChatGPT web interface**.
 
-## Contributing
+## Join Our Discord Community!
 
-Contributions are welcome! Please feel free to submit issues or pull requests to improve this userscript.
+🚀 We've launched a Discord channel for faster, collaborative discussions.
+
+👉 Join us here: [Discord Channel](https://discord.gg/pwTKpnc2sF)
+
+Stay connected for updates, support, and community interaction. See you there!
 
 ## Credits
 

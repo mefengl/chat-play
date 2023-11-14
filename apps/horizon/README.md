@@ -23,6 +23,14 @@ A userscript that rearranges the conversation in OpenAI's ChatGPT website (https
 2. Click [chatgpt-horizon](https://greasyfork.org/scripts/464285) to the greasyfork page to install the userscript.
 3. Visit any website, and you will see a "Translate to Chinese" button at the topright corner of the page.
 
+## Join Our Discord Community!
+
+🚀 We've launched a Discord channel for faster, collaborative discussions.
+
+👉 Join us here: [Discord Channel](https://discord.gg/pwTKpnc2sF)
+
+Stay connected for updates, support, and community interaction. See you there!
+
 ## License
 
 This script is released under the MIT License.

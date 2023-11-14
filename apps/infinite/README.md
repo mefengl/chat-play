@@ -30,9 +30,13 @@ The script will ask the new question to ChatGPT, and the process repeats indefin
 
 Note: If the script does not start running automatically, refresh the chat interface page.
 
-## Contributing
+## Join Our Discord Community!
 
-Contributions to the script are welcome. You can fork the script's GitHub repository [chat-play/apps/infinite](https://github.com/mefengl/chat-play) and submit a pull request with your changes.
+🚀 We've launched a Discord channel for faster, collaborative discussions.
+
+👉 Join us here: [Discord Channel](https://discord.gg/pwTKpnc2sF)
+
+Stay connected for updates, support, and community interaction. See you there!
 
 ## License
 

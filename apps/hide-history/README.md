@@ -23,9 +23,13 @@ You can easily toggle which timeframes you'd like to be hidden:
 2. 📦 Install this UserScript by clicking the install button or link.
 3. 🕹️ Visit [chat.openai.com](https://chat.openai.com/) and enjoy the cleaner interface with the script hiding the unwanted parts of your chat history!
 
-## Contributions 🤝
+## Join Our Discord Community!
 
-Please feel free to raise issues or pull requests to enhance the functionality of this script!
+🚀 We've launched a Discord channel for faster, collaborative discussions.
+
+👉 Join us here: [Discord Channel](https://discord.gg/pwTKpnc2sF)
+
+Stay connected for updates, support, and community interaction. See you there!
 
 ## Credits 🙏
 
