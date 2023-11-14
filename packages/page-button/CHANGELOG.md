@@ -1,5 +1,11 @@
 # page-button
 
+## 0.4.2
+
+### Patch Changes
+
+- displayHTML now render HTML instead of element array
+
 ## 0.4.1
 
 ### Patch Changes

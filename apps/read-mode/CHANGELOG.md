@@ -1,5 +1,16 @@
 # read-mode
 
+## 0.1.0
+
+### Minor Changes
+
+- Render markdown instead of plain html
+
+### Patch Changes
+
+- Updated dependencies
+  - page-button@0.4.2
+
 ## 0.0.7
 
 ### Patch Changes
