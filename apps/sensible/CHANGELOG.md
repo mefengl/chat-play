@@ -1,5 +1,11 @@
 # sensible
 
+## 0.7.16
+
+### Patch Changes
+
+- chroe: add Discord link
+
 ## 0.7.15
 
 ### Patch Changes

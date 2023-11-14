@@ -1,5 +1,11 @@
 # infinite
 
+## 0.5.13
+
+### Patch Changes
+
+- chroe: add Discord link
+
 ## 0.5.12
 
 ### Patch Changes

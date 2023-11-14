@@ -1,5 +1,11 @@
 # horizon
 
+## 0.2.17
+
+### Patch Changes
+
+- chroe: add Discord link
+
 ## 0.2.16
 
 ### Patch Changes

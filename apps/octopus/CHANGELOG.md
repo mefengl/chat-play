@@ -1,5 +1,11 @@
 # octopus
 
+## 0.2.30
+
+### Patch Changes
+
+- chroe: add Discord link
+
 ## 0.2.29
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # page-summary-button
 
+## 0.9.1
+
+### Patch Changes
+
+- chroe: add Discord link
+
 ## 0.9.0
 
 ### Minor Changes

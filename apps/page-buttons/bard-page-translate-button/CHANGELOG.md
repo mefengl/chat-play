@@ -1,5 +1,11 @@
 # bard-page-translate-button
 
+## 0.4.1
+
+### Patch Changes
+
+- chroe: add Discord link
+
 ## 0.4.0
 
 ### Minor Changes
