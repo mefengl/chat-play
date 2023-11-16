@@ -1,5 +1,11 @@
 # read-mode
 
+## 0.2.1
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.2.0
 
 ### Minor Changes

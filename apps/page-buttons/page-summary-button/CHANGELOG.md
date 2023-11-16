@@ -1,5 +1,11 @@
 # page-summary-button
 
+## 0.9.3
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.9.2
 
 ### Patch Changes

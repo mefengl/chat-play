@@ -1,5 +1,11 @@
 # octopus
 
+## 0.2.32
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.2.31
 
 ### Patch Changes

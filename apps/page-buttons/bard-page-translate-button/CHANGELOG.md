@@ -1,5 +1,11 @@
 # bard-page-translate-button
 
+## 0.4.3
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.4.2
 
 ### Patch Changes

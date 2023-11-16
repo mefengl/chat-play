@@ -1,5 +1,11 @@
 # doozy
 
+## 0.8.18
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.8.17
 
 ### Patch Changes

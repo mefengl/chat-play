@@ -1,5 +1,11 @@
 # infinite
 
+## 0.5.15
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.5.14
 
 ### Patch Changes

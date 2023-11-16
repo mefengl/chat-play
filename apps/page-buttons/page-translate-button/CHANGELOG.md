@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.11.3
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.11.2
 
 ### Patch Changes

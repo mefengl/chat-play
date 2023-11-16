@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.5.1
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.5.0
 
 ### Minor Changes

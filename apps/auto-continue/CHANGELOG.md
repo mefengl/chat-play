@@ -1,5 +1,11 @@
 # chatgpt-auto-continue
 
+## 1.1.5
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 1.1.4
 
 ### Patch Changes

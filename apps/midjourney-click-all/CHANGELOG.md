@@ -1,5 +1,11 @@
 # midjourney-click-all
 
+## 0.3.2
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.3.1
 
 ### Patch Changes

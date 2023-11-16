@@ -1,5 +1,11 @@
 # chatgpt-forget-model-not
 
+## 0.0.23
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.0.22
 
 ### Patch Changes

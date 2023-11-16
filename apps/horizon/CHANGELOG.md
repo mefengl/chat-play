@@ -1,5 +1,11 @@
 # horizon
 
+## 0.2.19
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.2.18
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # sensible
 
+## 0.7.18
+
+### Patch Changes
+
+- Add Discord server link to README files
+
 ## 0.7.17
 
 ### Patch Changes
