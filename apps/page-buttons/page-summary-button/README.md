@@ -2,6 +2,8 @@
 
 🍓 let ChatGPT summarize the web page you are reading in one click
 
+[Join Discord Server | 加入 Discord 讨论 | Discordのディスカッションに参加する](https://discord.gg/pwTKpnc2sF)
+
 ## Installation
 
 1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/) or [Greasemonkey](https://www.greasespot.net/).
@@ -11,14 +13,6 @@
 ## Usage
 
 When you visit a webpage with the userscript installed, you'll see a Summary button at the top right corner of the page. Click the button to send the text from the webpage to ChatGPT for summarization. **The summarized text will be displayed on the ChatGPT web interface**.
-
-## Join Our Discord Community!
-
-🚀 We've launched a Discord channel for faster, collaborative discussions.
-
-👉 Join us here: [Discord Channel](https://discord.gg/pwTKpnc2sF)
-
-Stay connected for updates, support, and community interaction. See you there!
 
 ## Credits
 

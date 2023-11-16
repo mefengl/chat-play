@@ -4,13 +4,7 @@ Find the `Read Mode` in Tampermonkey menu or Context Menu, Click it to enable th
 
 enjoy!
 
-## Join Our Discord Community!
-
-🚀 We've launched a Discord channel for faster, collaborative discussions.
-
-👉 Join us here: [Discord Channel](https://discord.gg/pwTKpnc2sF)
-
-Stay connected for updates, support, and community interaction. See you there!
+[Join Discord Server | 加入 Discord 讨论 | Discordのディスカッションに参加する](https://discord.gg/pwTKpnc2sF)
 
 ## License
 

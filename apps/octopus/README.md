@@ -1,15 +1,8 @@
 # Chat-Octopus
 
-[![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
-[![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
-[![Twitter Follow](https://img.shields.io/twitter/follow/mefengl?style=social)](https://twitter.com/mefengl)
-
-[![Daily downloads](https://img.shields.io/greasyfork/dd/462713)](https://greasyfork.org/zh-CN/scripts/462713-chat-octopus/stats)
-[![Total downloads](https://img.shields.io/greasyfork/dt/462713)](https://greasyfork.org/zh-CN/scripts/462713-chat-octopus/stats)
-
-[![License](https://img.shields.io/greasyfork/l/462713?color=&label=License)](https://opensource.org/licenses/MIT)
-
 Chat-Octopus is a userscript that enables you to send message to multiple AI language models, such as OpenAI's ChatGPT, Google's Bard, Microsoft Bing, and even more.
+
+[Join Discord Server | 加入 Discord 讨论 | Discordのディスカッションに参加する](https://discord.gg/pwTKpnc2sF)
 
 ## Features
 
@@ -37,14 +30,6 @@ Video Demo: https://www.bilibili.com/video/BV18T411q7aU
 ## Adding Support for More AI Models
 
 To add support for other AI models, you will need to modify the script and add the necessary configurations, such as URL patterns and DOM selectors, for each new AI model. The script is designed to be extensible, so you can easily add support for additional AI models.
-
-## Join Our Discord Community!
-
-🚀 We've launched a Discord channel for faster, collaborative discussions.
-
-👉 Join us here: [Discord Channel](https://discord.gg/pwTKpnc2sF)
-
-Stay connected for updates, support, and community interaction. See you there!
 
 ## License
 

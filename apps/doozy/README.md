@@ -1,17 +1,10 @@
 # Doozy
 
-[![GitHub stars](https://img.shields.io/github/stars/mefengl/chat-play?style=social)](https://github.com/mefengl/chat-play)
-[![Follow on GitHub](https://img.shields.io/github/followers/mefengl?label=Follow%20%40mefengl&style=social)](https://github.com/mefengl)
-[![Twitter Follow](https://img.shields.io/twitter/follow/mefengl?style=social)](https://twitter.com/mefengl)
-
-[![Daily downloads](https://img.shields.io/greasyfork/dd/461179)](https://greasyfork.org/zh-CN/scripts/461179-doozy/stats)
-[![Total downloads](https://img.shields.io/greasyfork/dt/461179)](https://greasyfork.org/zh-CN/scripts/461179-doozy/stats)
-
-[![License](https://img.shields.io/greasyfork/l/461179?color=&label=License)](https://opensource.org/licenses/MIT)
-
 > Doozy sounds like 多嘴 in Chinese, which means chatty
 
 A wonderful day spent with ChatGPT
+
+[Join Discord Server | 加入 Discord 讨论 | Discordのディスカッションに参加する](https://discord.gg/pwTKpnc2sF)
 
 ## 豆瓣
 

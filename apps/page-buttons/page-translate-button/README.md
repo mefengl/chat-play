@@ -6,6 +6,8 @@
 
 > if you prefer Bard: [bard-page-translate-button](https://greasyfork.org/scripts/471758)
 
+[Join Discord Server | 加入 Discord 讨论 | Discordのディスカッションに参加する](https://discord.gg/pwTKpnc2sF)
+
 ## Installation
 
 1. Install a userscript manager like [Tampermonkey](https://www.tampermonkey.net/) or [Greasemonkey](https://www.greasespot.net/).
@@ -17,14 +19,6 @@
 When you visit a webpage with the userscript installed, you'll see a Translate button at the topright corner of the page. Click the button to send the text from the webpage to ChatGPT for translation. **The translated text will be displayed on the ChatGPT web interface**.
 
 The default language for translation in the script is the browser's local language. If you need to change it, please click on Tampermonkey menu to make corresponding modifications.
-
-## Join Our Discord Community!
-
-🚀 We've launched a Discord channel for faster, collaborative discussions.
-
-👉 Join us here: [Discord Channel](https://discord.gg/pwTKpnc2sF)
-
-Stay connected for updates, support, and community interaction. See you there!
 
 ## Credits
 
