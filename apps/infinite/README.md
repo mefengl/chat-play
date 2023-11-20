@@ -4,6 +4,11 @@ ChatGPT-Infinite is a UserScript that automates the process of generating questi
 
 > Use this responsibly. You may encounter an error if more than 60-70 conversations are generated per hour.
 
+## 🦜 Doozy: AI Made Easy
+
+[Chrome Extension | Chrome 扩展 | Chrome拡張機能](https://chromewebstore.google.com/detail/doozy-ai-made-easy/okifoaikfmpfcamplcfjkpdnhfodpkil)
+> Now it mainly does translation and summary work, but more features are under development, let's go!
+
 [Join Discord Server | 加入 Discord 讨论 | Discordのディスカッションに参加する](https://discord.gg/pwTKpnc2sF)
 
 ## Stop

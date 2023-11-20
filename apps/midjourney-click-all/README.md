@@ -2,6 +2,11 @@
 
 Hello, lovely people! 👋🎉 Welcome to the repository for the `midjourney-click-all` userscript. Ever found yourself in the middle of a journey on Discord and wished for a simpler way to engage with the platform? This script has got you covered! It introduces an 'ALL' button that, once clicked, triggers all buttons in a row instantly. A true timesaver, isn't it? 🚀👀
 
+## 🦜 Doozy: AI Made Easy
+
+[Chrome Extension | Chrome 扩展 | Chrome拡張機能](https://chromewebstore.google.com/detail/doozy-ai-made-easy/okifoaikfmpfcamplcfjkpdnhfodpkil)
+> Now it mainly does translation and summary work, but more features are under development, let's go!
+
 [Join Discord Server | 加入 Discord 讨论 | Discordのディスカッションに参加する](https://discord.gg/pwTKpnc2sF)
 
 ## 📖 Notes

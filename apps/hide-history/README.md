@@ -9,6 +9,11 @@ You can easily toggle which timeframes you'd like to be hidden:
 <img src="https://pub-a57c0ab473094e398e91626882bd3cb6.r2.dev/chatgpt-hide-history/chatgpt-hide-history-menu.png" width="200">
 
 
+## 🦜 Doozy: AI Made Easy
+
+[Chrome Extension | Chrome 扩展 | Chrome拡張機能](https://chromewebstore.google.com/detail/doozy-ai-made-easy/okifoaikfmpfcamplcfjkpdnhfodpkil)
+> Now it mainly does translation and summary work, but more features are under development, let's go!
+
 [Join Discord Server | 加入 Discord 讨论 | Discordのディスカッションに参加する](https://discord.gg/pwTKpnc2sF)
 
 ## Usage 🛠️
