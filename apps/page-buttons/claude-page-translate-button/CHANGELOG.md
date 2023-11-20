@@ -1,5 +1,11 @@
 # claude-page-translate-button
 
+## 0.5.2
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 0.5.1
 
 ### Patch Changes

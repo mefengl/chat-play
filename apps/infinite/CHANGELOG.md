@@ -1,5 +1,11 @@
 # infinite
 
+## 0.5.16
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 0.5.15
 
 ### Patch Changes

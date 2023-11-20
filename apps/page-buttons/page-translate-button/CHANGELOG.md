@@ -1,5 +1,11 @@
 # page-translate-button
 
+## 0.11.4
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 0.11.3
 
 ### Patch Changes

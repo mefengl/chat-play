@@ -1,5 +1,11 @@
 # chatgpt-auto-continue
 
+## 1.1.6
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 1.1.5
 
 ### Patch Changes

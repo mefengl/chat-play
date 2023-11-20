@@ -1,5 +1,11 @@
 # bard-page-translate-button
 
+## 0.4.4
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 0.4.3
 
 ### Patch Changes

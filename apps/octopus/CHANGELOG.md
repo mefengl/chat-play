@@ -1,5 +1,11 @@
 # octopus
 
+## 0.2.33
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 0.2.32
 
 ### Patch Changes

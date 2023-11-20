@@ -1,5 +1,11 @@
 # read-mode
 
+## 0.2.2
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 0.2.1
 
 ### Patch Changes

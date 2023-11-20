@@ -1,5 +1,11 @@
 # sensible
 
+## 0.7.19
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 0.7.18
 
 ### Patch Changes

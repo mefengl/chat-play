@@ -1,5 +1,11 @@
 # hide-history
 
+## 0.2.21
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 0.2.20
 
 ### Patch Changes

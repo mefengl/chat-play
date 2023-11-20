@@ -1,5 +1,11 @@
 # doozy
 
+## 0.8.19
+
+### Patch Changes
+
+- Add Chrome extension announcement
+
 ## 0.8.18
 
 ### Patch Changes
