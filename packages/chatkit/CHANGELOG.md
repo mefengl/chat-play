@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.1
+
+### Patch Changes
+
+- fix(bard): fix for new ui
+
 ## 0.9.0
 
 ### Minor Changes
