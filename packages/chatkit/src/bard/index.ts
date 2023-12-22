@@ -16,13 +16,13 @@ export function getInputArea(): HTMLElement | null {
 
 export function getTextarea(): HTMLTextAreaElement | null {
   const inputArea = getInputArea();
-  return inputArea ? inputArea.querySelector('textarea') : null;
+  return inputArea ? inputArea.querySelector('.textarea') : null;
 }
 
 export function setTextarea(message: string) {
   const textarea = getTextarea();
   if (!textarea) return;
-  textarea.value = message;
+  textarea.textContent = message;
   textarea.dispatchEvent(new Event('input', { bubbles: true }));
 }
 
@@ -55,7 +55,7 @@ export async function send(message: string) {
   setTextarea(message);
   const textarea = getTextarea();
   if (!textarea) return;
-  while (textarea.value === message) {
+  while (textarea.textContent === message) {
     await new Promise(resolve => setTimeout(resolve, 100));
     getSubmitButton()?.click();
   }
