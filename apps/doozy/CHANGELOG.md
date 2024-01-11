@@ -1,5 +1,12 @@
 # doozy
 
+## 0.8.21
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.2
+
 ## 0.8.20
 
 ### Patch Changes

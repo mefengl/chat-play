@@ -1,5 +1,12 @@
 # init
 
+## 0.1.19
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.2
+
 ## 0.1.18
 
 ### Patch Changes

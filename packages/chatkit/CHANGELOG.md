@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.2
+
+### Patch Changes
+
+- fix(chatkit/chatgpt): let send function also work in narrow ui
+
 ## 0.9.1
 
 ### Patch Changes
