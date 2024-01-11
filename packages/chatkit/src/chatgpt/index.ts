@@ -36,7 +36,7 @@ export function getTextarea() {
 };
 
 function getNewSubmitButton() {
-  return document.querySelector('button[data-testid="send-button"]');
+  return document.querySelector('button[data-testid="send-button"]') as HTMLButtonElement | undefined;
 }
 
 export function getSubmitButton() {
@@ -45,7 +45,7 @@ export function getSubmitButton() {
   }
   const textarea = getTextarea();
   if (!textarea) return;
-  return textarea.nextElementSibling;
+  return textarea.nextElementSibling as HTMLButtonElement | undefined;
 };
 
 export function getInitialButtons() {
@@ -121,6 +121,7 @@ export async function send(message: string) {
   if (!textarea) return;
   while (textarea.value === message) {
     textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+    getSubmitButton()?.click();
     await new Promise(resolve => setTimeout(resolve, 100));
   }
   for (let i = 0; i < 10; i++) {
