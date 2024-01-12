@@ -1,7 +1,7 @@
 {
   "name": "chatgpt-auto-continue",
   "type": "module",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "private": true,
   "scripts": {
     "build": "node esbuild.config.js",
