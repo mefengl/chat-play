@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.4
+
+### Patch Changes
+
+- fix(chatkit/chatgpt): Fix double send problem
+
 ## 0.9.3
 
 ### Patch Changes

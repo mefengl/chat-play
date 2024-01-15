@@ -1,5 +1,12 @@
 # smart
 
+## 0.0.21
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.4
+
 ## 0.0.20
 
 ### Patch Changes
