@@ -119,13 +119,13 @@ export async function send(message: string) {
   setTextarea(message);
   const textarea = getTextarea();
   if (!textarea) return;
-  for (let i = 0; i < 10 && textarea.value === message; i++) {
+  for (let i = 0; i < 5 && textarea.value === message; i++) {
     getSubmitButton()?.click();
-    await new Promise(resolve => setTimeout(resolve, 100));
+    await new Promise(resolve => setTimeout(resolve, 400));
   }
-  for (let i = 0; i < 10 && textarea.value === message; i++) {
+  for (let i = 0; i < 5 && textarea.value === message; i++) {
     textarea.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
-    await new Promise(resolve => setTimeout(resolve, 100));
+    await new Promise(resolve => setTimeout(resolve, 400));
   }
   for (let i = 0; i < 10; i++) {
     if (isGenerating()) {
