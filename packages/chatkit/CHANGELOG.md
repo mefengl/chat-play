@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.5
+
+### Patch Changes
+
+- fix(chatgpt): auto-continue now works for last send
+
 ## 0.9.4
 
 ### Patch Changes

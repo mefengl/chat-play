@@ -1,5 +1,12 @@
 # hello
 
+## 0.0.22
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.5
+
 ## 0.0.21
 
 ### Patch Changes
