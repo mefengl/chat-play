@@ -175,17 +175,21 @@ export function waitForIdle() {
 export async function sendArray(messages: string[]) {
   let firstTime = true;
   const isLong = messages.length > 60;
-  while (messages.length > 0) {
+  let stop = false;
+  while (messages.length > 0 || stop) {
+    stop = false;
     const waitTime = (isLong && !document.hasFocus()) ? 20 * 1000 : 2000;
     if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
     if (isGenerating()) {
       continue;
     } else if (getContinueGeneratingButton()) {
       getContinueGeneratingButton()?.click();
+      stop = true;
       continue;
     } else if (getRegenerateButton() && !getTextarea()) {
       await new Promise(resolve => setTimeout(resolve, 10 * 1000));
       getRegenerateButton()?.click();
+      stop = true;
       continue;
     }
     firstTime = false;
