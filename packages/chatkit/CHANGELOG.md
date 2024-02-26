@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.6
+
+### Patch Changes
+
+- fix(chatgpt): Fix infinite loop issue
+
 ## 0.9.5
 
 ### Patch Changes
