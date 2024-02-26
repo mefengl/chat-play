@@ -180,6 +180,7 @@ export async function sendArray(messages: string[]) {
     stop = false;
     const waitTime = (isLong && !document.hasFocus()) ? 20 * 1000 : 2000;
     if (!firstTime) { await new Promise(resolve => setTimeout(resolve, waitTime)); }
+    firstTime = false;
     if (isGenerating()) {
       continue;
     } else if (getContinueGeneratingButton()) {
@@ -192,7 +193,6 @@ export async function sendArray(messages: string[]) {
       stop = true;
       continue;
     }
-    firstTime = false;
     if (messages.length === 0) {
       break;
     }
