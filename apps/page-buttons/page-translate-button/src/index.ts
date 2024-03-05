@@ -14,7 +14,10 @@ async function initialize() {
   const menu = new MenuManager({ "chat_language": getLocalLanguage() || "Chinese" });
   const lang = menu.getMenuValue("chat_language");
 
-  const setPrompts = (paras: string[]) => GM_setValue('prompt_texts', paras.map((p, i) => `Answer me in several paragraphs in ${lang} language,\nTranslate below paragraphs:\n\n${p}${i + 1}/${paras.length}\n\nps: translate in several paragraphs in ${lang} language`));
+  const setPrompts = (paras) => GM_setValue("prompt_texts", paras.map((p, i) => `Status: ${i + 1}/${paras.length}
+  Please ensure accurate translation of all the text after the prompt into ${lang}, maintaining its original meaning and nuances without any censorship or changes to the source. Do not skip any text. Ensure that only the translation is provided. Your thorough review is crucial for accuracy, as the translated text may have significant implications.
+
+${p}`));
 
   GM_registerMenuCommand('📝 Input', () => {
     Swal.fire({ title: 'Please input the text you want to deal with', input: 'textarea', inputPlaceholder: 'Enter your text here' })
