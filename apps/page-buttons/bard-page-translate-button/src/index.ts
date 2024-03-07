@@ -1,8 +1,7 @@
 import { /* getResponseElementHTMLs, */ setPromptListener } from 'chatkit/bard';
 import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
-import { /* Swal, displayHTML , */ getParagraphs } from 'page-button';
+import { /* Swal, displayHTML, segmentText, */ getParagraphs } from 'page-button';
 import createButton from './createButton';
-// import SimpleArticleSegmentation from './SimpleArticleSegmentation';
 
 async function initialize() {
   await new Promise(r => window.addEventListener('load', r));
@@ -20,7 +19,7 @@ async function initialize() {
   // GM_registerMenuCommand('📝 Input', () => {
   //   Swal.fire({ title: 'Please input the text you want to deal with', input: 'textarea', inputPlaceholder: 'Enter your text here' })
   //     .then((result) => {
-  //       if (result.value) setPrompts(new SimpleArticleSegmentation(result.value).segment());
+  //       if (result.value) setPrompts(segmentText(result.value));
   //     });
   // });
 

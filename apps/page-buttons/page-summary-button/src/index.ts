@@ -1,6 +1,6 @@
 import { getResponseElementHTMLs, setPromptListener } from 'chatkit/chatgpt';
 import { getLocalLanguage, MenuManager } from '@mefengl/monkit';
-import { Swal, displayHTML, SimpleArticleSegmentation, getParagraphs } from 'page-button';
+import { Swal, displayHTML, segmentText, getParagraphs } from 'page-button';
 import createButton from './createButton';
 
 async function initialize() {
@@ -19,7 +19,7 @@ async function initialize() {
   GM_registerMenuCommand('📝 Input', () => {
     Swal.fire({ title: 'Please input the text you want to deal with', input: 'textarea', inputPlaceholder: 'Enter your text here' })
       .then((result) => {
-        if (result.value) setPrompts(new SimpleArticleSegmentation(result.value).segment());
+        if (result.value) setPrompts(segmentText(result.value));
       });
   });
 

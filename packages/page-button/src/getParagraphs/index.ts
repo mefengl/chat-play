@@ -1,4 +1,4 @@
-import { SimpleArticleSegmentation } from '../SimpleArticleSegmentation';
+import { segmentText } from "../segmentText";
 
 export function getParagraphs() {
   try {
@@ -8,8 +8,7 @@ export function getParagraphs() {
     let article: Readability.Article | null = new Readability(docClone).parse();
 
     if (article?.textContent) {
-      const segmenter: SimpleArticleSegmentation = new SimpleArticleSegmentation(article.textContent);
-      const paragraphs: string[] = segmenter.segment();
+      const paragraphs: string[] = segmentText(article.textContent);
 
       // Trim the paragraphs
       for (let i = 0; i < paragraphs.length; i++) {

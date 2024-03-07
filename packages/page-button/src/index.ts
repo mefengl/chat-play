@@ -41,5 +41,5 @@ export async function displayHTML(html: string) {
   });
 }
 
-export * from './SimpleArticleSegmentation';
+export * from './segmentText';
 export * from './getParagraphs';
