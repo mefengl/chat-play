@@ -1,5 +1,12 @@
 # page-summary-button
 
+## 0.9.11
+
+### Patch Changes
+
+- Updated dependencies
+  - page-button@0.5.0
+
 ## 0.9.10
 
 ### Patch Changes

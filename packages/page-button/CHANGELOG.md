@@ -1,5 +1,11 @@
 # page-button
 
+## 0.5.0
+
+### Minor Changes
+
+- feat: now the article format extracted is better
+
 ## 0.4.2
 
 ### Patch Changes

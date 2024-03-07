@@ -1,5 +1,12 @@
 # claude-page-translate-button
 
+## 0.5.9
+
+### Patch Changes
+
+- Updated dependencies
+  - page-button@0.5.0
+
 ## 0.5.8
 
 ### Patch Changes
