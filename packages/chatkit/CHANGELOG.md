@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.7
+
+### Patch Changes
+
+- fix(chatgpt): add mroe waiting time in sending
+
 ## 0.9.6
 
 ### Patch Changes

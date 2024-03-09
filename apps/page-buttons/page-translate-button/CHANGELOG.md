@@ -1,5 +1,12 @@
 # page-translate-button
 
+## 0.11.12
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.7
+
 ## 0.11.11
 
 ### Patch Changes
