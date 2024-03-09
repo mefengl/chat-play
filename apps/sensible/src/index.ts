@@ -8,7 +8,6 @@ async function initialize() {
 async function main() {
   await initialize();
   autoCopyWhenSend();
-  document.querySelector("a.underline[href$='release-notes']")?.parentElement?.remove();
 }
 
 (function () {
