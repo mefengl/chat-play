@@ -1,5 +1,12 @@
 # read-mode
 
+## 0.2.11
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.8
+
 ## 0.2.10
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # infinite
 
+## 0.5.24
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.8
+
 ## 0.5.23
 
 ### Patch Changes

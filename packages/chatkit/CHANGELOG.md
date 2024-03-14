@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.8
+
+### Patch Changes
+
+- fix(chatgpt): Remove useless code that cause bug
+
 ## 0.9.7
 
 ### Patch Changes
