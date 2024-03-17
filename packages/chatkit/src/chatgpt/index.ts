@@ -119,10 +119,7 @@ export async function send(message: string) {
   setTextarea(message);
   const textarea = getTextarea();
   if (!textarea) return;
-  for (let i = 0; i < 5 && textarea.value === message; i++) {
-    getSubmitButton()?.click();
-    await new Promise(resolve => setTimeout(resolve, 800));
-  }
+  getSubmitButton()?.click();
   for (let i = 0; i < 10; i++) {
     if (isGenerating()) {
       break;
