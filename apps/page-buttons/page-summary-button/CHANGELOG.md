@@ -1,5 +1,12 @@
 # page-summary-button
 
+## 0.9.14
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.9
+
 ## 0.9.13
 
 ### Patch Changes

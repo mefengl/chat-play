@@ -1,5 +1,12 @@
 # twice
 
+## 0.1.28
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.9
+
 ## 0.1.27
 
 ### Patch Changes

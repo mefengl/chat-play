@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.9
+
+### Patch Changes
+
+- fix(chatgpt): remove multiple click logic
+
 ## 0.9.8
 
 ### Patch Changes
