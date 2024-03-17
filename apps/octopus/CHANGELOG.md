@@ -1,5 +1,12 @@
 # octopus
 
+## 0.2.43
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.10
+
 ## 0.2.42
 
 ### Patch Changes

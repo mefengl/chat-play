@@ -1,5 +1,12 @@
 # chatgpt-forget-model-not
 
+## 0.0.34
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.10
+
 ## 0.0.33
 
 ### Patch Changes

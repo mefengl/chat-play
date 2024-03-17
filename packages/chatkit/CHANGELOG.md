@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.10
+
+### Patch Changes
+
+- chore: retry for debug
+
 ## 0.9.9
 
 ### Patch Changes
