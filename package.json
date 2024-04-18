@@ -13,7 +13,7 @@
     "eslint-config-custom": "workspace:*",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@8.10.5",
+  "packageManager": "pnpm@9.0.2",
   "pnpm": {
     "patchedDependencies": {
       "sweetalert2@11.7.18": "patches/sweetalert2@11.7.18.patch"
