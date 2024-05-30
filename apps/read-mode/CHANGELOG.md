@@ -1,5 +1,11 @@
 # read-mode
 
+## 0.2.16
+
+### Patch Changes
+
+- remove the support for claude
+
 ## 0.2.15
 
 ### Patch Changes
