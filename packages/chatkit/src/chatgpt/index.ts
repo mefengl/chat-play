@@ -68,6 +68,10 @@ export function clickFollowUpButton(index: number) {
 }
 
 export function getButton(text: string) {
+  const button = Array.from(document.querySelectorAll('button[data-testid$="button"]'))
+    .find(button => button.getAttribute('data-testid')?.includes(text)) as HTMLButtonElement | undefined;
+  if (button) 
+    return button;
   return Array.from(document.querySelectorAll('button[as="button"]'))
     .find(button => button.textContent?.trim().toLowerCase().includes(text)) as HTMLButtonElement | undefined;
 }
@@ -77,11 +81,35 @@ export function getRegenerateButton() {
 };
 
 export function getContinueGeneratingButton() {
-  return getButton('continue');
+  const buttonInWideScreen = getButton('continue');
+  if (buttonInWideScreen)
+    return buttonInWideScreen;
+
+  function getNthGenerationDescendants(element: Node, generation: number): Node[] {
+    const descendants: Node[] = [];
+    function findDescendants(node: Node, currentDepth: number): void {
+      if (currentDepth === generation) {
+        descendants.push(node);
+        return;
+      }
+      node.childNodes.forEach((child: Node) => findDescendants(child, currentDepth + 1));
+    }
+    findDescendants(element, 0);
+    return descendants;
+  }
+  const form = document.querySelector('form');
+  if (!form)
+    return;
+  const seventhGenerationDescendants = getNthGenerationDescendants(form, 7);
+  if (seventhGenerationDescendants.length === 0 || seventhGenerationDescendants[0].nodeName !== 'BUTTON')
+    return;
+  return seventhGenerationDescendants[0] as HTMLButtonElement;
 };
 
 function getNewStopGeneratingButton() {
-  return document.querySelector('button[aria-label="Stop generating"]');
+  const stopButtonNotLogin = document.querySelector('button[aria-label="Stop generating"]');
+  const stopButton = document.querySelector('button[data-testid$="stop-button"]');
+  return stopButtonNotLogin || stopButton;
 }
 
 export function getStopGeneratingButton() {
