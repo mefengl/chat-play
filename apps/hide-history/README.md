@@ -20,7 +20,7 @@ You can easily toggle which timeframes you'd like to be hidden:
 
 1. 🚀 Install a UserScript manager like [Tampermonkey](http://tampermonkey.net/) or [Greasemonkey](https://www.greasespot.net/).
 2. 📦 Install this UserScript by clicking the install button or link.
-3. 🕹️ Visit [chat.openai.com](https://chat.openai.com/) and enjoy the cleaner interface with the script hiding the unwanted parts of your chat history!
+3. 🕹️ Visit [chatgpt.com](https://chatgpt.com/) and enjoy the cleaner interface with the script hiding the unwanted parts of your chat history!
 
 ## Credits 🙏
 

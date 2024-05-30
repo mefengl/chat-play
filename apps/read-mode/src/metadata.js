@@ -16,7 +16,7 @@ const base = `
 // @require      https://cdn.jsdelivr.net/npm/@mozilla/readability@0.4.3/Readability.min.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openai.com
 // @license      MIT
-// @match        https://chat.openai.com/*
+// @match        https://chatgpt.com/*
 // @match        https://claude.ai/*
 // @grant        GM_registerMenuCommand
 // @updateURL    ${generateUpdateURL()}

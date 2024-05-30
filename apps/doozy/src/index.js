@@ -218,7 +218,7 @@ import { getRegenerateButton, send } from 'chatkit/chatgpt';
   // ChatGPT response to prompt_texts
   let last_trigger_time = +new Date();
   $(() => {
-    if (location.href.includes("chat.openai")) {
+    if (location.href.includes("chatgpt.com")) {
       GM_addValueChangeListener("prompt_texts", (name, old_value, new_value) => {
         if (+new Date() - last_trigger_time < 500) {
           return;

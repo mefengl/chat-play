@@ -1,6 +1,6 @@
 # chatgpt-horizon
 
-A userscript that rearranges the conversation in OpenAI's ChatGPT website (https://chat.openai.com) to display the chat horizontally.
+A userscript that rearranges the conversation in OpenAI's ChatGPT website (https://chatgpt.com) to display the chat horizontally.
 
 ## 🦜 Doozy: AI Made Easy
 

@@ -23,7 +23,7 @@ Chat-Octopus is a userscript that enables you to send message to multiple AI lan
 
 ## Usage
 
-After installing the script, visit the websites of the AI language models you'd like to connect (e.g., [ChatGPT](https://chat.openai.com/), [Bard](https://bard.google.com/), Bing, etc.). You can then type a prompt into one of the AI's input fields and send the message. The script will automatically relay the message to the other AI(s), allowing you to observe how the different language models interact with each other.
+After installing the script, visit the websites of the AI language models you'd like to connect (e.g., [ChatGPT](https://chatgpt.com/), [Bard](https://bard.google.com/), Bing, etc.). You can then type a prompt into one of the AI's input fields and send the message. The script will automatically relay the message to the other AI(s), allowing you to observe how the different language models interact with each other.
 
 You can customize the script's settings through the userscript manager's menu by enabling or disabling specific features for each AI.
 

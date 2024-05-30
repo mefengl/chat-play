@@ -8,7 +8,7 @@ const base = `
 // @description  A wonderful day spent with ChatGPT
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=openai.com
 // @author       mefengl
-// @match        https://chat.openai.com/*
+// @match        https://chatgpt.com/*
 // @match        http://*/*
 // @match        https://*/*
 // @require      https://cdn.staticfile.org/jquery/3.6.1/jquery.min.js

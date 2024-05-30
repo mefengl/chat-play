@@ -8,7 +8,7 @@ import { chatgpt, bard, bing } from "chatkit"
   const menu_all = GM_getValue("menu_all", default_menu_all);
   // 菜单更新的逻辑
   const menus = [
-    { checker: () => location.href.includes("chat.openai"), name: "openai", value: true },
+    { checker: () => location.href.includes("chatgpt.com"), name: "openai", value: true },
     { checker: () => location.href.includes("bard.google"), name: "bard", value: true },
     { checker: () => location.href.includes("Bing+AI"), name: "bing", value: true },
   ];
@@ -54,7 +54,7 @@ import { chatgpt, bard, bing } from "chatkit"
   // ChatGPT send prompt to other ai
   let chatgpt_last_prompt = '';
   $(() => {
-    if (menu_all.openai && location.href.includes("chat.openai")) {
+    if (menu_all.openai && location.href.includes("chatgpt.com")) {
       chatgpt.onSend(() => {
         const textarea = chatgpt.getTextarea();
         if (!textarea) { return; }
@@ -68,7 +68,7 @@ import { chatgpt, bard, bing } from "chatkit"
   // ChatGPT response to prompt comes from other ai
   let last_trigger_time = +new Date();
   $(() => {
-    if (location.href.includes("chat.openai")) {
+    if (location.href.includes("chatgpt.com")) {
       GM_addValueChangeListener("chatgpt_prompt_texts", (name, old_value, new_value) => {
         if (+new Date() - last_trigger_time < 500) {
           return;

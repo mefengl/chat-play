@@ -36,7 +36,7 @@ export function getTextarea() {
 };
 
 function getNewSubmitButton() {
-  return document.querySelector('button[data-testid="send-button"]') as HTMLButtonElement | undefined;
+  return document.querySelector('button[data-testid$="send-button"]') as HTMLButtonElement | undefined;
 }
 
 export function getSubmitButton() {
@@ -195,7 +195,7 @@ export async function sendArray(messages: string[]) {
 
 export function setPromptListener(key: string = 'prompt_texts') {
   let last_trigger_time = +new Date();
-  if (location.href.includes("chat.openai")) {
+  if (location.href.includes("chatgpt.com")) {
     GM_addValueChangeListener(key, async (name: string, old_value: string[], new_value: string[]) => {
       if (+new Date() - last_trigger_time < 500) {
         return;

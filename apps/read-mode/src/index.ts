@@ -11,7 +11,7 @@ async function initialize() {
 
   // Read Mode
   function displayReadMode() {
-    if (window.location.href.includes('chat.openai.com')) {
+    if (window.location.href.includes('chatgpt.com')) {
       let elements = chatgpt.getResponseElementHTMLs();
       if (elements.length === 0) {
         elements = ['<p>No responses available.</p>'];

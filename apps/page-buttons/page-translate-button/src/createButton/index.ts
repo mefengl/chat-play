@@ -1,6 +1,6 @@
 function createButton(callback: () => void, buttonText: string) {
-  // if origin end with 'chat.openai.com', then return
-  if (window.location.href.includes("chat.openai")) { return; }
+  // if origin end with 'chatgpt.com', then return
+  if (window.location.href.includes("chatgpt.com")) { return; }
 
   // if title contains Chinese, then make button less visible
   const hideRight = document.title.match(/[\u4e00-\u9fa5]/) ? "-130px" : "-120px";

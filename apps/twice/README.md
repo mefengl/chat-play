@@ -17,12 +17,12 @@ This userscript is designed to make ChatGPT generate two responses to every ques
 
 1. Make sure you have the [Tampermonkey](https://www.tampermonkey.net/) browser extension installed.
 2. Click [here](https://greasyfork.org/scripts/463688-chatgpt-twice) to the script page on Greasyfork.
-3. Visit [https://chat.openai.com/](https://chat.openai.com/) and see the script in action!
+3. Visit [https://chatgpt.com/](https://chatgpt.com/) and see the script in action!
 
 ## Usage
 
 1. Install the userscript following the installation steps.
-2. Navigate to [https://chat.openai.com/](https://chat.openai.com/).
+2. Navigate to [https://chatgpt.com/](https://chatgpt.com/).
 3. Ask your question, and the script will automatically generate two responses.
 
 ## Contributing
