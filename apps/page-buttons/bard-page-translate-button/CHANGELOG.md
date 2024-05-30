@@ -1,5 +1,12 @@
 # bard-page-translate-button
 
+## 0.4.17
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.12
+
 ## 0.4.16
 
 ### Patch Changes

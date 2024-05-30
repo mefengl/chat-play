@@ -1,5 +1,11 @@
 # chatkit
 
+## 0.9.12
+
+### Patch Changes
+
+- update get buttons logic
+
 ## 0.9.11
 
 ### Patch Changes
