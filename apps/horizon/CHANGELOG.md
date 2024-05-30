@@ -1,5 +1,12 @@
 # horizon
 
+## 0.2.31
+
+### Patch Changes
+
+- Updated dependencies
+  - chatkit@0.9.11
+
 ## 0.2.30
 
 ### Patch Changes
